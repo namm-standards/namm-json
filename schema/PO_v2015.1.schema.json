@@ -1,0 +1,479 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://namm.org/NAMM_POv2015.1.schema.json",
+    "type": "object",
+    "title": "NAMM PO",
+    "description": "This is a json-schema version of NAMM PO v2015.1 from XSD",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_PO": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "@version": {
+                    "type": "number",
+                    "enum": [
+                        2015.1
+                    ]
+                },
+                "Id": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "POHeader": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "SoldTo": {
+                            "$ref": "#/definitions/Party"
+                        },
+                        "BillTo": {
+                            "$ref": "#/definitions/Party"
+                        },
+                        "BuyerOrderId": {
+                            "type": "string",
+                            "maxLength": 25
+                        },
+                        "Supplier": {
+                            "$ref": "#/definitions/Party"
+                        },
+                        "TermsCode": {
+                            "type": "string",
+                            "enum": [
+                                "P001",
+                                "P002",
+                                "P003",
+                                "P004",
+                                "P005",
+                                "P006",
+                                "P007",
+                                "P008",
+                                "P009",
+                                "P010",
+                                "P011",
+                                "P012",
+                                "P013",
+                                "P014",
+                                "P015",
+                                "P016",
+                                "P017",
+                                "P018",
+                                "P019",
+                                "P020",
+                                "P021",
+                                "P022",
+                                "P023",
+                                "P024",
+                                "P025",
+                                "P026",
+                                "P027",
+                                "P998",
+                                "P999"
+                            ],
+                            "maxLength": 15
+                        },
+                        "TermsDays": {
+                            "type": "integer"
+                        },
+                        "TermsDate": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "TermsPercent": {
+                            "type": "number"
+                        },
+                        "TermsPercentDays": {
+                            "type": "integer"
+                        },
+                        "ShipInstructions": {
+                            "type": "string",
+                            "maxLength": 250
+                        },
+                        "ShipTo": {
+                            "$ref": "#/definitions/Party"
+                        },
+                        "TranspCode": {
+                            "type": "string",
+                            "enum": [
+                                "S001",
+                                "S002",
+                                "S003",
+                                "S004",
+                                "S021",
+                                "S005",
+                                "S006",
+                                "S007",
+                                "S008",
+                                "S022",
+                                "S009",
+                                "S010",
+                                "S023",
+                                "S011",
+                                "S012",
+                                "S013",
+                                "S014",
+                                "S015",
+                                "S016",
+                                "S017",
+                                "S018",
+                                "S020",
+                                "S998",
+                                "S999"
+                            ],
+                            "maxLength": 15
+                        },
+                        "TranspDesc": {
+                            "type": "string",
+                            "maxLength": 50
+                        },
+                        "TranspCarrier": {
+                            "type": "string",
+                            "maxLength": 15
+                        },
+                        "TranspTime": {
+                            "type": "integer"
+                        },
+                        "TranspTerms": {
+                            "type": "string"
+                        },
+                        "IncoTermsCode": {
+                            "type": "string",
+                            "maxLength": 3
+                        },
+                        "IncoTermsDesc": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "DateOrdered": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "DateBeginShip": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "DateEndShip": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "DateCancel": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "Backorder": {
+                            "type": "string",
+                            "enum": [
+                                "Y",
+                                "N"
+                            ]
+                        },
+                        "BuyerName": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "PORevisionNumber": {
+                            "type": "integer"
+                        },
+                        "POStatusIndicator": {
+                            "type": "string",
+                            "enum": [
+                                "N",
+                                "U"
+                            ]
+                        },
+                        "ASNRequirement": {
+                            "type": "string",
+                            "enum": [
+                                "Y",
+                                "N"
+                            ]
+                        },
+                        "POFileType": {
+                            "type": "string",
+                            "enum": [
+                                "P",
+                                "A"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "SoldTo",
+                        "BillTo",
+                        "BuyerOrderId",
+                        "Supplier",
+                        "TermsCode",
+                        "TranspCode",
+                        "DateOrdered",
+                        "Backorder",
+                        "PORevisionNumber",
+                        "POStatusIndicator",
+                        "ASNRequirement",
+                        "POFileType"
+                    ]
+                },
+                "PODetail": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Items": {
+                            "type": "array",
+                            "additionalItems": false,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "POLineNbr": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "BuyerItemId": {
+                                        "type": "string",
+                                        "maxLength": 25
+                                    },
+                                    "BuyerItemDesc": {
+                                        "type": "string",
+                                        "maxLength": 50
+                                    },
+                                    "Qty": {
+                                        "type": "number"
+                                    },
+                                    "QtyUOM": {
+                                        "type": "string",
+                                        "enum": [
+                                            "BAG",
+                                            "BKT",
+                                            "BND",
+                                            "BOWL",
+                                            "BX",
+                                            "CRD",
+                                            "CM",
+                                            "CS",
+                                            "CTN",
+                                            "DZ",
+                                            "EA",
+                                            "FT",
+                                            "GAL",
+                                            "GROSS",
+                                            "IN",
+                                            "KIT",
+                                            "LOT",
+                                            "M",
+                                            "MM",
+                                            "PC",
+                                            "PK",
+                                            "PK100",
+                                            "PK50",
+                                            "PR",
+                                            "RACK",
+                                            "RL",
+                                            "SET",
+                                            "SET3",
+                                            "SET4",
+                                            "SET5",
+                                            "SGL",
+                                            "SHT",
+                                            "SQFT",
+                                            "TUBE",
+                                            "YD"
+                                        ]
+                                    },
+                                    "UCValue": {
+                                        "type": "number"
+                                    },
+                                    "UCCurrencyCode": {
+                                        "type": "string",
+                                        "description": "ISO currency code",
+                                        "enum": [
+                                            "USD",
+                                            "EUR",
+                                            "JPY"
+                                        ]
+                                    },
+                                    "RetailValue": {
+                                        "type": "number"
+                                    },
+                                    "RetailCurrencyCode": {
+                                        "type": "string",
+                                        "description": "ISO currency code",
+                                        "enum": [
+                                            "USD",
+                                            "EUR",
+                                            "JPY"
+                                        ]
+                                    },
+                                    "ICQtyPerUOM": {
+                                        "type": "number"
+                                    },
+                                    "ICUOM": {
+                                        "type": "string",
+                                        "maxLength": 5
+                                    },
+                                    "MCQtyPerUOM": {
+                                        "type": "number"
+                                    },
+                                    "MCUOM": {
+                                        "type": "string",
+                                        "maxLength": 5
+                                    },
+                                    "SupplierItemId": {
+                                        "type": "string",
+                                        "maxLength": 25
+                                    },
+                                    "BarCodeId": {
+                                        "type": "string",
+                                        "maxLength": 14
+                                    },
+                                    "BarCodeType": {
+                                        "type": "string",
+                                        "enum": [
+                                            "GTIN-12",
+                                            "GTIN-13",
+                                            "GTIN-14",
+                                            "PartNumber"
+                                        ]
+                                    },
+                                    "DateBeginShip": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "DateEndShip": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "DateCancel": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "TranspCode": {
+                                        "type": "string",
+                                        "enum": [
+                                            "S001",
+                                            "S002",
+                                            "S003",
+                                            "S004",
+                                            "S021",
+                                            "S005",
+                                            "S006",
+                                            "S007",
+                                            "S008",
+                                            "S022",
+                                            "S009",
+                                            "S010",
+                                            "S023",
+                                            "S011",
+                                            "S012",
+                                            "S013",
+                                            "S014",
+                                            "S015",
+                                            "S016",
+                                            "S017",
+                                            "S018",
+                                            "S020",
+                                            "S998",
+                                            "S999"
+                                        ],
+                                        "maxLength": 15
+                                    },
+                                    "ShipTo": {
+                                        "$ref": "#/definitions/Party"
+                                    }
+                                },
+                                "required": [
+                                    "POLineNbr",
+                                    "BuyerItemId",
+                                    "Qty",
+                                    "QtyUOM",
+                                    "UCValue",
+                                    "UCCurrencyCode",
+                                    "SupplierItemId",
+                                    "BarCodeId",
+                                    "BarCodeType"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "@version",
+                "Id",
+                "Timestamp",
+                "POHeader",
+                "PODetail"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_PO"
+    ],
+    "definitions": {
+        "Address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Attn": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address1": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address2": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address3": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "City": {
+                    "type": "string",
+                    "maxLength": 30
+                },
+                "State": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "PostalCode": {
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "Country": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "CountryCode": {
+                    "type": "string",
+                    "maxLength": 2
+                }
+            },
+            "required": []
+        },
+        "Party": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PartyId": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Name": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address": {
+                    "$ref": "#/definitions/Address"
+                }
+            },
+            "required": [
+                "PartyId",
+                "Address"
+            ]
+        }
+    }
+}

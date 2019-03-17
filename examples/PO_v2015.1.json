@@ -1,0 +1,99 @@
+﻿{
+    "NAMM_PO": { 
+            "@version": 2015.1,
+            "Id": "11383",
+            "Timestamp": "2013-12-20T10:20:06",
+            "POHeader": {
+                "SoldTo": {
+                    "PartyId": "000010298975",
+                    "Name": "Bill's Music",
+                    "Address": {
+                          "Address1": "1 Main St",
+                        "City": "New York",
+                        "State": "NY",
+                        "PostalCode": "11101",
+                        "Country": "USA",
+                        "CountryCode": "US"
+                    }
+                },
+                "BillTo": {
+                    "PartyId": "000010298975",
+                    "Name": "Bill's Music",
+                    "Address": {
+                        "Address1": "1 Main St",
+                        "City": "New York",
+                        "State": "NY",
+                        "PostalCode": "11101",
+                        "Country": "USA",
+                        "CountryCode": "US"
+                    }
+                },
+                "BuyerOrderId": "65642X",
+                "Supplier": {
+                    "PartyId": "0670716000009",
+                    "Name": "Korg USA, Inc.",
+                    "Address": {}
+                },
+                "TermsCode": "P001",
+                "TranspCode": "S023",
+                "DateOrdered": "2013-12-20T00:00:00",
+                "Backorder": "Y",
+                "PORevisionNumber": 0,
+                "POStatusIndicator": "N",
+                "ASNRequirement": "Y",
+                "POFileType": "P",
+                "ShipTo": {
+                    "PartyId": "098765432123",
+                    "Name": "Bill's Music",
+                    "Address": {
+                        "Address1": "1 Main St",
+                       
+                        "City": "New York",
+                        "State": "NY",
+                        "PostalCode": "11101"
+                    }
+                }
+            },
+            "PODetail": {
+                "Items": [
+                        {
+                            "POLineNbr": 1,
+                            "BuyerItemId": "MAA207",
+                            "BuyerItemDesc": "Vox amPlug Twin Headphone Amp",
+                            "Qty": 1,
+                            "QtyUOM": "EA",
+                            "UCValue": 55.00,
+                            "UCCurrencyCode": "USD",
+                            "SupplierItemId": "APTW",
+                            "BarCodeId": "4959112088023",
+                            "BarCodeType": "GTIN-12"
+                        },
+                        {
+                            "POLineNbr": 2,
+                            "BuyerItemId": "MAA055",
+                            "BuyerItemDesc": "Vox AmPlug Headphone Guitar Amp, Classic Rock",
+                            "Qty": 1,
+                            "QtyUOM": "EA",
+                            "UCValue": 99.00,
+                            "UCCurrencyCode": "USD",
+                            "SupplierItemId": "APCR",
+                            "BarCodeId": "4959112057630",
+                            "BarCodeType": "GTIN-12",
+                            "TranspCode": "S020",
+                            "ShipTo": {
+                                "PartyId": "N/A",
+                                "Name": "Jack Smith",
+                                "Address": {
+                                    "Address1": "101 Diana Dr",
+                                    
+                                    "City": "Guyton",
+                                    "State": "GA",
+                                    "PostalCode": "31312"
+                                }
+                            }
+                        }
+                    ]
+                
+            }
+        }
+    }
