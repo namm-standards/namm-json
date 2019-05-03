@@ -1,0 +1,74 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_FunctionalAcknowledgement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "number"
+                },
+                "Timestamp": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "string"
+                },
+                "Supplier": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string",
+                            "maxLength": 25
+                        }
+                    },
+                    "required": [
+                        "PartyId"
+                    ]
+                },
+                "SoldTo": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string",
+                            "maxLength": 25
+                        }
+                    },
+                    "required": [
+                        "PartyId"
+                    ]
+                },
+                "StatusCode": {
+                    "type": "string",
+                    "enum": [
+                        "C01",
+                        "C02"
+                    ]
+                },
+                "StatusMessage": {
+                    "type": "string",
+                    "maxLength": 10
+                }
+            },
+            "required": [
+                "version",
+                "Timestamp",
+                "Id",
+                "Supplier",
+                "SoldTo",
+                "StatusCode",
+                "StatusMessage"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_FunctionalAcknowledgement"
+    ],
+    "definitions": {
+        "NAMM_FunctionalAcknowledgement": {}
+    }
+}

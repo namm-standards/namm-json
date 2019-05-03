@@ -1,0 +1,117 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_ElectronicDeliveryResponse": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "number"
+                },
+                "Timestamp": {
+                    "type": "string"
+                },
+                "POId": {
+                    "type": "string"
+                },
+                "BuyerOrderId": {
+                    "type": "string"
+                },
+                "StatusCode": {
+                    "type": "string"
+                },
+                "StatusMessage": {
+                    "type": "string"
+                },
+                "Items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Item": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "SupplierItemId": {
+                                        "type": "string"
+                                    },
+                                    "POLineNbr": {
+                                        "type": "integer"
+                                    },
+                                    "BarCodeId": {
+                                        "type": "string"
+                                    },
+                                    "BarCodeType": {
+                                        "type": "string"
+                                    },
+                                    "Qty": {
+                                        "type": "integer"
+                                    },
+                                    "QtyUOM": {
+                                        "type": "string"
+                                    },
+                                    "UCValue": {
+                                        "type": "number"
+                                    },
+                                    "UCCurrencyCode": {
+                                        "type": "string"
+                                    },
+                                    "DownloadPath": {
+                                        "type": "string"
+                                    },
+                                    "SupportContact": {
+                                        "type": "string"
+                                    },
+                                    "Licenses": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "License": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "License"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "SupplierItemId",
+                                    "POLineNbr",
+                                    "BarCodeId",
+                                    "BarCodeType",
+                                    "Qty",
+                                    "QtyUOM",
+                                    "UCValue",
+                                    "UCCurrencyCode",
+                                    "DownloadPath",
+                                    "SupportContact",
+                                    "Licenses"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "version",
+                "Timestamp",
+                "POId",
+                "BuyerOrderId",
+                "StatusCode",
+                "StatusMessage",
+                "Items"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_ElectronicDeliveryResponse"
+    ],
+    "definitions": {
+        "NAMM_ElectronicDeliveryResponse": {}
+    }
+}

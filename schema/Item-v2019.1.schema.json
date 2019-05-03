@@ -1,0 +1,770 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_ITEM": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "number"
+                },
+                "Timestamp": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "string"
+                },
+                "SupplierId": {
+                    "type": "integer",
+                    "maximum": 1.8446744073709552E+19,
+                    "minimum": 0,
+                    "exclusiveMinimum": false
+                },
+                "Items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Item": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "SupplierItemId": {
+                                        "type": "string"
+                                    },
+                                    "SupplierModel": {
+                                        "type": "string"
+                                    },
+                                    "SupplierItemDesc": {
+                                        "type": "string"
+                                    },
+                                    "Kit": {
+                                        "type": "string"
+                                    },
+                                    "KitComponentOnly": {
+                                        "type": "string"
+                                    },
+                                    "Serialized": {
+                                        "type": "string"
+                                    },
+                                    "BrandName": {
+                                        "type": "string"
+                                    },
+                                    "CountryOrigin": {
+                                        "type": "string"
+                                    },
+                                    "Length": {
+                                        "type": "number"
+                                    },
+                                    "Width": {
+                                        "type": "number"
+                                    },
+                                    "Height": {
+                                        "type": "number"
+                                    },
+                                    "DimUOM": {
+                                        "type": "string"
+                                    },
+                                    "Weight": {
+                                        "type": "number"
+                                    },
+                                    "WeightUOM": {
+                                        "type": "string"
+                                    },
+                                    "AnnounceDate": {
+                                        "type": "string"
+                                    },
+                                    "AvailableDate": {
+                                        "type": "string"
+                                    },
+                                    "UnavailableDate": {
+                                        "type": "string"
+                                    },
+                                    "EndOfProductionDate": {
+                                        "type": "string"
+                                    },
+                                    "ReplacementID": {
+                                        "type": "string"
+                                    },
+                                    "WarrantyPartTerm": {
+                                        "type": "integer",
+                                        "maximum": 65535,
+                                        "minimum": 0,
+                                        "exclusiveMinimum": false
+                                    },
+                                    "WarrantyPartUOM": {
+                                        "type": "string"
+                                    },
+                                    "WarrantyLabTerm": {
+                                        "type": "integer",
+                                        "maximum": 255,
+                                        "minimum": 0,
+                                        "exclusiveMinimum": false
+                                    },
+                                    "WarrantyLabUOM": {
+                                        "type": "string"
+                                    },
+                                    "Condition": {
+                                        "type": "string"
+                                    },
+                                    "Barcodes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Barcode": {
+                                                "type": "array",
+                                                "minItems": 1,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "ID": {
+                                                            "type": "string"
+                                                        },
+                                                        "Type": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "ID",
+                                                        "Type"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "Pricing": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Price": {
+                                                "type": "array",
+                                                "minItems": 1,
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "Value": {
+                                                            "type": "number"
+                                                        },
+                                                        "type": {
+                                                            "type": "string"
+                                                        },
+                                                        "Currency": {
+                                                            "type": "string"
+                                                        },
+                                                        "Qty": {
+                                                            "type": "integer",
+                                                            "maximum": 255,
+                                                            "minimum": 0,
+                                                            "exclusiveMinimum": false
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "Value",
+                                                        "type",
+                                                        "Currency"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "Containers": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Container": {
+                                                "type": "array",
+                                                "minItems": 1,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "Type": {
+                                                            "type": "string"
+                                                        },
+                                                        "Length": {
+                                                            "type": "number"
+                                                        },
+                                                        "Width": {
+                                                            "type": "number"
+                                                        },
+                                                        "Height": {
+                                                            "type": "number"
+                                                        },
+                                                        "DimUOM": {
+                                                            "type": "string"
+                                                        },
+                                                        "Weight": {
+                                                            "type": "number"
+                                                        },
+                                                        "WeightUOM": {
+                                                            "type": "string"
+                                                        },
+                                                        "UOM": {
+                                                            "type": "string"
+                                                        },
+                                                        "QtyPerUOM": {
+                                                            "type": "integer",
+                                                            "maximum": 65535,
+                                                            "minimum": 0,
+                                                            "exclusiveMinimum": false
+                                                        },
+                                                        "Barcodes": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "Barcode": {
+                                                                    "type": "array",
+                                                                    "minItems": 1,
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "additionalProperties": false,
+                                                                        "properties": {
+                                                                            "ID": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "Type": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "ID",
+                                                                            "Type"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "Type",
+                                                        "Length",
+                                                        "Width",
+                                                        "Height",
+                                                        "DimUOM",
+                                                        "Weight",
+                                                        "WeightUOM",
+                                                        "UOM",
+                                                        "QtyPerUOM"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "KitItems": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "KitItem": {
+                                                "type": "array",
+                                                "minItems": 1,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "SupplierItemId": {
+                                                            "type": "string"
+                                                        },
+                                                        "Qty": {
+                                                            "type": "number"
+                                                        },
+                                                        "UOM": {
+                                                            "type": "string"
+                                                        },
+                                                        "Barcodes": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "Barcode": {
+                                                                    "type": "array",
+                                                                    "minItems": 1,
+                                                                    "items": {
+                                                                        "type": "object",
+                                                                        "additionalProperties": false,
+                                                                        "properties": {
+                                                                            "ID": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "Type": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "ID",
+                                                                            "Type"
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "SupplierItemId",
+                                                        "Qty",
+                                                        "UOM",
+                                                        "Barcodes"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "MarketingInfo": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "PrimaryCategory": {
+                                                "type": "string"
+                                            },
+                                            "ProductURL": {
+                                                "type": "string"
+                                            },
+                                            "ItemDescLong": {
+                                                "type": "string"
+                                            },
+                                            "SecondaryCategories": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "Category": {
+                                                        "type": "array",
+                                                        "minItems": 1,
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "Bullets": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "Bullet": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "Media": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "Images": {
+                                                        "type": "object",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Image": {
+                                                                "type": "array",
+                                                                "minItems": 1,
+                                                                "items": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "Value": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Audience": {
+                                                                            "type": "string",
+                                                                            "enum": [
+                                                                                "Consumer",
+                                                                                "Dealer"
+                                                                            ]
+                                                                        },
+                                                                        "View": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Caption": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "CarouselSequence": {
+                                                                            "type": "integer"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "Value"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "Videos": {
+                                                        "type": "object",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Video": {
+                                                                "type": "array",
+                                                                "minItems": 1,
+                                                                "items": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "Value": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Audience": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Caption": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "Value",
+                                                                        "type"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "Documents": {
+                                                        "type": "object",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Document": {
+                                                                "type": "array",
+                                                                "minItems": 1,
+                                                                "items": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "Value": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Audience": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Caption": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "Value",
+                                                                        "type"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "Audios": {
+                                                        "type": "object",
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "Audio": {
+                                                                "type": "array",
+                                                                "minItems": 1,
+                                                                "items": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "Value": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Audience": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "type": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "Caption": {
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "Value",
+                                                                        "type"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "Keywords": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "Keyword": {
+                                                        "type": "array",
+                                                        "minItems": 1,
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "PrimaryCategory",
+                                            "Bullets"
+                                        ]
+                                    },
+                                    "ExtendedAttributes": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "Data": {
+                                                "type": "array",
+                                                "minItems": 1,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "Name": {
+                                                            "type": "string"
+                                                        },
+                                                        "Topic": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "SuperTitle": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Title": {
+                                                                    "type": "string"
+                                                                },
+                                                                "SubTitle": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Credits": {
+                                                                    "type": "object",
+                                                                    "additionalProperties": false,
+                                                                    "properties": {
+                                                                        "Contributor": {
+                                                                            "type": "array",
+                                                                            "minItems": 1,
+                                                                            "items": {
+                                                                                "type": "object",
+                                                                                "additionalProperties": false,
+                                                                                "properties": {
+                                                                                    "primary": {
+                                                                                        "type": "boolean"
+                                                                                    },
+                                                                                    "Contribution": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "ContributorName": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "ContributorNameReversed": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "primary",
+                                                                                    "Contribution",
+                                                                                    "ContributorName",
+                                                                                    "ContributorNameReversed"
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "Copyright": {
+                                                                    "type": "object",
+                                                                    "additionalProperties": false,
+                                                                    "properties": {
+                                                                        "CopyrightLine": {
+                                                                            "type": "array",
+                                                                            "minItems": 1,
+                                                                            "items": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "SuperTitle",
+                                                                "Title",
+                                                                "SubTitle"
+                                                            ]
+                                                        },
+                                                        "Contributor": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "primary": {
+                                                                        "type": "boolean"
+                                                                    },
+                                                                    "Contribution": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ContributorName": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "ContributorNameReversed": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "primary",
+                                                                    "Contribution",
+                                                                    "ContributorName",
+                                                                    "ContributorNameReversed"
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "Name"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "RelatedItems": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "RelatedItem": {
+                                                "type": "array",
+                                                "minItems": 1,
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "type": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "similar",
+                                                                "accessory",
+                                                                "ThirdParty"
+                                                            ]
+                                                        },
+                                                        "included": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "Y",
+                                                                "N"
+                                                            ]
+                                                        },
+                                                        "SupplierItemId": {
+                                                            "type": "string"
+                                                        },
+                                                        "Barcode": {
+                                                            "type": "object",
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "ID": {
+                                                                    "type": "integer",
+                                                                    "maximum": 1.8446744073709552E+19,
+                                                                    "minimum": 0,
+                                                                    "exclusiveMinimum": false
+                                                                },
+                                                                "Type": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "ID",
+                                                                "Type"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "type",
+                                                        "SupplierItemId"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "ItemFamily": {
+                                        "type": "object",
+                                        "properties": {
+                                            "Value": {
+                                                "type": "string"
+                                            },
+                                            "property": {
+                                                "type": "string"
+                                            },
+                                            "code": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "Value",
+                                            "property",
+                                            "code"
+                                        ]
+                                    },
+                                    "Availability": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "QtyOnHand": {
+                                                "type": "integer",
+                                                "maximum": 255,
+                                                "minimum": 0,
+                                                "exclusiveMinimum": false
+                                            },
+                                            "Available": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "YES",
+                                                    "NO",
+                                                    "LOW",
+                                                    "MEDIUM",
+                                                    "HIGH"
+                                                ]
+                                            },
+                                            "QueryURL": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "Available"
+                                        ]
+                                    },
+                                    "Prop65Message": {
+                                        "type": "string"
+                                    },
+                                    "Prop65Chemical": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "SupplierItemId",
+                                    "SupplierModel",
+                                    "SupplierItemDesc",
+                                    "Kit",
+                                    "BrandName",
+                                    "AnnounceDate",
+                                    "AvailableDate",
+                                    "WarrantyPartTerm",
+                                    "WarrantyPartUOM",
+                                    "WarrantyLabTerm",
+                                    "WarrantyLabUOM",
+                                    "Barcodes",
+                                    "MarketingInfo"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "version",
+                "Timestamp",
+                "Id",
+                "SupplierId",
+                "Items"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_ITEM"
+    ],
+    "definitions": {
+        "NAMM_ITEM": {}
+    }
+}
