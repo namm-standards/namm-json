@@ -1,0 +1,552 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_Invoice": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "number"
+                },
+                "InvoiceHeader": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Id": {
+                            "type": "string",
+                            "maxLength": 50
+                        },
+                        "Timestamp": {
+                            "type": "string"
+                        },
+                        "SoldTo": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "PartyId": {
+                                    "type": "string",
+                                    "maxLength": 25
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                }
+                            },
+                            "required": [
+                                "PartyId"
+                            ]
+                        },
+                        "InvoiceId": {
+                            "type": "string",
+                            "maxLength": 32
+                        },
+                        "InvoiceType": {
+                            "type": "string",
+                            "pattern": "C|D"
+                        },
+                        "Supplier": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "PartyId": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "Attn": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address1": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address2": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address3": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "City": {
+                                            "type": "string",
+                                            "maxLength": 30
+                                        },
+                                        "State": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        },
+                                        "PostalCode": {
+                                            "type": "string",
+                                            "maxLength": 9
+                                        },
+                                        "Country": {
+                                            "type": "string",
+                                            "maxLength": 50
+                                        },
+                                        "CountryCode": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "PartyId",
+                                "Address"
+                            ]
+                        },
+                        "RemitTo": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "PartyId": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "Attn": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address1": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address2": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address3": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "City": {
+                                            "type": "string",
+                                            "maxLength": 30
+                                        },
+                                        "State": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        },
+                                        "PostalCode": {
+                                            "type": "string",
+                                            "maxLength": 9
+                                        },
+                                        "Country": {
+                                            "type": "string",
+                                            "maxLength": 50
+                                        },
+                                        "CountryCode": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "PartyId",
+                                "Address"
+                            ]
+                        },
+                        "BillTo": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "PartyId": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "Attn": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address1": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address2": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address3": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "City": {
+                                            "type": "string",
+                                            "maxLength": 30
+                                        },
+                                        "State": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        },
+                                        "PostalCode": {
+                                            "type": "string",
+                                            "maxLength": 9
+                                        },
+                                        "Country": {
+                                            "type": "string",
+                                            "maxLength": 50
+                                        },
+                                        "CountryCode": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "PartyId",
+                                "Address"
+                            ]
+                        },
+                        "ShipTo": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "PartyId": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "Name": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "Attn": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address1": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address2": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "Address3": {
+                                            "type": "string",
+                                            "maxLength": 35
+                                        },
+                                        "City": {
+                                            "type": "string",
+                                            "maxLength": 30
+                                        },
+                                        "State": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        },
+                                        "PostalCode": {
+                                            "type": "string",
+                                            "maxLength": 9
+                                        },
+                                        "Country": {
+                                            "type": "string",
+                                            "maxLength": 50
+                                        },
+                                        "CountryCode": {
+                                            "type": "string",
+                                            "maxLength": 2
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "PartyId",
+                                "Address"
+                            ]
+                        },
+                        "TermsCode": {
+                            "type": "string",
+                            "maxLength": 15
+                        },
+                        "TermsDays": {
+                            "type": "integer"
+                        },
+                        "TermsDate": {
+                            "type": "string"
+                        },
+                        "TermsPercent": {
+                            "type": "number"
+                        },
+                        "TermsPercentDays": {
+                            "type": "integer"
+                        },
+                        "ShipInstructions": {
+                            "type": "string",
+                            "maxLength": 250
+                        },
+                        "TranspCode": {
+                            "type": "string",
+                            "maxLength": 15
+                        },
+                        "TranspDesc": {
+                            "type": "string",
+                            "maxLength": 50
+                        },
+                        "TranspCarrier": {
+                            "type": "string",
+                            "maxLength": 15
+                        },
+                        "TranspTime": {
+                            "type": "integer"
+                        },
+                        "TranspTerms": {
+                            "type": "string"
+                        },
+                        "IncoTermsCode": {
+                            "type": "string",
+                            "maxLength": 3
+                        },
+                        "IncoTermsDesc": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "InvoiceDate": {
+                            "type": "string"
+                        },
+                        "InvoiceDueDate": {
+                            "type": "string"
+                        },
+                        "BuyerName": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "SalesRep": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "Comments": {
+                            "type": "string",
+                            "maxLength": 250
+                        }
+                    },
+                    "required": [
+                        "Id",
+                        "Timestamp",
+                        "SoldTo",
+                        "InvoiceId",
+                        "InvoiceType",
+                        "Supplier",
+                        "RemitTo",
+                        "BillTo",
+                        "ShipTo",
+                        "TermsCode",
+                        "InvoiceDate",
+                        "InvoiceDueDate"
+                    ]
+                },
+                "InvoiceSummary": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "TotalItemLines": {
+                            "type": "integer"
+                        },
+                        "TotalItemQty": {
+                            "type": "integer"
+                        },
+                        "LineTotal": {
+                            "type": "number"
+                        },
+                        "FreightTotal": {
+                            "type": "number"
+                        },
+                        "SalesTax": {
+                            "type": "number"
+                        },
+                        "MiscCharge": {
+                            "type": "number"
+                        },
+                        "InvoiceTotal": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "TotalItemLines",
+                        "TotalItemQty",
+                        "LineTotal",
+                        "FreightTotal",
+                        "SalesTax",
+                        "MiscCharge",
+                        "InvoiceTotal"
+                    ]
+                },
+                "InvoiceDetail": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Item": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "BuyerOrderId": {
+                                                "type": "string",
+                                                "maxLength": 25
+                                            },
+                                            "SupplierOrderId": {
+                                                "type": "string",
+                                                "maxLength": 25
+                                            },
+                                            "InvoiceLineNbr": {
+                                                "type": "integer"
+                                            },
+                                            "POLineNbr": {
+                                                "type": "integer"
+                                            },
+                                            "BuyerItemId": {
+                                                "type": "string",
+                                                "maxLength": 25
+                                            },
+                                            "Qty": {
+                                                "type": "number"
+                                            },
+                                            "QtyUOM": {
+                                                "type": "string",
+                                                "maxLength": 5
+                                            },
+                                            "UCValue": {
+                                                "type": "number"
+                                            },
+                                            "UCCurrencyCode": {
+                                                "type": "string",
+                                                "maxLength": 3
+                                            },
+                                            "ExtendedCostValue": {
+                                                "type": "number"
+                                            },
+                                            "ExtendedCurrencyCode": {
+                                                "type": "string",
+                                                "maxLength": 3
+                                            },
+                                            "RetailValue": {
+                                                "type": "number"
+                                            },
+                                            "RetailCurrencyCode": {
+                                                "type": "string",
+                                                "maxLength": 3
+                                            },
+                                            "SupplierItemId": {
+                                                "type": "string",
+                                                "maxLength": 25
+                                            },
+                                            "SupplierItemDesc": {
+                                                "type": "string",
+                                                "maxLength": 50
+                                            },
+                                            "PackListNbr": {
+                                                "type": "string",
+                                                "maxLength": 25
+                                            },
+                                            "ShipmentIds": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "ShipmentId": {
+                                                        "type": "array",
+                                                        "minItems": 1,
+                                                        "items": {
+                                                            "type": "string",
+                                                            "maxLength": 25
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "DateShipped": {
+                                                "type": "string"
+                                            },
+                                            "BarCodeId": {
+                                                "type": "string",
+                                                "maxLength": 14
+                                            },
+                                            "BarCodeType": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "GTIN-12",
+                                                    "GTIN-13",
+                                                    "GTIN-14",
+                                                    "PartNumber"
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "BuyerOrderId",
+                                            "SupplierOrderId",
+                                            "InvoiceLineNbr",
+                                            "POLineNbr",
+                                            "BuyerItemId",
+                                            "Qty",
+                                            "QtyUOM",
+                                            "UCValue",
+                                            "UCCurrencyCode",
+                                            "ExtendedCostValue",
+                                            "ExtendedCurrencyCode",
+                                            "SupplierItemId",
+                                            "SupplierItemDesc",
+                                            "ShipmentIds",
+                                            "DateShipped",
+                                            "BarCodeId",
+                                            "BarCodeType"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "Items"
+                    ]
+                }
+            },
+            "required": [
+                "version",
+                "InvoiceHeader",
+                "InvoiceSummary",
+                "InvoiceDetail"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_Invoice"
+    ],
+    "definitions": {
+        "NAMM_Invoice": {}
+    }
+}

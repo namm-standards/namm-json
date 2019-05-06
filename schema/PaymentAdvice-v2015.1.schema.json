@@ -1,0 +1,248 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_PaymentAdvice": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "number"
+                },
+                "Id": {
+                    "type": "string"
+                },
+                "TradingPartnerInfo": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "SenderID": {
+                            "type": "string"
+                        },
+                        "SenderName": {
+                            "type": "string"
+                        },
+                        "ReceiverID": {
+                            "type": "string"
+                        },
+                        "ReceiverName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "SenderID",
+                        "SenderName",
+                        "ReceiverID",
+                        "ReceiverName"
+                    ]
+                },
+                "Supplier": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string"
+                        },
+                        "Name": {
+                            "type": "string"
+                        },
+                        "Address": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Attn": {
+                                    "type": "string"
+                                },
+                                "Address1": {
+                                    "type": "string"
+                                },
+                                "Address2": {
+                                    "type": "string"
+                                },
+                                "Address3": {
+                                    "type": "string"
+                                },
+                                "City": {
+                                    "type": "string"
+                                },
+                                "State": {
+                                    "type": "string"
+                                },
+                                "PostalCode": {
+                                    "type": "string"
+                                },
+                                "Country": {
+                                    "type": "string"
+                                },
+                                "CountryCode": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "Attn",
+                                "Address1",
+                                "Address2",
+                                "Address3",
+                                "City",
+                                "State",
+                                "PostalCode",
+                                "Country",
+                                "CountryCode"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "PartyId",
+                        "Name",
+                        "Address"
+                    ]
+                },
+                "SoldTo": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string"
+                        },
+                        "Name": {
+                            "type": "string"
+                        },
+                        "Address": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Attn": {
+                                    "type": "string"
+                                },
+                                "Address1": {
+                                    "type": "string"
+                                },
+                                "Address2": {
+                                    "type": "string"
+                                },
+                                "Address3": {
+                                    "type": "string"
+                                },
+                                "City": {
+                                    "type": "string"
+                                },
+                                "State": {
+                                    "type": "string"
+                                },
+                                "PostalCode": {
+                                    "type": "string"
+                                },
+                                "Country": {
+                                    "type": "string"
+                                },
+                                "CountryCode": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "Attn",
+                                "Address1",
+                                "Address2",
+                                "Address3",
+                                "City",
+                                "State",
+                                "PostalCode",
+                                "Country",
+                                "CountryCode"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "PartyId",
+                        "Name",
+                        "Address"
+                    ]
+                },
+                "TotalPayment": {
+                    "type": "number"
+                },
+                "CurrencyCode": {
+                    "type": "string"
+                },
+                "PaymentType": {
+                    "type": "string"
+                },
+                "PaymentDate": {
+                    "type": "string"
+                },
+                "Reference": {
+                    "type": "string"
+                },
+                "Timestamp": {
+                    "type": "string"
+                },
+                "BuyerName": {
+                    "type": "string"
+                },
+                "PaymentAdvice": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PaymentStatus": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "Note": {
+                                        "type": "string"
+                                    },
+                                    "BuyerOrderId": {
+                                        "type": "string"
+                                    },
+                                    "DateOrdered": {
+                                        "type": "string"
+                                    },
+                                    "PaymentAmount": {
+                                        "type": "number"
+                                    },
+                                    "InvoiceNumber": {
+                                        "type": "string"
+                                    },
+                                    "InvoiceAmount": {
+                                        "type": "number"
+                                    }
+                                },
+                                "required": [
+                                    "BuyerOrderId",
+                                    "DateOrdered",
+                                    "PaymentAmount",
+                                    "InvoiceNumber",
+                                    "InvoiceAmount"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "version",
+                "Id",
+                "TradingPartnerInfo",
+                "Supplier",
+                "SoldTo",
+                "TotalPayment",
+                "CurrencyCode",
+                "PaymentType",
+                "PaymentDate",
+                "Reference",
+                "Timestamp",
+                "BuyerName",
+                "PaymentAdvice"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_PaymentAdvice"
+    ],
+    "definitions": {
+        "NAMM_PaymentAdvice": {}
+    }
+}

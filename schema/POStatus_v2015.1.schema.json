@@ -1,0 +1,409 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "NAMM_POStatus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "version": {
+                    "type": "number"
+                },
+                "Id": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "POStatusRequestId": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Timestamp": {
+                    "type": "string"
+                },
+                "BuyerOrderId": {
+                    "type": "string",
+                    "maxLength": 25
+                },
+                "DateOrdered": {
+                    "type": "string"
+                },
+                "BuyerName": {
+                    "type": "string"
+                },
+                "Supplier": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string",
+                            "maxLength": 50
+                        },
+                        "Name": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "Address": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Attn": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address1": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address2": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address3": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "City": {
+                                    "type": "string",
+                                    "maxLength": 30
+                                },
+                                "State": {
+                                    "type": "string",
+                                    "maxLength": 2
+                                },
+                                "PostalCode": {
+                                    "type": "string",
+                                    "maxLength": 9
+                                },
+                                "Country": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "CountryCode": {
+                                    "type": "string",
+                                    "maxLength": 2
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "PartyId"
+                    ]
+                },
+                "SoldTo": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string",
+                            "maxLength": 50
+                        },
+                        "Name": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "Address": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Attn": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address1": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address2": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address3": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "City": {
+                                    "type": "string",
+                                    "maxLength": 30
+                                },
+                                "State": {
+                                    "type": "string",
+                                    "maxLength": 2
+                                },
+                                "PostalCode": {
+                                    "type": "string",
+                                    "maxLength": 9
+                                },
+                                "Country": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "CountryCode": {
+                                    "type": "string",
+                                    "maxLength": 2
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "PartyId"
+                    ]
+                },
+                "StatusCode": {
+                    "type": "string"
+                },
+                "PaymentTerms": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "StatusCode": {
+                            "type": "string"
+                        },
+                        "StatusMessage": {
+                            "type": "string"
+                        },
+                        "TermsCode": {
+                            "type": "string",
+                            "maxLength": 15
+                        }
+                    },
+                    "required": [
+                        "StatusCode",
+                        "StatusMessage",
+                        "TermsCode"
+                    ]
+                },
+                "ShipmentTerms": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "StatusCode": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "ShipTo": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "PartyId": {
+                            "type": "string",
+                            "maxLength": 50
+                        },
+                        "Name": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "Address": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "Attn": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address1": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address2": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "Address3": {
+                                    "type": "string",
+                                    "maxLength": 35
+                                },
+                                "City": {
+                                    "type": "string",
+                                    "maxLength": 30
+                                },
+                                "State": {
+                                    "type": "string",
+                                    "maxLength": 2
+                                },
+                                "PostalCode": {
+                                    "type": "string",
+                                    "maxLength": 9
+                                },
+                                "Country": {
+                                    "type": "string",
+                                    "maxLength": 50
+                                },
+                                "CountryCode": {
+                                    "type": "string",
+                                    "maxLength": 2
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "PartyId"
+                    ]
+                },
+                "Items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Item": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "POLineNbr": {
+                                        "type": "integer"
+                                    },
+                                    "SequenceNbr": {
+                                        "type": "integer"
+                                    },
+                                    "StatusCode": {
+                                        "type": "string"
+                                    },
+                                    "StatusMessage": {
+                                        "type": "string"
+                                    },
+                                    "Qty": {
+                                        "type": "number"
+                                    },
+                                    "OriginalOrderQty": {
+                                        "type": "number"
+                                    },
+                                    "QtyUOM": {
+                                        "type": "string"
+                                    },
+                                    "UCValue": {
+                                        "type": "number"
+                                    },
+                                    "OriginalOrderUCValue": {
+                                        "type": "number"
+                                    },
+                                    "UCCurrencyCode": {
+                                        "type": "string"
+                                    },
+                                    "EstimatedShipDate": {
+                                        "type": "string"
+                                    },
+                                    "SupplierOrderId": {
+                                        "type": "string"
+                                    },
+                                    "BuyerItemId": {
+                                        "type": "string"
+                                    },
+                                    "SupplierItemId": {
+                                        "type": "string"
+                                    },
+                                    "BarCodeId": {
+                                        "type": "string"
+                                    },
+                                    "BarCodeType": {
+                                        "type": "string"
+                                    },
+                                    "ShipTo": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "PartyId": {
+                                                "type": "string",
+                                                "maxLength": 50
+                                            },
+                                            "Name": {
+                                                "type": "string",
+                                                "maxLength": 35
+                                            },
+                                            "Address": {
+                                                "type": "object",
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "Attn": {
+                                                        "type": "string",
+                                                        "maxLength": 35
+                                                    },
+                                                    "Address1": {
+                                                        "type": "string",
+                                                        "maxLength": 35
+                                                    },
+                                                    "Address2": {
+                                                        "type": "string",
+                                                        "maxLength": 35
+                                                    },
+                                                    "Address3": {
+                                                        "type": "string",
+                                                        "maxLength": 35
+                                                    },
+                                                    "City": {
+                                                        "type": "string",
+                                                        "maxLength": 30
+                                                    },
+                                                    "State": {
+                                                        "type": "string",
+                                                        "maxLength": 2
+                                                    },
+                                                    "PostalCode": {
+                                                        "type": "string",
+                                                        "maxLength": 9
+                                                    },
+                                                    "Country": {
+                                                        "type": "string",
+                                                        "maxLength": 50
+                                                    },
+                                                    "CountryCode": {
+                                                        "type": "string",
+                                                        "maxLength": 2
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "PartyId"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "POLineNbr",
+                                    "SequenceNbr",
+                                    "StatusCode",
+                                    "StatusMessage",
+                                    "Qty",
+                                    "OriginalOrderQty",
+                                    "QtyUOM",
+                                    "UCValue",
+                                    "OriginalOrderUCValue",
+                                    "UCCurrencyCode",
+                                    "SupplierOrderId",
+                                    "BuyerItemId",
+                                    "SupplierItemId",
+                                    "BarCodeId",
+                                    "BarCodeType"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "version",
+                "Id",
+                "POStatusRequestId",
+                "Timestamp",
+                "BuyerOrderId",
+                "DateOrdered",
+                "BuyerName",
+                "Supplier",
+                "SoldTo",
+                "StatusCode",
+                "PaymentTerms",
+                "ShipmentTerms",
+                "ShipTo",
+                "Items"
+            ]
+        }
+    },
+    "required": [
+        "NAMM_POStatus"
+    ],
+    "definitions": {
+        "NAMM_POStatus": {}
+    }
+}
