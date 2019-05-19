@@ -1,0 +1,96 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "title": "CommonDefs",
+    "description": "Common Shared Objects",
+    "additionalProperties": {
+        "not": {}
+    },
+    "definitions": {
+        "Address": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "Attn": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address1": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address2": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address3": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "City": {
+                    "type": "string",
+                    "maxLength": 30
+                },
+                "State": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "PostalCode": {
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "Country": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "CountryCode": {
+                    "type": "string",
+                    "maxLength": 2
+                }
+            },
+            "required": []
+        },
+        "Party": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "PartyId": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Name": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address": {
+                    "$ref": "#/definitions/Address"
+                }
+            },
+            "required": [
+                "PartyId",
+                "Address"
+            ]
+        },
+        "DimUOM": {
+            "type": "string",
+            "enum": [
+                "Inches",
+                "Meters"
+            ]
+        },
+        "WeightUOM": {
+            "type": "string",
+            "enum": [
+                "Pounds",
+                "Kilograms",
+                "Grams",
+                "Ounces"
+            ]
+        }
+    },
+    "$comment": "TBD"
+}
