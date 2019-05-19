@@ -1,6 +1,6 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://namm.org/NAMM_POv2015.1.schema.json",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "NAMM_POv2015.1.schema.json",
     "type": "object",
     "title": "NAMM PO",
     "description": "This is a json-schema version of NAMM PO v2015.1 from XSD",
@@ -29,17 +29,17 @@
                     "additionalProperties": false,
                     "properties": {
                         "SoldTo": {
-                            "$ref": "#/definitions/Party"
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "BillTo": {
-                            "$ref": "#/definitions/Party"
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "BuyerOrderId": {
                             "type": "string",
                             "maxLength": 25
                         },
                         "Supplier": {
-                            "$ref": "#/definitions/Party"
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "TermsCode": {
                             "type": "string",
@@ -94,7 +94,7 @@
                             "maxLength": 250
                         },
                         "ShipTo": {
-                            "$ref": "#/definitions/Party"
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "TranspCode": {
                             "type": "string",
@@ -221,7 +221,7 @@
                     "properties": {
                         "Items": {
                             "type": "array",
-                            "additionalItems": false,
+                           
                             "items": {
                                 "type": "object",
                                 "additionalProperties": false,
@@ -379,7 +379,7 @@
                                         "maxLength": 15
                                     },
                                     "ShipTo": {
-                                        "$ref": "#/definitions/Party"
+                                        "$ref": "CommonSchema.json#/definitions/Party"
                                     }
                                 },
                                 "required": [
@@ -409,71 +409,5 @@
     },
     "required": [
         "NAMM_PO"
-    ],
-    "definitions": {
-        "Address": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "Attn": {
-                    "type": "string",
-                    "maxLength": 35
-                },
-                "Address1": {
-                    "type": "string",
-                    "maxLength": 35
-                },
-                "Address2": {
-                    "type": "string",
-                    "maxLength": 35
-                },
-                "Address3": {
-                    "type": "string",
-                    "maxLength": 35
-                },
-                "City": {
-                    "type": "string",
-                    "maxLength": 30
-                },
-                "State": {
-                    "type": "string",
-                    "maxLength": 2
-                },
-                "PostalCode": {
-                    "type": "string",
-                    "maxLength": 9
-                },
-                "Country": {
-                    "type": "string",
-                    "maxLength": 50
-                },
-                "CountryCode": {
-                    "type": "string",
-                    "maxLength": 2
-                }
-            },
-            "required": []
-        },
-        "Party": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "PartyId": {
-                    "type": "string",
-                    "maxLength": 50
-                },
-                "Name": {
-                    "type": "string",
-                    "maxLength": 35
-                },
-                "Address": {
-                    "$ref": "#/definitions/Address"
-                }
-            },
-            "required": [
-                "PartyId",
-                "Address"
-            ]
-        }
-    }
+    ]
 }
