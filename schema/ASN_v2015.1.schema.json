@@ -1,20 +1,23 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "NAMM_ASN_2015.1",
     "type": "object",
     "title": "NAMM ASN",
     "description": "This is a json-schema version of NAMM ASN v2015.1 from XSD",
-    "additionalProperties": false,
+    "additionalProperties": {
+        "not": {}
+    },
     "properties": {
         "NAMM_ASN": {
             "type": "object",
-            "additionalProperties": true,
+            "additionalProperties": {},
             "properties": {
-                "@version": {
+                "version": {
                     "type": "number",
                     "enum": [
                         2015.1
                     ]
-                },  
+                },
                 "Id": {
                     "type": "string",
                     "maxLength": 50
@@ -25,7 +28,7 @@
                 },
                 "ShipmentHeader": {
                     "type": "object",
-                    "additionalProperties": true,
+                    "additionalProperties": {},
                     "properties": {
                         "ShipmentType": {
                             "type": "string",
@@ -42,357 +45,121 @@
                             "type": "string"
                         },
                         "Supplier": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": true,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId"
-                            ]
-                        },
-                        "ShipFrom": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": true,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
-                        },
-                        "ShipmentRefs": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "MasterBOL": {
-                                    "type": "string",
-                                    "maxLength": 25
-                                },
-                                "PRONbr": {
-                                    "type": "string",
-                                    "maxLength": 25
-                                },
-                                "ConfNbr": {
-                                    "type": "string",
-                                    "maxLength": 25
-                                }
-                            }
-                        },
-                        "ShipmentQty": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "ContainerQty": {
-                                    "type": "integer"
-                                },
-                                "ShipmentItemQty": {
-                                    "type": "integer"
-                                }
-                            },
-                            "required": [
-                                "ContainerQty"
-                            ]
-                        },
-                        "Volume": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "VolumeValue": {
-                                    "type": "number"
-                                },
-                                "VolumeUOMCode": {
-                                    "type": "string",
-                                    "maxLength": 5
-                                },
-                                "VolumeUOMDesc": {
-                                    "type": "string",
-                                    "maxLength": 15
-                                }
-                            }
-                        },
-                        "Weight": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "WeightValue": {
-                                    "type": "number"
-                                },
-                                "WeightUOMCode": {
-                                    "type": "string",
-                                    "maxLength": 5
-                                },
-                                "WeightUOMDesc": {
-                                    "type": "string",
-                                    "maxLength": 15
-                                }
-                            }
-                        },
-                        "TranspCode": {
+                            "$ref": "CommonSchema.json#/definitions/Party"
+                        }
+                    }
+                },
+                "ShipFrom": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "ShipmentRefs": {
+                    "type": "object",
+                    "additionalProperties": {},
+                    "properties": {
+                        "MasterBOL": {
                             "type": "string",
-                            "maxLength": 15
+                            "maxLength": 25
                         },
-                        "TranspDesc": {
+                        "PRONbr": {
                             "type": "string",
-                            "maxLength": 50
+                            "maxLength": 25
                         },
-                        "SoldTo": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": true,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
+                        "ConfNbr": {
+                            "type": "string",
+                            "maxLength": 25
+                        }
+                    }
+                },
+                "ShipmentQty": {
+                    "type": "object",
+                    "additionalProperties": {},
+                    "properties": {
+                        "ContainerQty": {
+                            "type": "integer"
                         },
-                        "ShipTo": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": true,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
-                        },
-                        "Vehicle": {
-                            "type": "object",
-                            "additionalProperties": true,
-                            "properties": {
-                                "VehicleId": {
-                                    "type": "string",
-                                    "maxLength": 25
-                                },
-                                "VehicleType": {
-                                    "type": "string"
-                                },
-                                "SealId": {
-                                    "type": "string",
-                                    "maxLength": 25
-                                }
-                            }
+                        "ShipmentItemQty": {
+                            "type": "integer"
                         }
                     },
                     "required": [
-                        "ShipmentId",
-                        "Supplier",
-                        "ShipFrom",
-                        "ShipmentRefs",
-                        "ShipmentQty",
-                        "SoldTo",
-                        "ShipTo"
+                        "ContainerQty"
                     ]
+                },
+                "Volume": {
+                    "type": "object",
+                    "additionalProperties": {},
+                    "properties": {
+                        "VolumeValue": {
+                            "type": "number"
+                        },
+                        "VolumeUOMCode": {
+                            "type": "string",
+                            "maxLength": 5
+                        },
+                        "VolumeUOMDesc": {
+                            "type": "string",
+                            "maxLength": 15
+                        }
+                    }
+                },
+                "Weight": {
+                    "type": "object",
+                    "additionalProperties": {},
+                    "properties": {
+                        "WeightValue": {
+                            "type": "number"
+                        },
+                        "WeightUOMCode": {
+                            "type": "string",
+                            "maxLength": 5
+                        },
+                        "WeightUOMDesc": {
+                            "type": "string",
+                            "maxLength": 15
+                        }
+                    }
+                },
+                "TranspCode": {
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "TranspDesc": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "SoldTo": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "ShipTo": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "Vehicle": {
+                    "type": "object",
+                    "additionalProperties": {},
+                    "properties": {
+                        "VehicleId": {
+                            "type": "string",
+                            "maxLength": 25
+                        },
+                        "VehicleType": {
+                            "type": "string"
+                        },
+                        "SealId": {
+                            "type": "string",
+                            "maxLength": 25
+                        }
+                    }
                 },
                 "Orders": {
                     "type": "object",
-                    "additionalProperties": true,
+                    "additionalProperties": {},
                     "properties": {
                         "Order": {
                             "type": "array",
                             "minItems": 1,
                             "items": {
                                 "type": "object",
-                                "additionalProperties": true,
+                                "additionalProperties": {},
                                 "properties": {
                                     "BuyerOrderId": {
                                         "type": "string",
@@ -400,14 +167,14 @@
                                     },
                                     "Containers": {
                                         "type": "object",
-                                        "additionalProperties": true,
+                                        "additionalProperties": {},
                                         "properties": {
                                             "Container": {
                                                 "type": "array",
                                                 "minItems": 1,
                                                 "items": {
                                                     "type": "object",
-                                                    "additionalProperties": true,
+                                                    "additionalProperties": {},
                                                     "properties": {
                                                         "ContainerId": {
                                                             "type": "string",
@@ -427,24 +194,24 @@
                                                             "type": "number"
                                                         },
                                                         "DimUOM": {
-                                                            "type": "string"
+                                                            "$ref": "CommonSchema.json#/definitions/DimUOM"
                                                         },
                                                         "Weight": {
                                                             "type": "number"
                                                         },
                                                         "WeightUOM": {
-                                                            "type": "string"
+                                                            "$ref": "CommonSchema.json#/definitions/WeightUOM"
                                                         },
                                                         "Item": {
                                                             "type": "array",
                                                             "minItems": 1,
                                                             "items": {
                                                                 "type": "object",
-                                                                "additionalProperties": true,
+                                                                "additionalProperties": {},
                                                                 "properties": {
                                                                     "ItemId": {
                                                                         "type": "object",
-                                                                        "additionalProperties": true,
+                                                                        "additionalProperties": {},
                                                                         "properties": {
                                                                             "BarCodeId": {
                                                                                 "type": "string",
@@ -488,7 +255,7 @@
                                                                     },
                                                                     "ItemQty": {
                                                                         "type": "object",
-                                                                        "additionalProperties": true,
+                                                                        "additionalProperties": {},
                                                                         "properties": {
                                                                             "Qty": {
                                                                                 "type": "number"
@@ -508,11 +275,11 @@
                                                                     },
                                                                     "ItemAttrs": {
                                                                         "type": "object",
-                                                                        "additionalProperties": true,
+                                                                        "additionalProperties": {},
                                                                         "properties": {
                                                                             "SerialNbrs": {
                                                                                 "type": "object",
-                                                                                "additionalProperties": true,
+                                                                                "additionalProperties": {},
                                                                                 "properties": {
                                                                                     "SerialNbr": {
                                                                                         "type": "string",
@@ -522,7 +289,7 @@
                                                                             },
                                                                             "StdPack": {
                                                                                 "type": "object",
-                                                                                "additionalProperties": true,
+                                                                                "additionalProperties": {},
                                                                                 "properties": {
                                                                                     "ICQtyPerUOM": {
                                                                                         "type": "number"
@@ -538,7 +305,7 @@
                                                                             },
                                                                             "StdContainer": {
                                                                                 "type": "object",
-                                                                                "additionalProperties": true,
+                                                                                "additionalProperties": {},
                                                                                 "properties": {
                                                                                     "MCQtyPerUOM": {
                                                                                         "type": "number"
@@ -582,12 +349,13 @@
                 "Id",
                 "Timestamp",
                 "ShipmentHeader",
-                "Orders"
+                "Orders",
+                "RequiredProperty"
             ]
         }
     },
     "required": [
         "NAMM_ASN"
     ],
-    "definitions": {}
+    "$id": "NAMM_ASN_2015.1"
 }

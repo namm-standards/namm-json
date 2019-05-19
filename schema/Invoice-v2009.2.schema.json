@@ -1,29 +1,41 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-06/schema#",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": {
+        "not": {}
+    },
     "properties": {
         "NAMM_Invoice": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": {
+                "not": {}
+            },
             "properties": {
                 "version": {
-                    "type": "number"
+                    "type": "number",
+                    "enum": [
+                        "2009.2"
+                    ]
                 },
                 "InvoiceHeader": {
                     "type": "object",
-                    "additionalProperties": false,
+                    "additionalProperties": {
+                        "not": {}
+                    },
                     "properties": {
                         "Id": {
                             "type": "string",
                             "maxLength": 50
                         },
                         "Timestamp": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "SoldTo": {
                             "type": "object",
-                            "additionalProperties": false,
+                            "additionalProperties": {
+                                "not": {}
+                            },
                             "properties": {
                                 "PartyId": {
                                     "type": "string",
@@ -47,244 +59,16 @@
                             "pattern": "C|D"
                         },
                         "Supplier": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": false,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "RemitTo": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": false,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "BillTo": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": false,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "ShipTo": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "maxLength": 50
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "maxLength": 35
-                                },
-                                "Address": {
-                                    "type": "object",
-                                    "additionalProperties": false,
-                                    "properties": {
-                                        "Attn": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address1": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address2": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "Address3": {
-                                            "type": "string",
-                                            "maxLength": 35
-                                        },
-                                        "City": {
-                                            "type": "string",
-                                            "maxLength": 30
-                                        },
-                                        "State": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        },
-                                        "PostalCode": {
-                                            "type": "string",
-                                            "maxLength": 9
-                                        },
-                                        "Country": {
-                                            "type": "string",
-                                            "maxLength": 50
-                                        },
-                                        "CountryCode": {
-                                            "type": "string",
-                                            "maxLength": 2
-                                        }
-                                    }
-                                }
-                            },
-                            "required": [
-                                "PartyId",
-                                "Address"
-                            ]
+                            "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "TermsCode": {
                             "type": "string",
@@ -333,10 +117,12 @@
                             "maxLength": 35
                         },
                         "InvoiceDate": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "InvoiceDueDate": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "BuyerName": {
                             "type": "string",
@@ -368,7 +154,9 @@
                 },
                 "InvoiceSummary": {
                     "type": "object",
-                    "additionalProperties": false,
+                    "additionalProperties": {
+                        "not": {}
+                    },
                     "properties": {
                         "TotalItemLines": {
                             "type": "integer"
@@ -404,18 +192,24 @@
                 },
                 "InvoiceDetail": {
                     "type": "object",
-                    "additionalProperties": false,
+                    "additionalProperties": {
+                        "not": {}
+                    },
                     "properties": {
                         "Items": {
                             "type": "object",
-                            "additionalProperties": false,
+                            "additionalProperties": {
+                                "not": {}
+                            },
                             "properties": {
                                 "Item": {
                                     "type": "array",
                                     "minItems": 1,
                                     "items": {
                                         "type": "object",
-                                        "additionalProperties": false,
+                                        "additionalProperties": {
+                                            "not": {}
+                                        },
                                         "properties": {
                                             "BuyerOrderId": {
                                                 "type": "string",
@@ -477,7 +271,9 @@
                                             },
                                             "ShipmentIds": {
                                                 "type": "object",
-                                                "additionalProperties": false,
+                                                "additionalProperties": {
+                                                    "not": {}
+                                                },
                                                 "properties": {
                                                     "ShipmentId": {
                                                         "type": "array",
