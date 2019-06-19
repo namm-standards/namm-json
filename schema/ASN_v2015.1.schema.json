@@ -9,6 +9,7 @@
     },
     "properties": {
         "NAMM_ASN": {
+            "$id": "asn.json",
             "type": "object",
             "additionalProperties": {},
             "properties": {
@@ -39,10 +40,12 @@
                             "maxLength": 25
                         },
                         "Shipped": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "EstDeliver": {
-                            "type": "string"
+                            "type": "string",
+                            "format": "date-time"
                         },
                         "Supplier": {
                             "$ref": "CommonSchema.json#/definitions/Party"
@@ -86,41 +89,39 @@
                     ]
                 },
                 "Volume": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "VolumeValue": {
-                            "type": "number"
-                        },
-                        "VolumeUOMCode": {
-                            "type": "string",
-                            "maxLength": 5
-                        },
-                        "VolumeUOMDesc": {
-                            "type": "string",
-                            "maxLength": 15
-                        }
-                    }
+                    "$ref": "CommonSchema.json#/definitions/Volume"
                 },
                 "Weight": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "WeightValue": {
-                            "type": "number"
-                        },
-                        "WeightUOMCode": {
-                            "type": "string",
-                            "maxLength": 5
-                        },
-                        "WeightUOMDesc": {
-                            "type": "string",
-                            "maxLength": 15
-                        }
-                    }
+                    "$ref": "CommonSchema.json#/definitions/Weight"
                 },
                 "TranspCode": {
                     "type": "string",
+                    "enum": [
+                        "S001",
+                        "S002",
+                        "S003",
+                        "S004",
+                        "S021",
+                        "S005",
+                        "S006",
+                        "S007",
+                        "S008",
+                        "S022",
+                        "S009",
+                        "S010",
+                        "S023",
+                        "S011",
+                        "S012",
+                        "S013",
+                        "S014",
+                        "S015",
+                        "S016",
+                        "S017",
+                        "S018",
+                        "S020",
+                        "S998",
+                        "S999"
+                    ],
                     "maxLength": 15
                 },
                 "TranspDesc": {
@@ -356,6 +357,5 @@
     },
     "required": [
         "NAMM_ASN"
-    ],
-    "$id": "NAMM_ASN_2015.1"
+    ]
 }
