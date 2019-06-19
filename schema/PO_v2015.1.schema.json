@@ -4,13 +4,17 @@
     "type": "object",
     "title": "NAMM PO",
     "description": "This is a json-schema version of NAMM PO v2015.1 from XSD",
-    "additionalProperties": false,
+    "additionalProperties": {
+        "not": {}
+    },
     "properties": {
         "NAMM_PO": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": {
+                "not": {}
+            },
             "properties": {
-                "@version": {
+                "version": {
                     "type": "number",
                     "enum": [
                         2015.1
@@ -26,7 +30,9 @@
                 },
                 "POHeader": {
                     "type": "object",
-                    "additionalProperties": false,
+                    "additionalProperties": {
+                        "not": {}
+                    },
                     "properties": {
                         "SoldTo": {
                             "$ref": "CommonSchema.json#/definitions/Party"
@@ -42,39 +48,7 @@
                             "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "TermsCode": {
-                            "type": "string",
-                            "enum": [
-                                "P001",
-                                "P002",
-                                "P003",
-                                "P004",
-                                "P005",
-                                "P006",
-                                "P007",
-                                "P008",
-                                "P009",
-                                "P010",
-                                "P011",
-                                "P012",
-                                "P013",
-                                "P014",
-                                "P015",
-                                "P016",
-                                "P017",
-                                "P018",
-                                "P019",
-                                "P020",
-                                "P021",
-                                "P022",
-                                "P023",
-                                "P024",
-                                "P025",
-                                "P026",
-                                "P027",
-                                "P998",
-                                "P999"
-                            ],
-                            "maxLength": 15
+                            "$ref": "CommonSchema.json#/definitions/TermsCode"
                         },
                         "TermsDays": {
                             "type": "integer"
@@ -97,34 +71,7 @@
                             "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "TranspCode": {
-                            "type": "string",
-                            "enum": [
-                                "S001",
-                                "S002",
-                                "S003",
-                                "S004",
-                                "S021",
-                                "S005",
-                                "S006",
-                                "S007",
-                                "S008",
-                                "S022",
-                                "S009",
-                                "S010",
-                                "S023",
-                                "S011",
-                                "S012",
-                                "S013",
-                                "S014",
-                                "S015",
-                                "S016",
-                                "S017",
-                                "S018",
-                                "S020",
-                                "S998",
-                                "S999"
-                            ],
-                            "maxLength": 15
+                            "$ref": "CommonSchema.json#/definitions/TranspCode"
                         },
                         "TranspDesc": {
                             "type": "string",
@@ -217,14 +164,17 @@
                 },
                 "PODetail": {
                     "type": "object",
-                    "additionalProperties": false,
+                    "additionalProperties": {
+                        "not": {}
+                    },
                     "properties": {
                         "Items": {
                             "type": "array",
-                           
                             "items": {
                                 "type": "object",
-                                "additionalProperties": false,
+                                "additionalProperties": {
+                                    "not": {}
+                                },
                                 "properties": {
                                     "POLineNbr": {
                                         "type": "integer",
@@ -399,7 +349,7 @@
                 }
             },
             "required": [
-                "@version",
+                "version",
                 "Id",
                 "Timestamp",
                 "POHeader",

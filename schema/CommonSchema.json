@@ -1,5 +1,6 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "CommonSchema.json",
     "type": "object",
     "title": "CommonDefs",
     "description": "Common Shared Objects",
@@ -79,7 +80,10 @@
             "type": "string",
             "enum": [
                 "Inches",
-                "Meters"
+                "Meters",
+                "Feet",
+                "Millimeters",
+                "Yards"
             ]
         },
         "WeightUOM": {
@@ -89,6 +93,236 @@
                 "Kilograms",
                 "Grams",
                 "Ounces"
+            ]
+        },
+        "Volume": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "VolumeValue": {
+                    "type": "number"
+                },
+                "VolumeUOMCode": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "VolumeUOMDesc": {
+                    "type": "string",
+                    "maxLength": 15
+                }
+            }
+        },
+        "Weight": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "WeightValue": {
+                    "type": "number"
+                },
+                "WeightUOMCode": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "WeightUOMDesc": {
+                    "type": "string",
+                    "maxLength": 15
+                }
+            }
+        },
+        "TranspCode": {
+            "type": "string",
+            "enum": [
+                "S001",
+                "S002",
+                "S003",
+                "S004",
+                "S021",
+                "S005",
+                "S006",
+                "S007",
+                "S008",
+                "S022",
+                "S009",
+                "S010",
+                "S023",
+                "S011",
+                "S012",
+                "S013",
+                "S014",
+                "S015",
+                "S016",
+                "S017",
+                "S018",
+                "S020",
+                "S998",
+                "S999"
+            ],
+            "maxLength": 15
+        },
+        "TermsCode": {
+            "type": "string",
+            "enum": [
+                "P001",
+                "P002",
+                "P003",
+                "P004",
+                "P005",
+                "P006",
+                "P007",
+                "P008",
+                "P009",
+                "P010",
+                "P011",
+                "P012",
+                "P013",
+                "P014",
+                "P015",
+                "P016",
+                "P017",
+                "P018",
+                "P019",
+                "P020",
+                "P021",
+                "P022",
+                "P023",
+                "P024",
+                "P025",
+                "P026",
+                "P027",
+                "P998",
+                "P999"
+            ],
+            "maxLength": 15
+        },
+        "POItem": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "POLineNbr": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "SupplierItemId": {
+                    "type": "string",
+                    "maxLength": 25
+                },
+                "BuyerItemId": {
+                    "type": "string",
+                    "maxLength": 25
+                },
+                "BuyerItemDesc": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Qty": {
+                    "type": "number"
+                },
+                "QtyUOM": {
+                    "type": "string",
+                    "enum": [
+                        "BAG",
+                        "BKT",
+                        "BND",
+                        "BOWL",
+                        "BX",
+                        "CRD",
+                        "CM",
+                        "CS",
+                        "CTN",
+                        "DZ",
+                        "EA",
+                        "FT",
+                        "GAL",
+                        "GROSS",
+                        "IN",
+                        "KIT",
+                        "LOT",
+                        "M",
+                        "MM",
+                        "PC",
+                        "PK",
+                        "PK100",
+                        "PK50",
+                        "PR",
+                        "RACK",
+                        "RL",
+                        "SET",
+                        "SET3",
+                        "SET4",
+                        "SET5",
+                        "SGL",
+                        "SHT",
+                        "SQFT",
+                        "TUBE",
+                        "YD"
+                    ]
+                },
+                "UCValue": {
+                    "type": "number"
+                },
+                "UCCurrencyCode": {
+                    "type": "string",
+                    "description": "ISO currency code",
+                    "enum": [
+                        "USD",
+                        "EUR",
+                        "JPY"
+                    ]
+                },
+                "RetailValue": {
+                    "type": "number"
+                },
+                "RetailCurrencyCode": {
+                    "type": "string",
+                    "description": "ISO currency code",
+                    "enum": [
+                        "USD",
+                        "EUR",
+                        "JPY"
+                    ]
+                },
+                "ICQtyPerUOM": {
+                    "type": "number"
+                },
+                "ICUOM": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "MCQtyPerUOM": {
+                    "type": "number"
+                },
+                "MCUOM": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "BarCodeId": {
+                    "type": "string",
+                    "maxLength": 14
+                },
+                "BarCodeType": {
+                    "type": "string",
+                    "enum": [
+                        "GTIN-12",
+                        "GTIN-13",
+                        "GTIN-14",
+                        "PartNumber"
+                    ]
+                },
+                "ShipTo": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                }
+            },
+            "required": [
+                "POLineNbr",
+                "BuyerItemId",
+                "Qty",
+                "QtyUOM",
+                "UCValue",
+                "UCCurrencyCode",
+                "BarCodeId",
+                "BarCodeType"
             ]
         }
     },

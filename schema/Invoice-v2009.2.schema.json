@@ -14,7 +14,7 @@
                 "version": {
                     "type": "number",
                     "enum": [
-                        "2009.2"
+                        2009.2
                     ]
                 },
                 "InvoiceHeader": {
@@ -338,11 +338,5 @@
                 "InvoiceDetail"
             ]
         }
-    },
-    "required": [
-        "NAMM_Invoice"
-    ],
-    "definitions": {
-        "NAMM_Invoice": {}
     }
 }
