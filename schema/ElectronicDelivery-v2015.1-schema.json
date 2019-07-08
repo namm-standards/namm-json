@@ -1,117 +1,83 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
+    "title": "NAMM_ElectronicDeliveryResponse",
     "additionalProperties": false,
     "properties": {
-        "NAMM_ElectronicDeliveryResponse": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "version": {
-                    "type": "number"
-                },
-                "Timestamp": {
-                    "type": "string"
-                },
-                "POId": {
-                    "type": "string"
-                },
-                "BuyerOrderId": {
-                    "type": "string"
-                },
-                "StatusCode": {
-                    "type": "string"
-                },
-                "StatusMessage": {
-                    "type": "string"
-                },
-                "Items": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "Item": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "SupplierItemId": {
-                                        "type": "string"
-                                    },
-                                    "POLineNbr": {
-                                        "type": "integer"
-                                    },
-                                    "BarCodeId": {
-                                        "type": "string"
-                                    },
-                                    "BarCodeType": {
-                                        "type": "string"
-                                    },
-                                    "Qty": {
-                                        "type": "integer"
-                                    },
-                                    "QtyUOM": {
-                                        "type": "string"
-                                    },
-                                    "UCValue": {
-                                        "type": "number"
-                                    },
-                                    "UCCurrencyCode": {
-                                        "type": "string"
-                                    },
-                                    "DownloadPath": {
-                                        "type": "string"
-                                    },
-                                    "SupportContact": {
-                                        "type": "string"
-                                    },
-                                    "Licenses": {
-                                        "type": "object",
-                                        "additionalProperties": false,
-                                        "properties": {
-                                            "License": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "required": [
-                                            "License"
-                                        ]
-                                    }
-                                },
-                                "required": [
-                                    "SupplierItemId",
-                                    "POLineNbr",
-                                    "BarCodeId",
-                                    "BarCodeType",
-                                    "Qty",
-                                    "QtyUOM",
-                                    "UCValue",
-                                    "UCCurrencyCode",
-                                    "DownloadPath",
-                                    "SupportContact",
-                                    "Licenses"
-                                ]
-                            }
+        "version": {
+            "type": "number",
+            "enum": [
+                2015.1
+            ]
+        },
+        "Timestamp": {
+            "type": "string",
+            "description": "Document Timestamp",
+            "format": "date-time"
+        },
+        "Id": {
+            "type": "string",
+            "maxLength": 25
+        },
+        "POId": {
+            "type": "string",
+            "maxLength": 25
+        },
+        "BuyerOrderId": {
+            "type": "string"
+        },
+        "StatusCode": {
+            "type": "string"
+        },
+        "StatusMessage": {
+            "type": "string"
+        },
+        "Items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "SupplierItemId": {
+                        "type": "string"
+                    },
+                    "POLineNbr": {
+                        "type": "integer"
+                    },
+                    "BarCodeId": {
+                        "type": "string"
+                    },
+                    "BarCodeType": {
+                        "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                    },
+                    "Qty": {
+                        "type": "integer"
+                    },
+                    "QtyUOM": {
+                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                    },
+                    "UCValue": {
+                        "type": "number"
+                    },
+                    "UCCurrencyCode": {
+                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                    },
+                    "DownloadPath": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "SupportContact": {
+                        "type": "string"
+                    },
+                    "Licenses": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
                         }
                     }
                 }
-            },
-            "required": [
-                "version",
-                "Timestamp",
-                "POId",
-                "BuyerOrderId",
-                "StatusCode",
-                "StatusMessage",
-                "Items"
-            ]
+            }
         }
     },
-    "required": [
-        "NAMM_ElectronicDeliveryResponse"
-    ],
-    "definitions": {
-        "NAMM_ElectronicDeliveryResponse": {}
-    }
+    "required": []
 }

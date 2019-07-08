@@ -1,9 +1,9 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "CommonSchema.json",
     "type": "object",
-    "title": "CommonDefs",
-    "description": "Common Shared Objects",
+    "title": "Common Scheam Definitions",
+    "description": "Common Shared Objects used by reference",
     "additionalProperties": {
         "not": {}
     },
@@ -48,7 +48,10 @@
                 },
                 "CountryCode": {
                     "type": "string",
-                    "maxLength": 2
+                    "description": "[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)",
+                    "maxLength": 2,
+                    "minLength": 2,
+                    "pattern": "^([A-Z]{2})$"
                 }
             },
             "required": []
@@ -323,6 +326,88 @@
                 "UCCurrencyCode",
                 "BarCodeId",
                 "BarCodeType"
+            ]
+        },
+        "QtyUOM": {
+            "type": "string",
+            "description": "Quantity Unit of Measure",
+            "enum": [
+                "Bag",
+                "Bucket",
+                "Bundle",
+                "Bowl",
+                "Box",
+                "Card",
+                "Case",
+                "Carton",
+                "Dozen",
+                "Each",
+                "Foot",
+                "Gallon",
+                "Gross",
+                "Kit",
+                "Lot",
+                "Piece",
+                "Pack",
+                "Pack 100",
+                "Pack 50",
+                "Pair",
+                "Rack",
+                "Roll",
+                "Set",
+                "Set of 3",
+                "Set of 4",
+                "Set of 5",
+                "Single",
+                "Sheet",
+                "Tube"
+            ]
+        },
+        "IncoTermsCode": {
+            "type": "string",
+            "enum": [
+                "EXW",
+                "FCA",
+                "FAS",
+                "FOB",
+                "CFR",
+                "CIF",
+                "CPT",
+                "CIP",
+                "DAF",
+                "DES",
+                "DEQ",
+                "DDU",
+                "DDP"
+            ]
+        },
+        "CurrencyCode": {
+            "type": "string",
+            "description": "ISO currency code",
+            "enum": [
+                "USD",
+                "EUR",
+                "JPY"
+            ]
+        },
+        "BarCodeType": {
+            "type": "string",
+            "enum": [
+                "GTIN-12",
+                "GTIN-13",
+                "GTIN-14",
+                "PartNumber",
+                "ISBN",
+                "UPC",
+                "EAN-13"
+            ]
+        },
+        "TermUOM": {
+            "type": "string",
+            "enum": [
+                "Days",
+                "Months",
+                "Years"
             ]
         }
     },

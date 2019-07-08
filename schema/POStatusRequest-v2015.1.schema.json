@@ -3,26 +3,31 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "NAMM_FunctionalAcknowledgement": {
+        "NAMM_POStatusRequest": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "version": {
-                    "type": "number"
-                },
-                "Timestamp": {
-                    "type": "string"
+                    "type": "number",
+                    "enum": [
+                        2015.1
+                    ]
                 },
                 "Id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Document ID"
+                },
+                "Timestamp": {
+                    "type": "string",
+                    "description": "Document Time stamp",
+                    "format": "date-time"
                 },
                 "Supplier": {
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
                         "PartyId": {
-                            "type": "string",
-                            "maxLength": 25
+                            "type": "string"
                         }
                     },
                     "required": [
@@ -34,39 +39,30 @@
                     "additionalProperties": false,
                     "properties": {
                         "PartyId": {
-                            "type": "string",
-                            "maxLength": 25
+                            "type": "string"
                         }
                     },
                     "required": [
                         "PartyId"
                     ]
                 },
-                "StatusCode": {
-                    "type": "string",
-                    "enum": [
-                        "C01",
-                        "C02"
-                    ]
-                },
-                "StatusMessage": {
-                    "type": "string",
-                    "maxLength": 10
+                "BuyerOrderIds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             },
             "required": [
                 "version",
                 "Timestamp",
-                "Id",
                 "Supplier",
                 "SoldTo",
-                "StatusCode",
-                "StatusMessage"
+                "BuyerOrderIds"
             ]
         }
     },
     "required": [
-        "NAMM_FunctionalAcknowledgement"
+        "NAMM_POStatusRequest"
     ]
-    
 }
