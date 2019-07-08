@@ -1,361 +1,356 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "NAMM_ASN_2015.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "title": "NAMM ASN",
-    "description": "This is a json-schema version of NAMM ASN v2015.1 from XSD",
-    "additionalProperties": {
-        "not": {}
-    },
+    "description": "This is a json-schema version of NAMM ASN v2015.1",
+    "additionalProperties": false,
     "properties": {
-        "NAMM_ASN": {
-            "$id": "asn.json",
+        "version": {
+            "type": "number",
+            "enum": [
+                2015.1
+            ]
+        },
+        "Id": {
+            "type": "string",
+            "description": "Document ID",
+            "maxLength": 50
+        },
+        "Timestamp": {
+            "type": "string",
+            "description": "Date/time stamp for this document",
+            "format": "date-time"
+        },
+        "ShipmentHeader": {
             "type": "object",
             "additionalProperties": {},
             "properties": {
-                "version": {
-                    "type": "number",
-                    "enum": [
-                        2015.1
-                    ]
-                },
-                "Id": {
+                "ShipmentType": {
                     "type": "string",
-                    "maxLength": 50
+                    "description": "Shipment type description",
+                    "maxLength": 25
                 },
-                "Timestamp": {
+                "ShipmentId": {
                     "type": "string",
-                    "format": "date-time"
+                    "description": "Supplier ASN document number",
+                    "maxLength": 25
                 },
-                "ShipmentHeader": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "ShipmentType": {
-                            "type": "string",
-                            "maxLength": 25
-                        },
-                        "ShipmentId": {
-                            "type": "string",
-                            "maxLength": 25
-                        },
-                        "Shipped": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "EstDeliver": {
-                            "type": "string",
-                            "format": "date-time"
-                        },
-                        "Supplier": {
-                            "$ref": "CommonSchema.json#/definitions/Party"
-                        }
-                    }
+                "Shipped": {
+                    "type": "string",
+                    "description": "Shipment date",
+                    "format": "date"
                 },
-                "ShipFrom": {
+                "EstDeliver": {
+                    "type": "string",
+                    "description": "Estimated Delivery Date",
+                    "format": "date"
+                },
+                "Supplier": {
                     "$ref": "CommonSchema.json#/definitions/Party"
-                },
-                "ShipmentRefs": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "MasterBOL": {
-                            "type": "string",
-                            "maxLength": 25
-                        },
-                        "PRONbr": {
-                            "type": "string",
-                            "maxLength": 25
-                        },
-                        "ConfNbr": {
-                            "type": "string",
-                            "maxLength": 25
-                        }
-                    }
-                },
-                "ShipmentQty": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "ContainerQty": {
-                            "type": "integer"
-                        },
-                        "ShipmentItemQty": {
-                            "type": "integer"
-                        }
-                    },
-                    "required": [
-                        "ContainerQty"
-                    ]
-                },
-                "Volume": {
-                    "$ref": "CommonSchema.json#/definitions/Volume"
-                },
-                "Weight": {
-                    "$ref": "CommonSchema.json#/definitions/Weight"
-                },
-                "TranspCode": {
+                }
+            }
+        },
+        "ShipFrom": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "ShipmentRefs": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "MasterBOL": {
                     "type": "string",
-                    "enum": [
-                        "S001",
-                        "S002",
-                        "S003",
-                        "S004",
-                        "S021",
-                        "S005",
-                        "S006",
-                        "S007",
-                        "S008",
-                        "S022",
-                        "S009",
-                        "S010",
-                        "S023",
-                        "S011",
-                        "S012",
-                        "S013",
-                        "S014",
-                        "S015",
-                        "S016",
-                        "S017",
-                        "S018",
-                        "S020",
-                        "S998",
-                        "S999"
-                    ],
-                    "maxLength": 15
+                    "description": "Shipment master Bill Of Lading number",
+                    "maxLength": 25
                 },
-                "TranspDesc": {
+                "PRONbr": {
                     "type": "string",
-                    "maxLength": 50
+                    "description": "Shipment PRO number",
+                    "maxLength": 25
                 },
-                "SoldTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
+                "ConfNbr": {
+                    "type": "string",
+                    "description": "Shipment confirmation number",
+                    "maxLength": 25
+                }
+            }
+        },
+        "ShipmentQty": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "ContainerQty": {
+                    "type": "integer",
+                    "description": "Number of units per container"
                 },
-                "ShipTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
+                "ShipmentItemQty": {
+                    "type": "integer",
+                    "description": "Number of units in shipment"
+                }
+            },
+            "required": [
+                "ContainerQty"
+            ]
+        },
+        "Volume": {
+            "$ref": "CommonSchema.json#/definitions/Volume"
+        },
+        "Weight": {
+            "$ref": "CommonSchema.json#/definitions/Weight"
+        },
+        "TranspCode": {
+            "type": "string",
+            "enum": [
+                "S001",
+                "S002",
+                "S003",
+                "S004",
+                "S021",
+                "S005",
+                "S006",
+                "S007",
+                "S008",
+                "S022",
+                "S009",
+                "S010",
+                "S023",
+                "S011",
+                "S012",
+                "S013",
+                "S014",
+                "S015",
+                "S016",
+                "S017",
+                "S018",
+                "S020",
+                "S998",
+                "S999"
+            ],
+            "maxLength": 15
+        },
+        "TranspDesc": {
+            "type": "string",
+            "maxLength": 50
+        },
+        "SoldTo": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "ShipTo": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "Vehicle": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "VehicleId": {
+                    "type": "string",
+                    "description": "Shipper vehicle ID",
+                    "maxLength": 25
                 },
-                "Vehicle": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "VehicleId": {
-                            "type": "string",
-                            "maxLength": 25
-                        },
-                        "VehicleType": {
-                            "type": "string"
-                        },
-                        "SealId": {
-                            "type": "string",
-                            "maxLength": 25
-                        }
-                    }
+                "VehicleType": {
+                    "type": "string",
+                    "description": "Shipper vehicle type"
                 },
-                "Orders": {
-                    "type": "object",
-                    "additionalProperties": {},
-                    "properties": {
-                        "Order": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {
+                "SealId": {
+                    "type": "string",
+                    "description": "Shipper container seal ID",
+                    "maxLength": 25
+                }
+            }
+        },
+        "Orders": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "Order": {
+                    "type": "array",
+                    "description": "Buyer purchase order IDs",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {},
+                        "properties": {
+                            "BuyerOrderId": {
+                                "type": "string",
+                                "description": "Buyer purchase order ID",
+                                "maxLength": 25
+                            },
+                            "Containers": {
                                 "type": "object",
                                 "additionalProperties": {},
                                 "properties": {
-                                    "BuyerOrderId": {
-                                        "type": "string",
-                                        "maxLength": 25
-                                    },
-                                    "Containers": {
-                                        "type": "object",
-                                        "additionalProperties": {},
-                                        "properties": {
-                                            "Container": {
-                                                "type": "array",
-                                                "minItems": 1,
-                                                "items": {
-                                                    "type": "object",
-                                                    "additionalProperties": {},
-                                                    "properties": {
-                                                        "ContainerId": {
-                                                            "type": "string",
-                                                            "maxLength": 25
-                                                        },
-                                                        "ShipperTrackingNumber": {
-                                                            "type": "string",
-                                                            "maxLength": 25
-                                                        },
-                                                        "Length": {
-                                                            "type": "number"
-                                                        },
-                                                        "Width": {
-                                                            "type": "number"
-                                                        },
-                                                        "Height": {
-                                                            "type": "number"
-                                                        },
-                                                        "DimUOM": {
-                                                            "$ref": "CommonSchema.json#/definitions/DimUOM"
-                                                        },
-                                                        "Weight": {
-                                                            "type": "number"
-                                                        },
-                                                        "WeightUOM": {
-                                                            "$ref": "CommonSchema.json#/definitions/WeightUOM"
-                                                        },
-                                                        "Item": {
-                                                            "type": "array",
-                                                            "minItems": 1,
-                                                            "items": {
+                                    "Container": {
+                                        "type": "array",
+                                        "minItems": 1,
+                                        "items": {
+                                            "type": "object",
+                                            "additionalProperties": {},
+                                            "properties": {
+                                                "ContainerId": {
+                                                    "type": "string",
+                                                    "description": "Shipper container ID",
+                                                    "maxLength": 25
+                                                },
+                                                "ShipperTrackingNumber": {
+                                                    "type": "string",
+                                                    "description": "Shipper tracking number",
+                                                    "maxLength": 25
+                                                },
+                                                "Length": {
+                                                    "type": "number"
+                                                },
+                                                "Width": {
+                                                    "type": "number"
+                                                },
+                                                "Height": {
+                                                    "type": "number"
+                                                },
+                                                "DimUOM": {
+                                                    "$ref": "CommonSchema.json#/definitions/DimUOM"
+                                                },
+                                                "Weight": {
+                                                    "type": "number"
+                                                },
+                                                "WeightUOM": {
+                                                    "$ref": "CommonSchema.json#/definitions/WeightUOM"
+                                                },
+                                                "Item": {
+                                                    "type": "array",
+                                                    "minItems": 1,
+                                                    "items": {
+                                                        "type": "object",
+                                                        "additionalProperties": {},
+                                                        "properties": {
+                                                            "ItemId": {
                                                                 "type": "object",
                                                                 "additionalProperties": {},
                                                                 "properties": {
-                                                                    "ItemId": {
-                                                                        "type": "object",
-                                                                        "additionalProperties": {},
-                                                                        "properties": {
-                                                                            "BarCodeId": {
-                                                                                "type": "string",
-                                                                                "maxLength": 14
-                                                                            },
-                                                                            "BarCodeType": {
-                                                                                "type": "string",
-                                                                                "enum": [
-                                                                                    "GTIN-12",
-                                                                                    "GTIN-13",
-                                                                                    "GTIN-14",
-                                                                                    "PartNumber"
-                                                                                ]
-                                                                            },
-                                                                            "BuyerItemId": {
-                                                                                "type": "string",
-                                                                                "maxLength": 25
-                                                                            },
-                                                                            "BuyerItemDesc": {
-                                                                                "type": "string",
-                                                                                "maxLength": 50
-                                                                            },
-                                                                            "SupplierItemId": {
-                                                                                "type": "string",
-                                                                                "maxLength": 25
-                                                                            },
-                                                                            "SupplierItemDesc": {
-                                                                                "type": "string",
-                                                                                "maxLength": 50
-                                                                            }
-                                                                        },
-                                                                        "required": [
-                                                                            "BarCodeId",
-                                                                            "BarCodeType",
-                                                                            "BuyerItemId",
-                                                                            "SupplierItemId"
+                                                                    "BarCodeId": {
+                                                                        "type": "string",
+                                                                        "maxLength": 14
+                                                                    },
+                                                                    "BarCodeType": {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "GTIN-12",
+                                                                            "GTIN-13",
+                                                                            "GTIN-14",
+                                                                            "PartNumber"
                                                                         ]
                                                                     },
-                                                                    "POLineNbr": {
-                                                                        "type": "integer"
+                                                                    "BuyerItemId": {
+                                                                        "type": "string",
+                                                                        "maxLength": 25
                                                                     },
-                                                                    "ItemQty": {
-                                                                        "type": "object",
-                                                                        "additionalProperties": {},
-                                                                        "properties": {
-                                                                            "Qty": {
-                                                                                "type": "number"
-                                                                            },
-                                                                            "ItemUOMCode": {
-                                                                                "type": "string",
-                                                                                "maxLength": 5
-                                                                            },
-                                                                            "ItemUOMDesc": {
-                                                                                "type": "string",
-                                                                                "maxLength": 15
-                                                                            }
-                                                                        },
-                                                                        "required": [
-                                                                            "Qty"
-                                                                        ]
+                                                                    "BuyerItemDesc": {
+                                                                        "type": "string",
+                                                                        "maxLength": 50
                                                                     },
-                                                                    "ItemAttrs": {
-                                                                        "type": "object",
-                                                                        "additionalProperties": {},
-                                                                        "properties": {
-                                                                            "SerialNbrs": {
-                                                                                "type": "object",
-                                                                                "additionalProperties": {},
-                                                                                "properties": {
-                                                                                    "SerialNbr": {
-                                                                                        "type": "string",
-                                                                                        "maxLength": 25
-                                                                                    }
-                                                                                }
-                                                                            },
-                                                                            "StdPack": {
-                                                                                "type": "object",
-                                                                                "additionalProperties": {},
-                                                                                "properties": {
-                                                                                    "ICQtyPerUOM": {
-                                                                                        "type": "number"
-                                                                                    },
-                                                                                    "ICUOM": {
-                                                                                        "type": "string",
-                                                                                        "maxLength": 5
-                                                                                    },
-                                                                                    "StdPackType": {
-                                                                                        "type": "string"
-                                                                                    }
-                                                                                }
-                                                                            },
-                                                                            "StdContainer": {
-                                                                                "type": "object",
-                                                                                "additionalProperties": {},
-                                                                                "properties": {
-                                                                                    "MCQtyPerUOM": {
-                                                                                        "type": "number"
-                                                                                    },
-                                                                                    "MCUOM": {
-                                                                                        "type": "string",
-                                                                                        "maxLength": 5
-                                                                                    },
-                                                                                    "StdContainerType": {
-                                                                                        "type": "string"
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
+                                                                    "SupplierItemId": {
+                                                                        "type": "string",
+                                                                        "maxLength": 25
+                                                                    },
+                                                                    "SupplierItemDesc": {
+                                                                        "type": "string",
+                                                                        "maxLength": 50
                                                                     }
                                                                 },
                                                                 "required": [
-                                                                    "ItemId",
-                                                                    "POLineNbr",
-                                                                    "ItemQty"
+                                                                    "BarCodeId",
+                                                                    "BarCodeType",
+                                                                    "BuyerItemId",
+                                                                    "SupplierItemId"
                                                                 ]
+                                                            },
+                                                            "POLineNbr": {
+                                                                "type": "integer"
+                                                            },
+                                                            "ItemQty": {
+                                                                "type": "object",
+                                                                "additionalProperties": {},
+                                                                "properties": {
+                                                                    "Qty": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "ItemUOMCode": {
+                                                                        "type": "string",
+                                                                        "maxLength": 5
+                                                                    },
+                                                                    "ItemUOMDesc": {
+                                                                        "type": "string",
+                                                                        "maxLength": 15
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "Qty"
+                                                                ]
+                                                            },
+                                                            "ItemAttrs": {
+                                                                "type": "object",
+                                                                "additionalProperties": {},
+                                                                "properties": {
+                                                                    "SerialNbrs": {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "type": "string",
+                                                                            "description": "Item serial number"
+                                                                        }
+                                                                    },
+                                                                    "StdPack": {
+                                                                        "type": "object",
+                                                                        "additionalProperties": {},
+                                                                        "properties": {
+                                                                            "ICQtyPerUOM": {
+                                                                                "type": "number",
+                                                                                "description": "Inner Carton quantity per Unit of Measure"
+                                                                            },
+                                                                            "ICUOM": {
+                                                                                "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                                                                            },
+                                                                            "StdPackType": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "StdContainer": {
+                                                                        "type": "object",
+                                                                        "additionalProperties": {},
+                                                                        "properties": {
+                                                                            "MCQtyPerUOM": {
+                                                                                "type": "number",
+                                                                                "description": "Master Carton quantity per Unit of Measure"
+                                                                            },
+                                                                            "MCUOM": {
+                                                                                "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                                                                            },
+                                                                            "StdContainerType": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
                                                             }
-                                                        }
+                                                        },
+                                                        "required": [
+                                                            "ItemId",
+                                                            "POLineNbr",
+                                                            "ItemQty"
+                                                        ]
                                                     }
                                                 }
                                             }
                                         }
                                     }
-                                },
-                                "required": [
-                                    "BuyerOrderId",
-                                    "Containers"
-                                ]
+                                }
                             }
-                        }
+                        },
+                        "required": [
+                            "BuyerOrderId",
+                            "Containers"
+                        ]
                     }
                 }
-            },
-            "required": [
-                "version",
-                "Id",
-                "Timestamp",
-                "ShipmentHeader",
-                "Orders",
-                "RequiredProperty"
-            ]
+            }
         }
     },
-    "required": [
-        "NAMM_ASN"
-    ]
+    "required": []
 }

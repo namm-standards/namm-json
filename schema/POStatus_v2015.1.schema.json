@@ -1,12 +1,11 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
         "NAMM_POStatus": {
             "type": "object",
-            "additionalProperties": {
-                "not": {}
-            },
+            "additionalProperties": false,
             "properties": {
                 "version": {
                     "type": "number",
@@ -16,26 +15,31 @@
                 },
                 "Id": {
                     "type": "string",
-                    "maxLength": 50
-                },
-                "POStatusRequestId": {
-                    "type": "string",
+                    "description": "Document ID",
                     "maxLength": 50
                 },
                 "Timestamp": {
                     "type": "string",
                     "format": "date-time"
                 },
+                "POStatusRequestId": {
+                    "type": "string",
+                    "description": "PO ID of status request",
+                    "maxLength": 50
+                },
                 "BuyerOrderId": {
                     "type": "string",
+                    "description": "Buyer order ID",
                     "maxLength": 25
                 },
                 "DateOrdered": {
                     "type": "string",
-                    "format": "date-time"
+                    "description": "Order Date",
+                    "format": "date"
                 },
                 "BuyerName": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Buyer Name"
                 },
                 "Supplier": {
                     "$ref": "CommonSchema.json#/definitions/Party"
@@ -44,16 +48,15 @@
                     "$ref": "CommonSchema.json#/definitions/Party"
                 },
                 "StatusCode": {
-                    "type": "string"
+                    "$ref": "#/definitions/StatusCode"
                 },
                 "PaymentTerms": {
                     "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
+                    "additionalProperties": false,
                     "properties": {
                         "StatusCode": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Payment status code"
                         },
                         "StatusMessage": {
                             "type": "string"
@@ -75,7 +78,8 @@
                     },
                     "properties": {
                         "StatusCode": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Shipment status code"
                         }
                     }
                 },
@@ -83,89 +87,74 @@
                     "$ref": "CommonSchema.json#/definitions/Party"
                 },
                 "Items": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
-                    "properties": {
-                        "Item": {
-                            "type": "array",
-                            "minItems": 1,
-                            "items": {
-                                "type": "object",
-                                "additionalProperties": {
-                                    "not": {}
-                                },
-                                "properties": {
-                                    "POLineNbr": {
-                                        "type": "integer"
-                                    },
-                                    "SequenceNbr": {
-                                        "type": "integer"
-                                    },
-                                    "StatusCode": {
-                                        "type": "string"
-                                    },
-                                    "StatusMessage": {
-                                        "type": "string"
-                                    },
-                                    "Qty": {
-                                        "type": "number"
-                                    },
-                                    "OriginalOrderQty": {
-                                        "type": "number"
-                                    },
-                                    "QtyUOM": {
-                                        "type": "string"
-                                    },
-                                    "UCValue": {
-                                        "type": "number"
-                                    },
-                                    "OriginalOrderUCValue": {
-                                        "type": "number"
-                                    },
-                                    "UCCurrencyCode": {
-                                        "type": "string"
-                                    },
-                                    "EstimatedShipDate": {
-                                        "type": "string"
-                                    },
-                                    "SupplierOrderId": {
-                                        "type": "string"
-                                    },
-                                    "BuyerItemId": {
-                                        "type": "string"
-                                    },
-                                    "SupplierItemId": {
-                                        "type": "string"
-                                    },
-                                    "BarCodeId": {
-                                        "type": "string"
-                                    },
-                                    "BarCodeType": {
-                                        "type": "string"
-                                    },
-                                    "ShipTo": {
-                                        "$ref": "CommonSchema.json#/definitions/Party"
-                                    }
-                                },
-                                "required": [
-                                    "POLineNbr",
-                                    "SequenceNbr",
-                                    "StatusCode",
-                                    "StatusMessage",
-                                    "Qty",
-                                    "OriginalOrderQty",
-                                    "QtyUOM",
-                                    "UCValue",
-                                    "OriginalOrderUCValue",
-                                    "UCCurrencyCode",
-                                    "SupplierOrderId",
-                                    "BuyerItemId",
-                                    "SupplierItemId",
-                                    "BarCodeId",
-                                    "BarCodeType"
-                                ]
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "POLineNbr": {
+                                "type": "integer",
+                                "description": "Item line number"
+                            },
+                            "SequenceNbr": {
+                                "type": "integer",
+                                "description": "Item sequence number"
+                            },
+                            "StatusCode": {
+                                "$ref": "#/definitions/StatusCode"
+                            },
+                            "StatusMessage": {
+                                "type": "string",
+                                "description": "Item Status Message"
+                            },
+                            "Qty": {
+                                "type": "number",
+                                "description": "Item Quantity"
+                            },
+                            "OriginalOrderQty": {
+                                "type": "number",
+                                "description": "Original order quantity"
+                            },
+                            "QtyUOM": {
+                                "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                            },
+                            "UCValue": {
+                                "type": "number",
+                                "description": "Unit cost"
+                            },
+                            "OriginalOrderUCValue": {
+                                "type": "number",
+                                "description": "Original Unit Cost"
+                            },
+                            "UCCurrencyCode": {
+                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                            },
+                            "EstimatedShipDate": {
+                                "type": "string",
+                                "description": "Estimated Shipping Date",
+                                "format": "date"
+                            },
+                            "SupplierOrderId": {
+                                "type": "string",
+                                "description": "Suppliers Order ID"
+                            },
+                            "BuyerItemId": {
+                                "type": "string",
+                                "description": "Buyer Item ID"
+                            },
+                            "SupplierItemId": {
+                                "type": "string",
+                                "description": "Supplier Item ID"
+                            },
+                            "BarCodeId": {
+                                "type": "string",
+                                "description": "Barcode Value"
+                            },
+                            "BarCodeType": {
+                                "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                            },
+                            "ShipTo": {
+                                "$ref": "CommonSchema.json#/definitions/Party"
                             }
                         }
                     }
@@ -175,7 +164,6 @@
                 "version",
                 "Id",
                 "POStatusRequestId",
-                "Timestamp",
                 "BuyerOrderId",
                 "DateOrdered",
                 "BuyerName",
@@ -186,6 +174,17 @@
                 "ShipmentTerms",
                 "ShipTo",
                 "Items"
+            ]
+        }
+    },
+    "definitions": {
+        "StatusCode": {
+            "type": "string",
+            "description": "Status Codes for Document and Item (TBD)",
+            "enum": [
+                "1",
+                "2",
+                "3"
             ]
         }
     }

@@ -1,31 +1,30 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "NAMM_POv2015.1.schema.json",
     "type": "object",
     "title": "NAMM PO",
     "description": "This is a json-schema version of NAMM PO v2015.1 from XSD",
-    "additionalProperties": {
-        "not": {}
-    },
+    "additionalProperties": false,
     "properties": {
         "NAMM_PO": {
             "type": "object",
-            "additionalProperties": {
-                "not": {}
-            },
+            "additionalProperties": false,
             "properties": {
                 "version": {
                     "type": "number",
+                    "description": "Version",
                     "enum": [
                         2015.1
                     ]
                 },
                 "Id": {
                     "type": "string",
+                    "description": "Document ID",
                     "maxLength": 50
                 },
                 "Timestamp": {
                     "type": "string",
+                    "description": "Date/time stamp for this document",
                     "format": "date-time"
                 },
                 "POHeader": {
@@ -42,6 +41,7 @@
                         },
                         "BuyerOrderId": {
                             "type": "string",
+                            "description": "Buyer purchase order number/ID",
                             "maxLength": 25
                         },
                         "Supplier": {
@@ -51,17 +51,21 @@
                             "$ref": "CommonSchema.json#/definitions/TermsCode"
                         },
                         "TermsDays": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Number of days for payment"
                         },
                         "TermsDate": {
                             "type": "string",
-                            "format": "date-time"
+                            "description": "Date payment is due",
+                            "format": "date"
                         },
                         "TermsPercent": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Percentage terms"
                         },
                         "TermsPercentDays": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Number of days for percentage terms"
                         },
                         "ShipInstructions": {
                             "type": "string",
@@ -79,17 +83,19 @@
                         },
                         "TranspCarrier": {
                             "type": "string",
+                            "description": "Transport carrier name",
                             "maxLength": 15
                         },
                         "TranspTime": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Expected transport time"
                         },
                         "TranspTerms": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Transport terms"
                         },
                         "IncoTermsCode": {
-                            "type": "string",
-                            "maxLength": 3
+                            "$ref": "CommonSchema.json#/definitions/IncoTermsCode"
                         },
                         "IncoTermsDesc": {
                             "type": "string",
@@ -97,22 +103,27 @@
                         },
                         "DateOrdered": {
                             "type": "string",
-                            "format": "date-time"
+                            "description": "Order date",
+                            "format": "date"
                         },
                         "DateBeginShip": {
                             "type": "string",
-                            "format": "date-time"
+                            "description": "Date to end shipment",
+                            "format": "date"
                         },
                         "DateEndShip": {
                             "type": "string",
+                            "description": "Date to end shipment",
                             "format": "date-time"
                         },
                         "DateCancel": {
                             "type": "string",
+                            "description": "Date to cancel order if not shipped",
                             "format": "date-time"
                         },
                         "Backorder": {
                             "type": "string",
+                            "description": "Allow backorder",
                             "enum": [
                                 "Y",
                                 "N"
@@ -120,13 +131,16 @@
                         },
                         "BuyerName": {
                             "type": "string",
+                            "description": "Individual buyer name",
                             "maxLength": 35
                         },
                         "PORevisionNumber": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Purchase Order revision number"
                         },
                         "POStatusIndicator": {
                             "type": "string",
+                            "description": "New or Updated PO",
                             "enum": [
                                 "N",
                                 "U"
@@ -134,6 +148,7 @@
                         },
                         "ASNRequirement": {
                             "type": "string",
+                            "description": "Require ASN",
                             "enum": [
                                 "Y",
                                 "N"
@@ -141,6 +156,7 @@
                         },
                         "POFileType": {
                             "type": "string",
+                            "description": "Pre-accepted or Accepted PO",
                             "enum": [
                                 "P",
                                 "A"
@@ -164,9 +180,7 @@
                 },
                 "PODetail": {
                     "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
+                    "additionalProperties": false,
                     "properties": {
                         "Items": {
                             "type": "array",
@@ -178,155 +192,83 @@
                                 "properties": {
                                     "POLineNbr": {
                                         "type": "integer",
+                                        "description": "Purchase Order line number",
                                         "minimum": 1
                                     },
                                     "BuyerItemId": {
                                         "type": "string",
+                                        "description": "Buyer item ID",
                                         "maxLength": 25
                                     },
                                     "BuyerItemDesc": {
                                         "type": "string",
+                                        "description": "Buyer item description",
                                         "maxLength": 50
                                     },
                                     "Qty": {
                                         "type": "number"
                                     },
                                     "QtyUOM": {
-                                        "type": "string",
-                                        "enum": [
-                                            "BAG",
-                                            "BKT",
-                                            "BND",
-                                            "BOWL",
-                                            "BX",
-                                            "CRD",
-                                            "CM",
-                                            "CS",
-                                            "CTN",
-                                            "DZ",
-                                            "EA",
-                                            "FT",
-                                            "GAL",
-                                            "GROSS",
-                                            "IN",
-                                            "KIT",
-                                            "LOT",
-                                            "M",
-                                            "MM",
-                                            "PC",
-                                            "PK",
-                                            "PK100",
-                                            "PK50",
-                                            "PR",
-                                            "RACK",
-                                            "RL",
-                                            "SET",
-                                            "SET3",
-                                            "SET4",
-                                            "SET5",
-                                            "SGL",
-                                            "SHT",
-                                            "SQFT",
-                                            "TUBE",
-                                            "YD"
-                                        ]
+                                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
                                     },
                                     "UCValue": {
-                                        "type": "number"
+                                        "type": "number",
+                                        "description": "Unit cost value"
                                     },
                                     "UCCurrencyCode": {
-                                        "type": "string",
-                                        "description": "ISO currency code",
-                                        "enum": [
-                                            "USD",
-                                            "EUR",
-                                            "JPY"
-                                        ]
+                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
                                     },
                                     "RetailValue": {
-                                        "type": "number"
+                                        "type": "number",
+                                        "description": "Retail value"
                                     },
                                     "RetailCurrencyCode": {
-                                        "type": "string",
-                                        "description": "ISO currency code",
-                                        "enum": [
-                                            "USD",
-                                            "EUR",
-                                            "JPY"
-                                        ]
+                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
                                     },
                                     "ICQtyPerUOM": {
-                                        "type": "number"
+                                        "type": "number",
+                                        "description": "Inner Carton quantity per Unit of Measure"
                                     },
                                     "ICUOM": {
-                                        "type": "string",
-                                        "maxLength": 5
+                                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
                                     },
                                     "MCQtyPerUOM": {
-                                        "type": "number"
+                                        "type": "number",
+                                        "description": "Master Carton quantity per Unit of Measure"
                                     },
                                     "MCUOM": {
-                                        "type": "string",
-                                        "maxLength": 5
+                                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
                                     },
                                     "SupplierItemId": {
                                         "type": "string",
+                                        "description": "Supplier item ID",
                                         "maxLength": 25
                                     },
                                     "BarCodeId": {
                                         "type": "string",
+                                        "description": "Digital barcode representation",
                                         "maxLength": 14
                                     },
                                     "BarCodeType": {
-                                        "type": "string",
-                                        "enum": [
-                                            "GTIN-12",
-                                            "GTIN-13",
-                                            "GTIN-14",
-                                            "PartNumber"
-                                        ]
+                                        "$ref": "CommonSchema.json#/definitions/BarCodeType"
                                     },
                                     "DateBeginShip": {
                                         "type": "string",
+                                        "description": "Item beginning shiping date",
                                         "format": "date-time"
                                     },
                                     "DateEndShip": {
                                         "type": "string",
+                                        "description": "Item end shipping date",
                                         "format": "date-time"
                                     },
                                     "DateCancel": {
                                         "type": "string",
+                                        "description": "Item cancel date",
                                         "format": "date-time"
                                     },
                                     "TranspCode": {
-                                        "type": "string",
-                                        "enum": [
-                                            "S001",
-                                            "S002",
-                                            "S003",
-                                            "S004",
-                                            "S021",
-                                            "S005",
-                                            "S006",
-                                            "S007",
-                                            "S008",
-                                            "S022",
-                                            "S009",
-                                            "S010",
-                                            "S023",
-                                            "S011",
-                                            "S012",
-                                            "S013",
-                                            "S014",
-                                            "S015",
-                                            "S016",
-                                            "S017",
-                                            "S018",
-                                            "S020",
-                                            "S998",
-                                            "S999"
-                                        ],
-                                        "maxLength": 15
+                                        "$ref": "CommonSchema.json#/definitions/TranspCode"
                                     },
                                     "ShipTo": {
                                         "$ref": "CommonSchema.json#/definitions/Party"

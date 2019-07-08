@@ -1,15 +1,11 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
-    "additionalProperties": {
-        "not": {}
-    },
+    "additionalProperties": false,
     "properties": {
         "NAMM_Invoice": {
             "type": "object",
-            "additionalProperties": {
-                "not": {}
-            },
+            "additionalProperties": false,
             "properties": {
                 "version": {
                     "type": "number",
@@ -25,10 +21,12 @@
                     "properties": {
                         "Id": {
                             "type": "string",
+                            "description": "Document ID",
                             "maxLength": 50
                         },
                         "Timestamp": {
                             "type": "string",
+                            "description": "Date/time stamp for this document",
                             "format": "date-time"
                         },
                         "SoldTo": {
@@ -39,10 +37,12 @@
                             "properties": {
                                 "PartyId": {
                                     "type": "string",
+                                    "description": "Buyer GLN/NAMM ID",
                                     "maxLength": 25
                                 },
                                 "Name": {
                                     "type": "string",
+                                    "description": "Buyer company name",
                                     "maxLength": 35
                                 }
                             },
@@ -52,11 +52,16 @@
                         },
                         "InvoiceId": {
                             "type": "string",
+                            "description": "Vendor invoice number",
                             "maxLength": 32
                         },
                         "InvoiceType": {
                             "type": "string",
-                            "pattern": "C|D"
+                            "description": "Invoice type",
+                            "enum": [
+                                "C",
+                                "D"
+                            ]
                         },
                         "Supplier": {
                             "$ref": "CommonSchema.json#/definitions/Party"
@@ -71,46 +76,52 @@
                             "$ref": "CommonSchema.json#/definitions/Party"
                         },
                         "TermsCode": {
-                            "type": "string",
-                            "maxLength": 15
+                            "$ref": "CommonSchema.json#/definitions/TermsCode"
                         },
                         "TermsDays": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Number of days for payment"
                         },
                         "TermsDate": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Date payment is due"
                         },
                         "TermsPercent": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Percentage terms"
                         },
                         "TermsPercentDays": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Number of days for percentage terms"
                         },
                         "ShipInstructions": {
                             "type": "string",
+                            "description": "Shipping instructions",
                             "maxLength": 250
                         },
                         "TranspCode": {
-                            "type": "string",
-                            "maxLength": 15
+                            "$ref": "CommonSchema.json#/definitions/TranspCode"
                         },
                         "TranspDesc": {
                             "type": "string",
+                            "description": "Transport description",
                             "maxLength": 50
                         },
                         "TranspCarrier": {
                             "type": "string",
+                            "description": "Transport carrier name",
                             "maxLength": 15
                         },
                         "TranspTime": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Expected transport time"
                         },
                         "TranspTerms": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Transport terms"
                         },
                         "IncoTermsCode": {
-                            "type": "string",
-                            "maxLength": 3
+                            "$ref": "CommonSchema.json#/definitions/IncoTermsCode"
                         },
                         "IncoTermsDesc": {
                             "type": "string",
@@ -118,18 +129,22 @@
                         },
                         "InvoiceDate": {
                             "type": "string",
+                            "description": "Invoice date",
                             "format": "date-time"
                         },
                         "InvoiceDueDate": {
                             "type": "string",
+                            "description": "Date payment is due",
                             "format": "date-time"
                         },
                         "BuyerName": {
                             "type": "string",
+                            "description": "Buyer company name",
                             "maxLength": 35
                         },
                         "SalesRep": {
                             "type": "string",
+                            "description": "Supplier sales representative name",
                             "maxLength": 35
                         },
                         "Comments": {
@@ -154,30 +169,35 @@
                 },
                 "InvoiceSummary": {
                     "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
+                    "additionalProperties": false,
                     "properties": {
                         "TotalItemLines": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Invoice number of item lines"
                         },
                         "TotalItemQty": {
-                            "type": "integer"
+                            "type": "integer",
+                            "description": "Invoice item quantity"
                         },
                         "LineTotal": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Value of all item lines"
                         },
                         "FreightTotal": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Freight total amount"
                         },
                         "SalesTax": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Sales tax amount"
                         },
                         "MiscCharge": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Miscellaneous charges"
                         },
                         "InvoiceTotal": {
-                            "type": "number"
+                            "type": "number",
+                            "description": "Total invoice amount"
                         }
                     },
                     "required": [
@@ -192,15 +212,11 @@
                 },
                 "InvoiceDetail": {
                     "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
+                    "additionalProperties": false,
                     "properties": {
                         "Items": {
                             "type": "object",
-                            "additionalProperties": {
-                                "not": {}
-                            },
+                            "additionalProperties": false,
                             "properties": {
                                 "Item": {
                                     "type": "array",
@@ -213,93 +229,88 @@
                                         "properties": {
                                             "BuyerOrderId": {
                                                 "type": "string",
+                                                "description": "Buyer order ID",
                                                 "maxLength": 25
                                             },
                                             "SupplierOrderId": {
                                                 "type": "string",
+                                                "description": "Supplier order ID",
                                                 "maxLength": 25
                                             },
                                             "InvoiceLineNbr": {
-                                                "type": "integer"
+                                                "type": "integer",
+                                                "description": "Invoice item line number"
                                             },
                                             "POLineNbr": {
-                                                "type": "integer"
+                                                "type": "integer",
+                                                "description": "Purchase Order line number"
                                             },
                                             "BuyerItemId": {
                                                 "type": "string",
+                                                "description": "Buyer item ID",
                                                 "maxLength": 25
                                             },
                                             "Qty": {
                                                 "type": "number"
                                             },
                                             "QtyUOM": {
-                                                "type": "string",
-                                                "maxLength": 5
+                                                "$ref": "CommonSchema.json#/definitions/QtyUOM"
                                             },
                                             "UCValue": {
-                                                "type": "number"
+                                                "type": "number",
+                                                "description": "Unit cost"
                                             },
                                             "UCCurrencyCode": {
-                                                "type": "string",
-                                                "maxLength": 3
+                                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
                                             },
                                             "ExtendedCostValue": {
-                                                "type": "number"
+                                                "type": "number",
+                                                "description": "Extended cost"
                                             },
                                             "ExtendedCurrencyCode": {
-                                                "type": "string",
-                                                "maxLength": 3
+                                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
                                             },
                                             "RetailValue": {
-                                                "type": "number"
+                                                "type": "number",
+                                                "description": "Unit retail value"
                                             },
                                             "RetailCurrencyCode": {
-                                                "type": "string",
-                                                "maxLength": 3
+                                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
                                             },
                                             "SupplierItemId": {
                                                 "type": "string",
+                                                "description": "Supplier item ID",
                                                 "maxLength": 25
                                             },
                                             "SupplierItemDesc": {
                                                 "type": "string",
+                                                "description": "Supplier item description",
                                                 "maxLength": 50
                                             },
                                             "PackListNbr": {
                                                 "type": "string",
+                                                "description": "Packing list number",
                                                 "maxLength": 25
                                             },
                                             "ShipmentIds": {
-                                                "type": "object",
-                                                "additionalProperties": {
-                                                    "not": {}
-                                                },
-                                                "properties": {
-                                                    "ShipmentId": {
-                                                        "type": "array",
-                                                        "minItems": 1,
-                                                        "items": {
-                                                            "type": "string",
-                                                            "maxLength": 25
-                                                        }
-                                                    }
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "description": "Shipment ID"
                                                 }
                                             },
                                             "DateShipped": {
-                                                "type": "string"
+                                                "type": "string",
+                                                "description": "Date of shipment",
+                                                "format": "date"
                                             },
                                             "BarCodeId": {
                                                 "type": "string",
+                                                "description": "Digital barcode representation",
                                                 "maxLength": 14
                                             },
                                             "BarCodeType": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "GTIN-12",
-                                                    "GTIN-13",
-                                                    "GTIN-14",
-                                                    "PartNumber"
-                                                ]
+                                                "$ref": "CommonSchema.json#/definitions/BarCodeType"
                                             }
                                         },
                                         "required": [

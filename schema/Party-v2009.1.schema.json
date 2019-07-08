@@ -1,18 +1,14 @@
 ﻿{
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "party.json",
     "type": "object",
     "description": "This is a json-schema version of NAMM Party v2009.1 from XSD",
-    "additionalProperties": {
-        "not": {}
-    },
+    "additionalProperties": false,
     "properties": {
         "NAMM_PARTY": {
             "type": "object",
             "title": "NAMM Party",
-            "additionalProperties": {
-                "not": {}
-            },
+            "additionalProperties": false,
             "properties": {
                 "version": {
                     "type": "number",
@@ -36,7 +32,10 @@
                         },
                         "PartyIdType": {
                             "type": "string",
-                            "pattern": "GLN|NAMM"
+                            "enum": [
+                                "GLN",
+                                "NAMM"
+                            ]
                         },
                         "Name": {
                             "type": "string",
@@ -72,7 +71,10 @@
                                             },
                                             "PartyIdType": {
                                                 "type": "string",
-                                                "pattern": "GLN|NAMM"
+                                                "enum": [
+                                                    "GLN",
+                                                    "NAMM"
+                                                ]
                                             },
                                             "Description": {
                                                 "type": "string"
