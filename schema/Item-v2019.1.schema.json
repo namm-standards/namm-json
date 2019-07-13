@@ -127,9 +127,8 @@
                 "Barcodes": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/Barcode"
-                    },
-                    "required": []
+                        "$ref": "CommonSchema.json#/definitions/Barcode"
+                    }
                 },
                 "Pricing": {
                     "type": "array",
@@ -201,30 +200,10 @@
                                 "minimum": 0
                             },
                             "Barcodes": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "Barcode": {
-                                        "type": "array",
-                                        "minItems": 1,
-                                        "items": {
-                                            "type": "object",
-                                            "additionalProperties": false,
-                                            "properties": {
-                                                "ID": {
-                                                    "type": "string"
-                                                },
-                                                "Type": {
-                                                    "$ref": "CommonSchema.json#/definitions/BarCodeType"
-                                                }
-                                            },
-                                            "required": [
-                                                "Type"
-                                            ]
-                                        }
-                                    }
-                                },
-                                "required": []
+                                "type": "array",
+                                "items": {
+                                    "$ref": "CommonSchema.json#/definitions/Barcode"
+                                }
                             }
                         },
                         "required": [
@@ -260,7 +239,7 @@
                                 "type": "array",
                                 "minItems": 1,
                                 "items": {
-                                    "$ref": "#/definitions/Barcode"
+                                    "$ref": "CommonSchema.json#/definitions/Barcode"
                                 }
                             }
                         },
@@ -373,7 +352,6 @@
                     "properties": {
                         "QtyOnHand": {
                             "type": "integer",
-                            "maximum": 255,
                             "minimum": 0
                         },
                         "Available": {
@@ -404,19 +382,6 @@
             },
             "required": []
         },
-        "Barcode": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "ID": {
-                    "type": "string"
-                },
-                "Type": {
-                    "$ref": "CommonSchema.json#/definitions/BarCodeType"
-                }
-            },
-            "required": []
-        },
         "RelatedItem": {
             "type": "object",
             "additionalProperties": false,
@@ -440,7 +405,7 @@
                     "type": "string"
                 },
                 "Barcode": {
-                    "$ref": "#/definitions/Barcode"
+                    "$ref": "CommonSchema.json#/definitions/Barcode"
                 }
             }
         },

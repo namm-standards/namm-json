@@ -1,6 +1,5 @@
 ﻿{
-    "NAMM_PO": { 
-            "@version": 2015.1,
+            "version": 2015.1,
             "Id": "11383",
             "Timestamp": "2013-12-20T10:20:06",
             "POHeader": {
@@ -36,7 +35,7 @@
                 },
                 "TermsCode": "P001",
                 "TranspCode": "S023",
-                "DateOrdered": "2013-12-20T00:00:00",
+                "DateOrdered": "2013-12-20",
                 "Backorder": "Y",
                 "PORevisionNumber": 0,
                 "POStatusIndicator": "N",
@@ -61,7 +60,7 @@
                             "BuyerItemId": "MAA207",
                             "BuyerItemDesc": "Vox amPlug Twin Headphone Amp",
                             "Qty": 1,
-                            "QtyUOM": "EA",
+                            "QtyUOM": "Each",
                             "UCValue": 55.00,
                             "UCCurrencyCode": "USD",
                             "SupplierItemId": "APTW",
@@ -73,7 +72,7 @@
                             "BuyerItemId": "MAA055",
                             "BuyerItemDesc": "Vox AmPlug Headphone Guitar Amp, Classic Rock",
                             "Qty": 1,
-                            "QtyUOM": "EA",
+                            "QtyUOM": "Each",
                             "UCValue": 99.00,
                             "UCCurrencyCode": "USD",
                             "SupplierItemId": "APCR",
@@ -96,4 +95,4 @@
                 
             }
         }
-    }
+    

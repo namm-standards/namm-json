@@ -1,139 +1,119 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "party.json",
     "type": "object",
+    "title": "NAMM_PARTY",
     "description": "This is a json-schema version of NAMM Party v2009.1 from XSD",
     "additionalProperties": false,
     "properties": {
-        "NAMM_PARTY": {
+        "version": {
+            "type": "number",
+            "enum": [
+                2009.1
+            ]
+        },
+        "RevisionDate": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "TradingPartner": {
             "type": "object",
-            "title": "NAMM Party",
-            "additionalProperties": false,
+            "additionalProperties": {
+                "not": {}
+            },
             "properties": {
-                "version": {
-                    "type": "number",
-                    "enum": [
-                        2009.1
-                    ]
-                },
-                "RevisionDate": {
+                "PartyId": {
                     "type": "string",
-                    "format": "date-time"
+                    "maxLength": 25
                 },
-                "TradingPartner": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
-                    "properties": {
-                        "PartyId": {
-                            "type": "string",
-                            "maxLength": 25
-                        },
-                        "PartyIdType": {
-                            "type": "string",
-                            "enum": [
-                                "GLN",
-                                "NAMM"
-                            ]
-                        },
-                        "Name": {
-                            "type": "string",
-                            "maxLength": 35
-                        },
-                        "DBA": {
-                            "type": "string",
-                            "maxLength": 35
-                        },
-                        "URL": {
-                            "type": "string",
-                            "maxLength": 500,
-                            "format": "uri"
-                        },
-                        "Locations": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "not": {}
-                            },
-                            "properties": {
-                                "Location": {
-                                    "type": "array",
-                                    "minItems": 1,
-                                    "items": {
-                                        "type": "object",
-                                        "additionalProperties": {
-                                            "not": {}
-                                        },
-                                        "properties": {
-                                            "PartyId": {
-                                                "type": "string",
-                                                "maxLength": 25
-                                            },
-                                            "PartyIdType": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "GLN",
-                                                    "NAMM"
-                                                ]
-                                            },
-                                            "Description": {
-                                                "type": "string"
-                                            },
-                                            "Name": {
-                                                "type": "string",
-                                                "maxLength": 35
-                                            },
-                                            "DBA": {
-                                                "type": "string",
-                                                "maxLength": 35
-                                            },
-                                            "Address": {
-                                                "$ref": "CommonSchema.json#/definitions/Address"
-                                            },
-                                            "Phone": {
-                                                "type": "string",
-                                                "maxLength": 24
-                                            },
-                                            "Fax": {
-                                                "type": "string",
-                                                "maxLength": 24
-                                            },
-                                            "Email": {
-                                                "type": "string",
-                                                "maxLength": 100,
-                                                "format": "email"
-                                            },
-                                            "StartDate": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                            },
-                                            "EndDate": {
-                                                "type": "string",
-                                                "format": "date-time"
-                                            }
-                                        },
-                                        "required": [
-                                            "PartyId",
-                                            "PartyIdType"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "required": [
-                        "PartyId",
-                        "PartyIdType",
-                        "Name",
-                        "Locations"
+                "PartyIdType": {
+                    "type": "string",
+                    "enum": [
+                        "GLN",
+                        "NAMM"
                     ]
+                },
+                "Name": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "DBA": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "URL": {
+                    "type": "string",
+                    "maxLength": 500,
+                    "format": "uri"
+                },
+                "Locations": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "not": {}
+                        },
+                        "properties": {
+                            "PartyId": {
+                                "type": "string",
+                                "maxLength": 25
+                            },
+                            "PartyIdType": {
+                                "type": "string",
+                                "enum": [
+                                    "GLN",
+                                    "NAMM"
+                                ]
+                            },
+                            "Description": {
+                                "type": "string"
+                            },
+                            "Name": {
+                                "type": "string",
+                                "maxLength": 35
+                            },
+                            "DBA": {
+                                "type": "string",
+                                "maxLength": 35
+                            },
+                            "Address": {
+                                "$ref": "CommonSchema.json#/definitions/Address"
+                            },
+                            "Phone": {
+                                "type": "string",
+                                "maxLength": 24
+                            },
+                            "Fax": {
+                                "type": "string",
+                                "maxLength": 24
+                            },
+                            "Email": {
+                                "type": "string",
+                                "maxLength": 100,
+                                "format": "email"
+                            },
+                            "StartDate": {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            "EndDate": {
+                                "type": "string",
+                                "format": "date"
+                            }
+                        },
+                        "required": [
+                            "PartyId",
+                            "PartyIdType"
+                        ]
+                    }
                 }
             },
             "required": [
-                "version",
-                "RevisionDate",
-                "TradingPartner"
+                "PartyId",
+                "PartyIdType",
+                "Name"
             ]
         }
-    }
+    },
+    "required": []
 }

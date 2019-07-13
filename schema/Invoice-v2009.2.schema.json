@@ -1,353 +1,343 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
+    "title": "NAMM_Invoice",
     "additionalProperties": false,
     "properties": {
-        "NAMM_Invoice": {
+        "version": {
+            "type": "number",
+            "enum": [
+                2009.2
+            ]
+        },
+        "InvoiceHeader": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": {
+                "not": {}
+            },
             "properties": {
-                "version": {
-                    "type": "number",
-                    "enum": [
-                        2009.2
-                    ]
+                "Id": {
+                    "type": "string",
+                    "description": "Document ID",
+                    "maxLength": 50
                 },
-                "InvoiceHeader": {
+                "Timestamp": {
+                    "type": "string",
+                    "description": "Date/time stamp for this document",
+                    "format": "date-time"
+                },
+                "SoldTo": {
                     "type": "object",
                     "additionalProperties": {
                         "not": {}
                     },
                     "properties": {
-                        "Id": {
+                        "PartyId": {
                             "type": "string",
-                            "description": "Document ID",
-                            "maxLength": 50
+                            "description": "Buyer GLN/NAMM ID",
+                            "maxLength": 25
                         },
-                        "Timestamp": {
-                            "type": "string",
-                            "description": "Date/time stamp for this document",
-                            "format": "date-time"
-                        },
-                        "SoldTo": {
-                            "type": "object",
-                            "additionalProperties": {
-                                "not": {}
-                            },
-                            "properties": {
-                                "PartyId": {
-                                    "type": "string",
-                                    "description": "Buyer GLN/NAMM ID",
-                                    "maxLength": 25
-                                },
-                                "Name": {
-                                    "type": "string",
-                                    "description": "Buyer company name",
-                                    "maxLength": 35
-                                }
-                            },
-                            "required": [
-                                "PartyId"
-                            ]
-                        },
-                        "InvoiceId": {
-                            "type": "string",
-                            "description": "Vendor invoice number",
-                            "maxLength": 32
-                        },
-                        "InvoiceType": {
-                            "type": "string",
-                            "description": "Invoice type",
-                            "enum": [
-                                "C",
-                                "D"
-                            ]
-                        },
-                        "Supplier": {
-                            "$ref": "CommonSchema.json#/definitions/Party"
-                        },
-                        "RemitTo": {
-                            "$ref": "CommonSchema.json#/definitions/Party"
-                        },
-                        "BillTo": {
-                            "$ref": "CommonSchema.json#/definitions/Party"
-                        },
-                        "ShipTo": {
-                            "$ref": "CommonSchema.json#/definitions/Party"
-                        },
-                        "TermsCode": {
-                            "$ref": "CommonSchema.json#/definitions/TermsCode"
-                        },
-                        "TermsDays": {
-                            "type": "integer",
-                            "description": "Number of days for payment"
-                        },
-                        "TermsDate": {
-                            "type": "string",
-                            "description": "Date payment is due"
-                        },
-                        "TermsPercent": {
-                            "type": "number",
-                            "description": "Percentage terms"
-                        },
-                        "TermsPercentDays": {
-                            "type": "integer",
-                            "description": "Number of days for percentage terms"
-                        },
-                        "ShipInstructions": {
-                            "type": "string",
-                            "description": "Shipping instructions",
-                            "maxLength": 250
-                        },
-                        "TranspCode": {
-                            "$ref": "CommonSchema.json#/definitions/TranspCode"
-                        },
-                        "TranspDesc": {
-                            "type": "string",
-                            "description": "Transport description",
-                            "maxLength": 50
-                        },
-                        "TranspCarrier": {
-                            "type": "string",
-                            "description": "Transport carrier name",
-                            "maxLength": 15
-                        },
-                        "TranspTime": {
-                            "type": "integer",
-                            "description": "Expected transport time"
-                        },
-                        "TranspTerms": {
-                            "type": "string",
-                            "description": "Transport terms"
-                        },
-                        "IncoTermsCode": {
-                            "$ref": "CommonSchema.json#/definitions/IncoTermsCode"
-                        },
-                        "IncoTermsDesc": {
-                            "type": "string",
-                            "maxLength": 35
-                        },
-                        "InvoiceDate": {
-                            "type": "string",
-                            "description": "Invoice date",
-                            "format": "date-time"
-                        },
-                        "InvoiceDueDate": {
-                            "type": "string",
-                            "description": "Date payment is due",
-                            "format": "date-time"
-                        },
-                        "BuyerName": {
+                        "Name": {
                             "type": "string",
                             "description": "Buyer company name",
                             "maxLength": 35
-                        },
-                        "SalesRep": {
-                            "type": "string",
-                            "description": "Supplier sales representative name",
-                            "maxLength": 35
-                        },
-                        "Comments": {
-                            "type": "string",
-                            "maxLength": 250
                         }
                     },
                     "required": [
-                        "Id",
-                        "Timestamp",
-                        "SoldTo",
-                        "InvoiceId",
-                        "InvoiceType",
-                        "Supplier",
-                        "RemitTo",
-                        "BillTo",
-                        "ShipTo",
-                        "TermsCode",
-                        "InvoiceDate",
-                        "InvoiceDueDate"
+                        "PartyId"
                     ]
                 },
-                "InvoiceSummary": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "TotalItemLines": {
-                            "type": "integer",
-                            "description": "Invoice number of item lines"
-                        },
-                        "TotalItemQty": {
-                            "type": "integer",
-                            "description": "Invoice item quantity"
-                        },
-                        "LineTotal": {
-                            "type": "number",
-                            "description": "Value of all item lines"
-                        },
-                        "FreightTotal": {
-                            "type": "number",
-                            "description": "Freight total amount"
-                        },
-                        "SalesTax": {
-                            "type": "number",
-                            "description": "Sales tax amount"
-                        },
-                        "MiscCharge": {
-                            "type": "number",
-                            "description": "Miscellaneous charges"
-                        },
-                        "InvoiceTotal": {
-                            "type": "number",
-                            "description": "Total invoice amount"
-                        }
-                    },
-                    "required": [
-                        "TotalItemLines",
-                        "TotalItemQty",
-                        "LineTotal",
-                        "FreightTotal",
-                        "SalesTax",
-                        "MiscCharge",
-                        "InvoiceTotal"
+                "InvoiceId": {
+                    "type": "string",
+                    "description": "Vendor invoice number",
+                    "maxLength": 32
+                },
+                "InvoiceType": {
+                    "type": "string",
+                    "description": "Invoice type",
+                    "enum": [
+                        "C",
+                        "D"
                     ]
                 },
-                "InvoiceDetail": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "Items": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                                "Item": {
-                                    "type": "array",
-                                    "minItems": 1,
-                                    "items": {
-                                        "type": "object",
-                                        "additionalProperties": {
-                                            "not": {}
-                                        },
-                                        "properties": {
-                                            "BuyerOrderId": {
-                                                "type": "string",
-                                                "description": "Buyer order ID",
-                                                "maxLength": 25
-                                            },
-                                            "SupplierOrderId": {
-                                                "type": "string",
-                                                "description": "Supplier order ID",
-                                                "maxLength": 25
-                                            },
-                                            "InvoiceLineNbr": {
-                                                "type": "integer",
-                                                "description": "Invoice item line number"
-                                            },
-                                            "POLineNbr": {
-                                                "type": "integer",
-                                                "description": "Purchase Order line number"
-                                            },
-                                            "BuyerItemId": {
-                                                "type": "string",
-                                                "description": "Buyer item ID",
-                                                "maxLength": 25
-                                            },
-                                            "Qty": {
-                                                "type": "number"
-                                            },
-                                            "QtyUOM": {
-                                                "$ref": "CommonSchema.json#/definitions/QtyUOM"
-                                            },
-                                            "UCValue": {
-                                                "type": "number",
-                                                "description": "Unit cost"
-                                            },
-                                            "UCCurrencyCode": {
-                                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
-                                            },
-                                            "ExtendedCostValue": {
-                                                "type": "number",
-                                                "description": "Extended cost"
-                                            },
-                                            "ExtendedCurrencyCode": {
-                                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
-                                            },
-                                            "RetailValue": {
-                                                "type": "number",
-                                                "description": "Unit retail value"
-                                            },
-                                            "RetailCurrencyCode": {
-                                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
-                                            },
-                                            "SupplierItemId": {
-                                                "type": "string",
-                                                "description": "Supplier item ID",
-                                                "maxLength": 25
-                                            },
-                                            "SupplierItemDesc": {
-                                                "type": "string",
-                                                "description": "Supplier item description",
-                                                "maxLength": 50
-                                            },
-                                            "PackListNbr": {
-                                                "type": "string",
-                                                "description": "Packing list number",
-                                                "maxLength": 25
-                                            },
-                                            "ShipmentIds": {
-                                                "type": "array",
-                                                "items": {
-                                                    "type": "string",
-                                                    "description": "Shipment ID"
-                                                }
-                                            },
-                                            "DateShipped": {
-                                                "type": "string",
-                                                "description": "Date of shipment",
-                                                "format": "date"
-                                            },
-                                            "BarCodeId": {
-                                                "type": "string",
-                                                "description": "Digital barcode representation",
-                                                "maxLength": 14
-                                            },
-                                            "BarCodeType": {
-                                                "$ref": "CommonSchema.json#/definitions/BarCodeType"
-                                            }
-                                        },
-                                        "required": [
-                                            "BuyerOrderId",
-                                            "SupplierOrderId",
-                                            "InvoiceLineNbr",
-                                            "POLineNbr",
-                                            "BuyerItemId",
-                                            "Qty",
-                                            "QtyUOM",
-                                            "UCValue",
-                                            "UCCurrencyCode",
-                                            "ExtendedCostValue",
-                                            "ExtendedCurrencyCode",
-                                            "SupplierItemId",
-                                            "SupplierItemDesc",
-                                            "ShipmentIds",
-                                            "DateShipped",
-                                            "BarCodeId",
-                                            "BarCodeType"
-                                        ]
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "required": [
-                        "Items"
-                    ]
+                "Supplier": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "RemitTo": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "BillTo": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "ShipTo": {
+                    "$ref": "CommonSchema.json#/definitions/Party"
+                },
+                "TermsCode": {
+                    "$ref": "CommonSchema.json#/definitions/TermsCode"
+                },
+                "TermsDays": {
+                    "type": "integer",
+                    "description": "Number of days for payment"
+                },
+                "TermsDate": {
+                    "type": "string",
+                    "description": "Date payment is due"
+                },
+                "TermsPercent": {
+                    "type": "number",
+                    "description": "Percentage terms"
+                },
+                "TermsPercentDays": {
+                    "type": "integer",
+                    "description": "Number of days for percentage terms"
+                },
+                "ShipInstructions": {
+                    "type": "string",
+                    "description": "Shipping instructions",
+                    "maxLength": 250
+                },
+                "TranspCode": {
+                    "$ref": "CommonSchema.json#/definitions/TranspCode"
+                },
+                "TranspDesc": {
+                    "type": "string",
+                    "description": "Transport description",
+                    "maxLength": 50
+                },
+                "TranspCarrier": {
+                    "type": "string",
+                    "description": "Transport carrier name",
+                    "maxLength": 15
+                },
+                "TranspTime": {
+                    "type": "integer",
+                    "description": "Expected transport time"
+                },
+                "TranspTerms": {
+                    "type": "string",
+                    "description": "Transport terms"
+                },
+                "IncoTermsCode": {
+                    "$ref": "CommonSchema.json#/definitions/IncoTermsCode"
+                },
+                "IncoTermsDesc": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "InvoiceDate": {
+                    "type": "string",
+                    "description": "Invoice date",
+                    "format": "date"
+                },
+                "InvoiceDueDate": {
+                    "type": "string",
+                    "description": "Date payment is due",
+                    "format": "date"
+                },
+                "BuyerName": {
+                    "type": "string",
+                    "description": "Buyer company name",
+                    "maxLength": 35
+                },
+                "SalesRep": {
+                    "type": "string",
+                    "description": "Supplier sales representative name",
+                    "maxLength": 35
+                },
+                "Comments": {
+                    "type": "string",
+                    "maxLength": 250
                 }
             },
             "required": [
-                "version",
-                "InvoiceHeader",
-                "InvoiceSummary",
-                "InvoiceDetail"
+                "Id",
+                "Timestamp",
+                "SoldTo",
+                "InvoiceId",
+                "InvoiceType",
+                "Supplier",
+                "RemitTo",
+                "BillTo",
+                "ShipTo",
+                "TermsCode",
+                "InvoiceDate",
+                "InvoiceDueDate"
+            ]
+        },
+        "InvoiceSummary": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "TotalItemLines": {
+                    "type": "integer",
+                    "description": "Invoice number of item lines"
+                },
+                "TotalItemQty": {
+                    "type": "integer",
+                    "description": "Invoice item quantity"
+                },
+                "LineTotal": {
+                    "type": "number",
+                    "description": "Value of all item lines"
+                },
+                "FreightTotal": {
+                    "type": "number",
+                    "description": "Freight total amount"
+                },
+                "SalesTax": {
+                    "type": "number",
+                    "description": "Sales tax amount"
+                },
+                "MiscCharge": {
+                    "type": "number",
+                    "description": "Miscellaneous charges"
+                },
+                "InvoiceTotal": {
+                    "type": "number",
+                    "description": "Total invoice amount"
+                }
+            },
+            "required": [
+                "TotalItemLines",
+                "TotalItemQty",
+                "LineTotal",
+                "FreightTotal",
+                "SalesTax",
+                "MiscCharge",
+                "InvoiceTotal"
+            ]
+        },
+        "InvoiceDetail": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Item": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "not": {}
+                                },
+                                "properties": {
+                                    "BuyerOrderId": {
+                                        "type": "string",
+                                        "description": "Buyer order ID",
+                                        "maxLength": 25
+                                    },
+                                    "SupplierOrderId": {
+                                        "type": "string",
+                                        "description": "Supplier order ID",
+                                        "maxLength": 25
+                                    },
+                                    "InvoiceLineNbr": {
+                                        "type": "integer",
+                                        "description": "Invoice item line number"
+                                    },
+                                    "POLineNbr": {
+                                        "type": "integer",
+                                        "description": "Purchase Order line number"
+                                    },
+                                    "BuyerItemId": {
+                                        "type": "string",
+                                        "description": "Buyer item ID",
+                                        "maxLength": 25
+                                    },
+                                    "Qty": {
+                                        "type": "number"
+                                    },
+                                    "QtyUOM": {
+                                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                                    },
+                                    "UCValue": {
+                                        "type": "number",
+                                        "description": "Unit cost"
+                                    },
+                                    "UCCurrencyCode": {
+                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                                    },
+                                    "ExtendedCostValue": {
+                                        "type": "number",
+                                        "description": "Extended cost"
+                                    },
+                                    "ExtendedCurrencyCode": {
+                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                                    },
+                                    "RetailValue": {
+                                        "type": "number",
+                                        "description": "Unit retail value"
+                                    },
+                                    "RetailCurrencyCode": {
+                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                                    },
+                                    "SupplierItemId": {
+                                        "type": "string",
+                                        "description": "Supplier item ID",
+                                        "maxLength": 25
+                                    },
+                                    "SupplierItemDesc": {
+                                        "type": "string",
+                                        "description": "Supplier item description",
+                                        "maxLength": 50
+                                    },
+                                    "PackListNbr": {
+                                        "type": "string",
+                                        "description": "Packing list number",
+                                        "maxLength": 25
+                                    },
+                                    "ShipmentIds": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "description": "Shipment ID"
+                                        }
+                                    },
+                                    "DateShipped": {
+                                        "type": "string",
+                                        "description": "Date of shipment",
+                                        "format": "date"
+                                    },
+                                    "BarCodeId": {
+                                        "type": "string",
+                                        "description": "Digital barcode representation",
+                                        "maxLength": 14
+                                    },
+                                    "BarCodeType": {
+                                        "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                                    }
+                                },
+                                "required": [
+                                    "BuyerOrderId",
+                                    "SupplierOrderId",
+                                    "InvoiceLineNbr",
+                                    "POLineNbr",
+                                    "BuyerItemId",
+                                    "Qty",
+                                    "QtyUOM",
+                                    "UCValue",
+                                    "UCCurrencyCode",
+                                    "ExtendedCostValue",
+                                    "ExtendedCurrencyCode",
+                                    "SupplierItemId",
+                                    "SupplierItemDesc",
+                                    "ShipmentIds",
+                                    "DateShipped",
+                                    "BarCodeId",
+                                    "BarCodeType"
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "Items"
             ]
         }
-    }
+    },
+    "required": []
 }

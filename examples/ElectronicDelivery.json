@@ -1,0 +1,48 @@
+﻿{
+    "version": 2015.1,
+    "Timestamp": "2019-07-13T09:00:00-05:00",
+    "Id": "1E3A75AE-FFD6-4A64-8579-38E90F61AB62",
+    "POId": "0000001",
+    "Timestamp": "2015-01-25T10:46:54",
+    "POId": "ThisDocumentIDNumber",
+    "BuyerOrderId": "432543",
+    "StatusCode": "C01",
+    "StatusMessage": "Received",
+    "Items": [
+        {
+            "SupplierItemId": "5931",
+            "POLineNbr": 1,
+            "BarCode": {
+                "ID": "123455931",
+                "Type": "PartNumber"
+            },
+            "Qty": 1,
+            "QtyUOM": "Each",
+            "UCValue": 195.00,
+            "UCCurrencyCode": "USD",
+            "DownloadPath": "https://standards.namm.org/EDItem/5931",
+            "DownloadPath": "http://www.softwarecompany.com/cgi-bin/WebObjects/LicenseApp",
+            "SupportContact": "www.softwarecompany.com/xsupport.php",
+            "Licenses": [
+                "5a69a9f6c11841bcbd1748095f622b98"
+            ]
+        },
+        {
+            "SupplierItemId": "1439",
+            "POLineNbr": 2,
+            "BarCode": {
+                "ID": "123451439",
+                "Type": "PartNumber"
+            },
+            "Qty": 1,
+            "QtyUOM": "Each",
+            "UCValue": 138.00,
+            "UCCurrencyCode": "USD",
+            "DownloadPath": "http://www.softwarecompany.com/cgi-bin/WebObjects/LicenseApp",
+            "SupportContact": "www.softwarecompany.com/xsupport.php",
+            "Licenses": [
+                "ad1d321e53f04732abb69e36b28f671d"
+            ]
+        }
+    ]
+}
