@@ -1,0 +1,60 @@
+﻿{
+    "version": 2015.1,
+    "Id": "DocumentIDNumber",
+    "TradingPartnerInfo": {
+        "SenderID": "091478008",
+        "SenderName": "GuitarCenter",
+        "ReceiverID": "MusicSupplier",
+        "ReceiverName": " MusicSupplier "
+    },
+    "Supplier": {
+        "PartyId": "123456789012",
+        "Name": "Korg Inc.",
+        "Address": {
+            "Attn": "",
+            "Address1": "123 N Main St",
+            "Address2": "",
+            "City": "Anytown",
+            "State": "NY",
+            "PostalCode": "10011",
+            "Country": "United States",
+            "CountryCode": "US"
+        }
+    },
+    "SoldTo": {
+        "PartyId": "987654321012",
+        "Name": "Joe's Music Company",
+        "Address": {
+            "Address1": "321 S Second St",
+            "City": "MyTown",
+            "State": "CA",
+            "PostalCode": "90456",
+            "Country": "United States",
+            "CountryCode": "US"
+        }
+    },
+    "TotalPayment": 2000.00,
+    "CurrencyCode": "USD",
+    "PaymentType": "CHK",
+    "PaymentDate": "2011-06-11",
+    "Reference": "12345",
+    "Timestamp": "2011-01-15T08:58:23",
+    "BuyerName": "Joe Schmoe",
+    "PaymentAdvice": [
+        {
+            "Note": "",
+            "BuyerOrderId": "432543",
+            "DateOrdered": "2011-01-15",
+            "PaymentAmount": 1088.4,
+            "InvoiceNumber": "117842823",
+            "InvoiceAmount": 1234.00
+        },
+        {
+            "BuyerOrderId": "432544",
+            "DateOrdered": "2011-02-16",
+            "PaymentAmount": 911.60,
+            "InvoiceNumber": "1178429845",
+            "InvoiceAmount": 911.90
+        }
+    ]
+}
