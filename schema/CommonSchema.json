@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "CommonSchema.json",
     "type": "object",
-    "title": "Common Scheam Definitions",
+    "title": "Common Schema Definitions",
     "description": "Common Shared Objects used by reference",
     "additionalProperties": {
         "not": {}
@@ -409,6 +409,19 @@
                 "Months",
                 "Years"
             ]
+        },
+        "Barcode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Type": {
+                    "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                }
+            },
+            "required": []
         }
     },
     "$comment": "TBD"

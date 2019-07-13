@@ -1,102 +1,81 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
+    "title": "NAMM_PaymentAdvice",
     "additionalProperties": false,
     "properties": {
-        "NAMM_PaymentAdvice": {
+        "version": {
+            "type": "number",
+            "enum": [
+                2015.1
+            ]
+        },
+        "Id": {
+            "type": "string",
+            "description": "Document ID"
+        },
+        "Timestamp": {
+            "type": "string",
+            "description": "Document Timestamp",
+            "format": "date-time"
+        },
+        "TradingPartnerInfo": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "version": {
-                    "type": "number",
-                    "enum": [
-                        2015.1
-                    ]
-                },
-                "Id": {
-                    "type": "string",
-                    "description": "Document ID"
-                },
-                "Timestamp": {
-                    "type": "string",
-                    "description": "Document Timestamp",
-                    "format": "date-time"
-                },
-                "TradingPartnerInfo": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "SenderID": {
-                            "type": "string"
-                        },
-                        "SenderName": {
-                            "type": "string"
-                        },
-                        "ReceiverID": {
-                            "type": "string"
-                        },
-                        "ReceiverName": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "SenderID",
-                        "SenderName",
-                        "ReceiverID",
-                        "ReceiverName"
-                    ]
-                },
-                "Supplier": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
-                },
-                "SoldTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
-                },
-                "TotalPayment": {
-                    "type": "number"
-                },
-                "CurrencyCode": {
-                    "$ref": "CommonSchema.json#/definitions/CurrencyCode"
-                },
-                "PaymentType": {
+                "SenderID": {
                     "type": "string"
                 },
-                "PaymentDate": {
-                    "type": "string",
-                    "format": "date"
-                },
-                "Reference": {
+                "SenderName": {
                     "type": "string"
                 },
-                "BuyerName": {
+                "ReceiverID": {
                     "type": "string"
                 },
-                "PaymentAdvice": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/PaymentStatus"
-                    }
+                "ReceiverName": {
+                    "type": "string"
                 }
             },
             "required": [
-                "version",
-                "Id",
-                "TradingPartnerInfo",
-                "Supplier",
-                "SoldTo",
-                "TotalPayment",
-                "CurrencyCode",
-                "PaymentType",
-                "PaymentDate",
-                "Reference",
-                "BuyerName",
-                "PaymentAdvice"
+                "SenderID",
+                "SenderName",
+                "ReceiverID",
+                "ReceiverName"
             ]
+        },
+        "Supplier": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "SoldTo": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "TotalPayment": {
+            "type": "number"
+        },
+        "CurrencyCode": {
+            "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+        },
+        "PaymentType": {
+            "type": "string"
+        },
+        "PaymentDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "Reference": {
+            "type": "string"
+        },
+        "BuyerName": {
+            "type": "string"
+        },
+        "PaymentAdvice": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/PaymentStatus"
+            }
         }
     },
-    "required": [
-        "NAMM_PaymentAdvice"
-    ],
+    "required": [],
     "definitions": {
         "PaymentStatus": {
             "type": "object",

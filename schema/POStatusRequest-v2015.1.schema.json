@@ -1,68 +1,54 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
+    "title": "NAMM_POStatusRequest",
     "additionalProperties": false,
     "properties": {
-        "NAMM_POStatusRequest": {
+        "version": {
+            "type": "number",
+            "enum": [
+                2015.1
+            ]
+        },
+        "Id": {
+            "type": "string",
+            "description": "Document ID"
+        },
+        "Timestamp": {
+            "type": "string",
+            "description": "Document Time stamp",
+            "format": "date-time"
+        },
+        "Supplier": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "version": {
-                    "type": "number",
-                    "enum": [
-                        2015.1
-                    ]
-                },
-                "Id": {
-                    "type": "string",
-                    "description": "Document ID"
-                },
-                "Timestamp": {
-                    "type": "string",
-                    "description": "Document Time stamp",
-                    "format": "date-time"
-                },
-                "Supplier": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "PartyId": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "PartyId"
-                    ]
-                },
-                "SoldTo": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "PartyId": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [
-                        "PartyId"
-                    ]
-                },
-                "BuyerOrderIds": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                "PartyId": {
+                    "type": "string"
                 }
             },
             "required": [
-                "version",
-                "Timestamp",
-                "Supplier",
-                "SoldTo",
-                "BuyerOrderIds"
+                "PartyId"
             ]
+        },
+        "SoldTo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PartyId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "PartyId"
+            ]
+        },
+        "BuyerOrderIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
-    "required": [
-        "NAMM_POStatusRequest"
-    ]
+    "required": []
 }

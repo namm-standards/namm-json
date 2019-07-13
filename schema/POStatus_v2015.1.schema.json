@@ -1,182 +1,163 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
+    "title": "NAMM_PO_Status",
     "additionalProperties": false,
     "properties": {
-        "NAMM_POStatus": {
+        "version": {
+            "type": "number",
+            "enum": [
+                2015.1
+            ]
+        },
+        "Id": {
+            "type": "string",
+            "description": "Document ID",
+            "maxLength": 50
+        },
+        "Timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "POStatusRequestId": {
+            "type": "string",
+            "description": "PO ID of status request",
+            "maxLength": 50
+        },
+        "BuyerOrderId": {
+            "type": "string",
+            "description": "Buyer order ID",
+            "maxLength": 25
+        },
+        "DateOrdered": {
+            "type": "string",
+            "description": "Order Date",
+            "format": "date"
+        },
+        "BuyerName": {
+            "type": "string",
+            "description": "Buyer Name"
+        },
+        "Supplier": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "SoldTo": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "StatusCode": {
+            "$ref": "#/definitions/StatusCode"
+        },
+        "PaymentTerms": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "version": {
-                    "type": "number",
-                    "enum": [
-                        2015.1
-                    ]
-                },
-                "Id": {
-                    "type": "string",
-                    "description": "Document ID",
-                    "maxLength": 50
-                },
-                "Timestamp": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "POStatusRequestId": {
-                    "type": "string",
-                    "description": "PO ID of status request",
-                    "maxLength": 50
-                },
-                "BuyerOrderId": {
-                    "type": "string",
-                    "description": "Buyer order ID",
-                    "maxLength": 25
-                },
-                "DateOrdered": {
-                    "type": "string",
-                    "description": "Order Date",
-                    "format": "date"
-                },
-                "BuyerName": {
-                    "type": "string",
-                    "description": "Buyer Name"
-                },
-                "Supplier": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
-                },
-                "SoldTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
-                },
                 "StatusCode": {
-                    "$ref": "#/definitions/StatusCode"
+                    "type": "string",
+                    "description": "Payment status code"
                 },
-                "PaymentTerms": {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "StatusCode": {
-                            "type": "string",
-                            "description": "Payment status code"
-                        },
-                        "StatusMessage": {
-                            "type": "string"
-                        },
-                        "TermsCode": {
-                            "$ref": "CommonSchema.json#/definitions/TermsCode"
-                        }
-                    },
-                    "required": [
-                        "StatusCode",
-                        "StatusMessage",
-                        "TermsCode"
-                    ]
+                "StatusMessage": {
+                    "type": "string"
                 },
-                "ShipmentTerms": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "not": {}
-                    },
-                    "properties": {
-                        "StatusCode": {
-                            "type": "string",
-                            "description": "Shipment status code"
-                        }
-                    }
-                },
-                "ShipTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
-                },
-                "Items": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "POLineNbr": {
-                                "type": "integer",
-                                "description": "Item line number"
-                            },
-                            "SequenceNbr": {
-                                "type": "integer",
-                                "description": "Item sequence number"
-                            },
-                            "StatusCode": {
-                                "$ref": "#/definitions/StatusCode"
-                            },
-                            "StatusMessage": {
-                                "type": "string",
-                                "description": "Item Status Message"
-                            },
-                            "Qty": {
-                                "type": "number",
-                                "description": "Item Quantity"
-                            },
-                            "OriginalOrderQty": {
-                                "type": "number",
-                                "description": "Original order quantity"
-                            },
-                            "QtyUOM": {
-                                "$ref": "CommonSchema.json#/definitions/QtyUOM"
-                            },
-                            "UCValue": {
-                                "type": "number",
-                                "description": "Unit cost"
-                            },
-                            "OriginalOrderUCValue": {
-                                "type": "number",
-                                "description": "Original Unit Cost"
-                            },
-                            "UCCurrencyCode": {
-                                "$ref": "CommonSchema.json#/definitions/CurrencyCode"
-                            },
-                            "EstimatedShipDate": {
-                                "type": "string",
-                                "description": "Estimated Shipping Date",
-                                "format": "date"
-                            },
-                            "SupplierOrderId": {
-                                "type": "string",
-                                "description": "Suppliers Order ID"
-                            },
-                            "BuyerItemId": {
-                                "type": "string",
-                                "description": "Buyer Item ID"
-                            },
-                            "SupplierItemId": {
-                                "type": "string",
-                                "description": "Supplier Item ID"
-                            },
-                            "BarCodeId": {
-                                "type": "string",
-                                "description": "Barcode Value"
-                            },
-                            "BarCodeType": {
-                                "$ref": "CommonSchema.json#/definitions/BarCodeType"
-                            },
-                            "ShipTo": {
-                                "$ref": "CommonSchema.json#/definitions/Party"
-                            }
-                        }
-                    }
+                "TermsCode": {
+                    "$ref": "CommonSchema.json#/definitions/TermsCode"
                 }
             },
             "required": [
-                "version",
-                "Id",
-                "POStatusRequestId",
-                "BuyerOrderId",
-                "DateOrdered",
-                "BuyerName",
-                "Supplier",
-                "SoldTo",
                 "StatusCode",
-                "PaymentTerms",
-                "ShipmentTerms",
-                "ShipTo",
-                "Items"
+                "StatusMessage",
+                "TermsCode"
             ]
+        },
+        "ShipmentTerms": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "StatusCode": {
+                    "type": "string",
+                    "description": "Shipment status code"
+                }
+            }
+        },
+        "ShipTo": {
+            "$ref": "CommonSchema.json#/definitions/Party"
+        },
+        "Items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "POLineNbr": {
+                        "type": "integer",
+                        "description": "Item line number"
+                    },
+                    "SequenceNbr": {
+                        "type": "integer",
+                        "description": "Item sequence number"
+                    },
+                    "StatusCode": {
+                        "$ref": "#/definitions/StatusCode"
+                    },
+                    "StatusMessage": {
+                        "type": "string",
+                        "description": "Item Status Message"
+                    },
+                    "Qty": {
+                        "type": "number",
+                        "description": "Item Quantity"
+                    },
+                    "OriginalOrderQty": {
+                        "type": "number",
+                        "description": "Original order quantity"
+                    },
+                    "QtyUOM": {
+                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                    },
+                    "UCValue": {
+                        "type": "number",
+                        "description": "Unit cost"
+                    },
+                    "OriginalOrderUCValue": {
+                        "type": "number",
+                        "description": "Original Unit Cost"
+                    },
+                    "UCCurrencyCode": {
+                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                    },
+                    "EstimatedShipDate": {
+                        "type": "string",
+                        "description": "Estimated Shipping Date",
+                        "format": "date"
+                    },
+                    "SupplierOrderId": {
+                        "type": "string",
+                        "description": "Suppliers Order ID"
+                    },
+                    "BuyerItemId": {
+                        "type": "string",
+                        "description": "Buyer Item ID"
+                    },
+                    "SupplierItemId": {
+                        "type": "string",
+                        "description": "Supplier Item ID"
+                    },
+                    "BarCodeId": {
+                        "type": "string",
+                        "description": "Barcode Value"
+                    },
+                    "BarCodeType": {
+                        "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                    },
+                    "ShipTo": {
+                        "$ref": "CommonSchema.json#/definitions/Party"
+                    }
+                }
+            }
         }
     },
+    "required": [],
     "definitions": {
         "StatusCode": {
             "type": "string",
@@ -184,7 +165,9 @@
             "enum": [
                 "1",
                 "2",
-                "3"
+                "3",
+                "Changes",
+                "C1"
             ]
         }
     }
