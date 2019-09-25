@@ -1,14 +1,12 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "po_status.json",
     "type": "object",
     "title": "NAMM_PO_Status",
     "additionalProperties": false,
     "properties": {
-        "version": {
-            "type": "number",
-            "enum": [
-                2015.1
-            ]
+        "Version": {
+            "$ref": "common.json#/definitions/Version"
         },
         "Id": {
             "type": "string",
@@ -39,10 +37,10 @@
             "description": "Buyer Name"
         },
         "Supplier": {
-            "$ref": "CommonSchema.json#/definitions/Party"
+            "$ref": "common.json#/definitions/Party"
         },
         "SoldTo": {
-            "$ref": "CommonSchema.json#/definitions/Party"
+            "$ref": "common.json#/definitions/Party"
         },
         "StatusCode": {
             "$ref": "#/definitions/StatusCode"
@@ -59,7 +57,7 @@
                     "type": "string"
                 },
                 "TermsCode": {
-                    "$ref": "CommonSchema.json#/definitions/TermsCode"
+                    "$ref": "common.json#/definitions/TermsCode"
                 }
             },
             "required": [
@@ -81,7 +79,7 @@
             }
         },
         "ShipTo": {
-            "$ref": "CommonSchema.json#/definitions/Party"
+            "$ref": "common.json#/definitions/Party"
         },
         "Items": {
             "type": "array",
@@ -113,7 +111,7 @@
                         "description": "Original order quantity"
                     },
                     "QtyUOM": {
-                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                        "$ref": "common.json#/definitions/QtyUOM"
                     },
                     "UCValue": {
                         "type": "number",
@@ -124,7 +122,7 @@
                         "description": "Original Unit Cost"
                     },
                     "UCCurrencyCode": {
-                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                        "$ref": "common.json#/definitions/CurrencyCode"
                     },
                     "EstimatedShipDate": {
                         "type": "string",
@@ -148,10 +146,10 @@
                         "description": "Barcode Value"
                     },
                     "BarCodeType": {
-                        "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                        "$ref": "common.json#/definitions/BarCodeType"
                     },
                     "ShipTo": {
-                        "$ref": "CommonSchema.json#/definitions/Party"
+                        "$ref": "common.json#/definitions/Party"
                     }
                 }
             }

@@ -1,0 +1,442 @@
+﻿{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "common.json",
+    "type": "object",
+    "title": "Common Schema Definitions",
+    "description": "Common Shared Objects used by reference",
+    "additionalProperties": {
+        "not": {}
+    },
+    "definitions": {
+        "Address": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "Attn": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address1": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address2": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address3": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "City": {
+                    "type": "string",
+                    "maxLength": 30
+                },
+                "State": {
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "PostalCode": {
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "Country": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "CountryCode": {
+                    "type": "string",
+                    "description": "[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)",
+                    "maxLength": 2,
+                    "minLength": 2,
+                    "pattern": "^([A-Z]{2})$"
+                }
+            },
+            "required": []
+        },
+        "Party": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "PartyId": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "PartyIdType": {
+                    "type": "string",
+                    "enum": [
+                        "GLN",
+                        "NAMM"
+                    ]
+                },
+                "Name": {
+                    "type": "string",
+                    "maxLength": 35
+                },
+                "Address": {
+                    "$ref": "#/definitions/Address"
+                }
+            },
+            "required": [
+                "PartyId",
+                "PartyIdType",
+                "Address"
+            ]
+        },
+        "DimUOM": {
+            "type": "string",
+            "enum": [
+                "Inches",
+                "Meters",
+                "Feet",
+                "Millimeters",
+                "Yards"
+            ]
+        },
+        "WeightUOM": {
+            "type": "string",
+            "enum": [
+                "Pounds",
+                "Kilograms",
+                "Grams",
+                "Ounces"
+            ]
+        },
+        "Volume": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "VolumeValue": {
+                    "type": "number"
+                },
+                "VolumeUOMCode": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "VolumeUOMDesc": {
+                    "type": "string",
+                    "maxLength": 15
+                }
+            }
+        },
+        "Weight": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "WeightValue": {
+                    "type": "number"
+                },
+                "WeightUOMCode": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "WeightUOMDesc": {
+                    "type": "string",
+                    "maxLength": 15
+                }
+            }
+        },
+        "TranspCode": {
+            "type": "string",
+            "enum": [
+                "S001",
+                "S002",
+                "S003",
+                "S004",
+                "S021",
+                "S005",
+                "S006",
+                "S007",
+                "S008",
+                "S022",
+                "S009",
+                "S010",
+                "S023",
+                "S011",
+                "S012",
+                "S013",
+                "S014",
+                "S015",
+                "S016",
+                "S017",
+                "S018",
+                "S020",
+                "S998",
+                "S999"
+            ],
+            "maxLength": 15
+        },
+        "TermsCode": {
+            "type": "string",
+            "enum": [
+                "P001",
+                "P002",
+                "P003",
+                "P004",
+                "P005",
+                "P006",
+                "P007",
+                "P008",
+                "P009",
+                "P010",
+                "P011",
+                "P012",
+                "P013",
+                "P014",
+                "P015",
+                "P016",
+                "P017",
+                "P018",
+                "P019",
+                "P020",
+                "P021",
+                "P022",
+                "P023",
+                "P024",
+                "P025",
+                "P026",
+                "P027",
+                "P998",
+                "P999"
+            ],
+            "maxLength": 15
+        },
+        "POItem": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "POLineNbr": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "SupplierItemId": {
+                    "type": "string",
+                    "maxLength": 25
+                },
+                "BuyerItemId": {
+                    "type": "string",
+                    "maxLength": 25
+                },
+                "BuyerItemDesc": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "Qty": {
+                    "type": "number"
+                },
+                "QtyUOM": {
+                    "type": "string",
+                    "enum": [
+                        "BAG",
+                        "BKT",
+                        "BND",
+                        "BOWL",
+                        "BX",
+                        "CRD",
+                        "CM",
+                        "CS",
+                        "CTN",
+                        "DZ",
+                        "EA",
+                        "FT",
+                        "GAL",
+                        "GROSS",
+                        "IN",
+                        "KIT",
+                        "LOT",
+                        "M",
+                        "MM",
+                        "PC",
+                        "PK",
+                        "PK100",
+                        "PK50",
+                        "PR",
+                        "RACK",
+                        "RL",
+                        "SET",
+                        "SET3",
+                        "SET4",
+                        "SET5",
+                        "SGL",
+                        "SHT",
+                        "SQFT",
+                        "TUBE",
+                        "YD"
+                    ]
+                },
+                "UCValue": {
+                    "type": "number"
+                },
+                "UCCurrencyCode": {
+                    "type": "string",
+                    "description": "ISO currency code",
+                    "enum": [
+                        "USD",
+                        "EUR",
+                        "JPY"
+                    ]
+                },
+                "RetailValue": {
+                    "type": "number"
+                },
+                "RetailCurrencyCode": {
+                    "type": "string",
+                    "description": "ISO currency code",
+                    "enum": [
+                        "USD",
+                        "EUR",
+                        "JPY"
+                    ]
+                },
+                "ICQtyPerUOM": {
+                    "type": "number"
+                },
+                "ICUOM": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "MCQtyPerUOM": {
+                    "type": "number"
+                },
+                "MCUOM": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "BarCodeId": {
+                    "type": "string",
+                    "maxLength": 14
+                },
+                "BarCodeType": {
+                    "type": "string",
+                    "enum": [
+                        "GTIN-12",
+                        "GTIN-13",
+                        "GTIN-14",
+                        "PartNumber"
+                    ]
+                },
+                "ShipTo": {
+                    "$ref": "#/definitions/Party"
+                }
+            },
+            "required": [
+                "POLineNbr",
+                "BuyerItemId",
+                "Qty",
+                "QtyUOM",
+                "UCValue",
+                "UCCurrencyCode",
+                "BarCodeId",
+                "BarCodeType"
+            ]
+        },
+        "QtyUOM": {
+            "type": "string",
+            "description": "Quantity Unit of Measure",
+            "enum": [
+                "Bag",
+                "Bucket",
+                "Bundle",
+                "Bowl",
+                "Box",
+                "Card",
+                "Case",
+                "Carton",
+                "Dozen",
+                "Each",
+                "Foot",
+                "Gallon",
+                "Gross",
+                "Kit",
+                "Lot",
+                "Piece",
+                "Pack",
+                "Pack 100",
+                "Pack 50",
+                "Pair",
+                "Rack",
+                "Roll",
+                "Set",
+                "Set of 3",
+                "Set of 4",
+                "Set of 5",
+                "Single",
+                "Sheet",
+                "Tube"
+            ]
+        },
+        "IncoTermsCode": {
+            "type": "string",
+            "enum": [
+                "EXW",
+                "FCA",
+                "FAS",
+                "FOB",
+                "CFR",
+                "CIF",
+                "CPT",
+                "CIP",
+                "DAF",
+                "DES",
+                "DEQ",
+                "DDU",
+                "DDP"
+            ]
+        },
+        "CurrencyCode": {
+            "type": "string",
+            "description": "ISO currency code",
+            "enum": [
+                "USD",
+                "EUR",
+                "JPY"
+            ]
+        },
+        "BarCodeType": {
+            "type": "string",
+            "enum": [
+                "GTIN-12",
+                "GTIN-13",
+                "GTIN-14",
+                "PartNumber",
+                "ISBN",
+                "UPC",
+                "EAN-13"
+            ]
+        },
+        "TermUOM": {
+            "type": "string",
+            "enum": [
+                "Days",
+                "Months",
+                "Years"
+            ]
+        },
+        "Barcode": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Type": {
+                    "$ref": "#/definitions/BarCodeType"
+                }
+            },
+            "required": []
+        },
+        "Version": {
+            "type": "number",
+            "enum": [
+                2020.1
+            ]
+        }
+    },
+    "$comment": "TBD"
+}

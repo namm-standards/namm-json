@@ -1,14 +1,12 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "ed_response.json",
     "type": "object",
     "title": "NAMM_ElectronicDeliveryResponse",
     "additionalProperties": false,
     "properties": {
-        "version": {
-            "type": "number",
-            "enum": [
-                2015.1
-            ]
+        "Version": {
+            "$ref": "common.json#/definitions/Version"
         },
         "Timestamp": {
             "type": "string",
@@ -47,20 +45,20 @@
                         "type": "integer"
                     },
                     "BarCode": {
-                        "$ref": "CommonSchema.json#/definitions/Barcode"
+                        "$ref": "common.json#/definitions/Barcode"
                     },
                     "Qty": {
                         "type": "integer"
                     },
                     "QtyUOM": {
-                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                        "$ref": "common.json#/definitions/QtyUOM"
                     },
                     "UCValue": {
                         "type": "number",
                         "description": "Unit Cost"
                     },
                     "UCCurrencyCode": {
-                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                        "$ref": "common.json#/definitions/CurrencyCode"
                     },
                     "DownloadPath": {
                         "type": "string",
