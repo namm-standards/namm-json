@@ -1,14 +1,13 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "invoice.json",
     "type": "object",
-    "title": "NAMM_Invoice",
+    "title": "Invoice",
+    "description": "JSON Schema version of NAMM Invoice 2009.2",
     "additionalProperties": false,
     "properties": {
-        "version": {
-            "type": "number",
-            "enum": [
-                2009.2
-            ]
+        "Version": {
+            "$ref": "common.json#/definitions/Version"
         },
         "InvoiceHeader": {
             "type": "object",
@@ -61,19 +60,22 @@
                     ]
                 },
                 "Supplier": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
+                    "$ref": "common.json#/definitions/Party"
                 },
                 "RemitTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
+                    "$ref": "common.json#/definitions/Party"
                 },
                 "BillTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
+                    "$ref": "common.json#/definitions/Party"
                 },
                 "ShipTo": {
-                    "$ref": "CommonSchema.json#/definitions/Party"
+                    "$ref": "common.json#/definitions/Party"
+                },
+                "CurrencyCode": {
+                    "$ref": "common.json#/definitions/CurrencyCode"
                 },
                 "TermsCode": {
-                    "$ref": "CommonSchema.json#/definitions/TermsCode"
+                    "$ref": "common.json#/definitions/TermsCode"
                 },
                 "TermsDays": {
                     "type": "integer",
@@ -97,7 +99,7 @@
                     "maxLength": 250
                 },
                 "TranspCode": {
-                    "$ref": "CommonSchema.json#/definitions/TranspCode"
+                    "$ref": "common.json#/definitions/TranspCode"
                 },
                 "TranspDesc": {
                     "type": "string",
@@ -118,7 +120,7 @@
                     "description": "Transport terms"
                 },
                 "IncoTermsCode": {
-                    "$ref": "CommonSchema.json#/definitions/IncoTermsCode"
+                    "$ref": "common.json#/definitions/IncoTermsCode"
                 },
                 "IncoTermsDesc": {
                     "type": "string",
@@ -251,28 +253,28 @@
                                         "type": "number"
                                     },
                                     "QtyUOM": {
-                                        "$ref": "CommonSchema.json#/definitions/QtyUOM"
+                                        "$ref": "common.json#/definitions/QtyUOM"
                                     },
                                     "UCValue": {
                                         "type": "number",
                                         "description": "Unit cost"
                                     },
                                     "UCCurrencyCode": {
-                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                                        "$ref": "common.json#/definitions/CurrencyCode"
                                     },
                                     "ExtendedCostValue": {
                                         "type": "number",
                                         "description": "Extended cost"
                                     },
                                     "ExtendedCurrencyCode": {
-                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                                        "$ref": "common.json#/definitions/CurrencyCode"
                                     },
                                     "RetailValue": {
                                         "type": "number",
                                         "description": "Unit retail value"
                                     },
                                     "RetailCurrencyCode": {
-                                        "$ref": "CommonSchema.json#/definitions/CurrencyCode"
+                                        "$ref": "common.json#/definitions/CurrencyCode"
                                     },
                                     "SupplierItemId": {
                                         "type": "string",
@@ -307,7 +309,7 @@
                                         "maxLength": 14
                                     },
                                     "BarCodeType": {
-                                        "$ref": "CommonSchema.json#/definitions/BarCodeType"
+                                        "$ref": "common.json#/definitions/BarCodeType"
                                     }
                                 },
                                 "required": [
