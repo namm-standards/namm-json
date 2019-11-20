@@ -246,8 +246,7 @@ This common element localization is an important factor in the success of the ov
 
 Because this schema comprises only schema elements that are referenced by other schemas, it does not have an accompanying content document.
 
-- <a href="https://github.com/namm-standards/namm-json/blob/master/schema/common.json" target="_blank">Raw Common Elements schema</a>
-- [Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/CommonSchema.json)
+- [Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/CommonSchema.json){:target="_blank" rel="noopener"}
 - [Common Elements schema technical reference](./common/index.html)
 
 >End of document.
