@@ -1,6 +1,6 @@
 # NAMM B2B JSON Implementation Guide
 
-#### Revision x.x &mdash; Last edit: 15 Nov 2019
+#### Revision 2020.1 &mdash; Last edit: 20 Nov 2019
 
 # Executive Overview
 
@@ -246,7 +246,7 @@ This common element localization is an important factor in the success of the ov
 
 Because this schema comprises only schema elements that are referenced by other schemas, it does not have an accompanying content document.
 
-- [Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/CommonSchema.json){:target="_blank" rel="noopener"}
+- [Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/common.json)
 - [Common Elements schema technical reference](./common/index.html)
 
 >End of document.
