@@ -148,25 +148,25 @@ The Purchase Order document, **po.json**, contains a list of items the buyer has
 
 The Purchase Order document first provides basic information about the proposed sale, such as buyer, billing, and supplier data. It then provides overall sale specifics, such as terms and shipping instructions. Finally, it provides a shipping location and a list of ordered items.
 
-[Sample Purchase Order document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_v2015.1.json)
-[Raw Purchase Order schema](https://github.com/namm-standards/namm-json/blob/master/schema/PO_v2015.1.schema.json)
-[Purchase Order schema technical reference](./po/index.html)
+- [Sample Purchase Order document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_v2015.1.json)
+- [Raw Purchase Order schema](https://github.com/namm-standards/namm-json/blob/master/schema/PO_v2015.1.schema.json)
+- [Purchase Order schema technical reference](./po/index.html)
 
 ## Invoice
 
 The Invoice document, **invoice.json**, is a supplier’s request for payment from the buyer. It contains information about the supplier, payee, and buyer, as well as invoice terms and detailed information about the referenced purchase, down to the individual items.
 
-[Sample Invoice document](https://github.com/namm-standards/namm-json/blob/master/examples/Invoice.json)
-[Raw Invoice schema](https://github.com/namm-standards/namm-json/blob/master/schema/Invoice-v2009.2.schema.json)
-[Invoice schema technical reference](./invoice/index.html)
+- [Sample Invoice document](https://github.com/namm-standards/namm-json/blob/master/examples/Invoice.json)
+- [Raw Invoice schema](https://github.com/namm-standards/namm-json/blob/master/schema/Invoice-v2009.2.schema.json)
+- [Invoice schema technical reference](./invoice/index.html)
 
 ## Advanced Shipping Notice
 
 The Advanced Shipping Notice (ASN) document, **asn.json**, contains detailed information about one or more orders in progress from supplier to buyer. It may be requested via the Purchase Order document, and provides specific partial or full order shipment details, enabling the buyer to reconcile items ordered with those actually received.
 
-[Sample ASN document](https://github.com/namm-standards/namm-json/blob/master/examples/ASN.json)
-[Raw ASN schema](https://github.com/namm-standards/namm-json/blob/master/schema/ASN_v2015.1.schema.json)
-[ASN schema technical reference](./asn/index.html)
+- [Sample ASN document](https://github.com/namm-standards/namm-json/blob/master/examples/ASN.json)
+- [Raw ASN schema](https://github.com/namm-standards/namm-json/blob/master/schema/ASN_v2015.1.schema.json)
+- [ASN schema technical reference](./asn/index.html)
 
 ## Item
 
@@ -174,39 +174,39 @@ The Item document, **item.json**, essentially contains a catalog of items availa
 
 The Item document structure is reasonably “flat”, presenting salable items in a simple hierarchy with few levels. Each item has many possible descriptive characteristics, most of which are optional, but provide ease of description for virtually any product, including packaging, origin, and warranty information.
 
-[Sample Item document](https://github.com/namm-standards/namm-json/blob/master/examples/Item.json)
-[Raw Item schema](https://github.com/namm-standards/namm-json/blob/master/schema/Item-v2019.1.schema.json)
-[Item schema technical reference](./item/index.html)
+- [Sample Item document](https://github.com/namm-standards/namm-json/blob/master/examples/Item.json)
+- [Raw Item schema](https://github.com/namm-standards/namm-json/blob/master/schema/Item-v2019.1.schema.json)
+- [Item schema technical reference](./item/index.html)
 
 ## Purchase Order Status Request
 
 The Purchase Order Status Request document, **postatusrequest.json**, requests from the supplier the status of an outstanding Purchase Order. In fact, the status of multiple Purchase Orders may be requested in one transaction, obviating the need for multiple requests.
 
-[Sample Purchase Order Status Request document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_StatusRequest.json)
-[Raw Purchase Order Status Request schema](https://github.com/namm-standards/namm-json/blob/master/schema/POStatusRequest-v2015.1.schema.json)
-[Purchase Order Status Request schema technical reference](./postatusreq/index.html)
+- [Sample Purchase Order Status Request document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_StatusRequest.json)
+- [Raw Purchase Order Status Request schema](https://github.com/namm-standards/namm-json/blob/master/schema/POStatusRequest-v2015.1.schema.json)
+- [Purchase Order Status Request schema technical reference](./postatusreq/index.html)
 
 ## Purchase Order Status / Detail Acknowledgement
 
 As evidenced by its name, the Purchase Order Status / Detail Acknowledgement document, **postatus.json**, is a dual-purpose transactional document. It may be transmitted from supplier to buyer as a detailed acknowledgement of a submitted Purchase Order (in lieu of a Functional Acknowledgment). It may also be sent as a status report for a buyer's Purchase Orders, generated either periodically or in specific response to a Purchase Order Status Request.
 
-[Sample Purchase Order Status / Detail Acknowledgement document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_Status.json)
-[Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/POStatus_v2015.1.schema.json)
-[Purchase Order Status / Detail Acknowledgement schema technical reference](./postatus/index.html)
+- [Sample Purchase Order Status / Detail Acknowledgement document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_Status.json)
+- [Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/POStatus_v2015.1.schema.json)
+- [Purchase Order Status / Detail Acknowledgement schema technical reference](./postatus/index.html)
 
 ## Electronic Delivery
 **No description available at this time**
 
-[Sample Electronic Delivery document](https://github.com/namm-standards/namm-json/blob/master/examples/ElectronicDelivery.json)
-[Raw Electronic Delivery schema](https://github.com/namm-standards/namm-json/blob/master/schema/ElectronicDelivery-v2015.1-schema.json)
-[Electronic Delivery schema technical reference](./elecdeliv/index.html)
+- [Sample Electronic Delivery document](https://github.com/namm-standards/namm-json/blob/master/examples/ElectronicDelivery.json)
+- [Raw Electronic Delivery schema](https://github.com/namm-standards/namm-json/blob/master/schema/ElectronicDelivery-v2015.1-schema.json)
+- [Electronic Delivery schema technical reference](./elecdeliv/index.html)
 
 ## Payment Advice
 **No description available at this time**
 
-[Sample Payment Advice document](https://github.com/namm-standards/namm-json/blob/master/examples/PaymentAdvice.json)
-[Raw Payment Advice schema](https://github.com/namm-standards/namm-json/blob/master/schema/PaymentAdvice-v2015.1.schema.json)
-[Payment Advice schema technical reference](./payadvice/index.html)
+- [Sample Payment Advice document](https://github.com/namm-standards/namm-json/blob/master/examples/PaymentAdvice.json)
+- [Raw Payment Advice schema](https://github.com/namm-standards/namm-json/blob/master/schema/PaymentAdvice-v2015.1.schema.json)
+- [Payment Advice schema technical reference](./payadvice/index.html)
 
 ## Party  
 
@@ -214,9 +214,9 @@ The Party document, **party.json**, contains general information about the parti
 
 The Party document contains public identifying information about one trading partner. However, for added flexibility, multiple trading locations for the partner may be specified in the same document. These locations might be such things as different branch offices, product warehouses, or shipping destinations. Each party and each location includes a unique ID, which may be in GLN (Global Location Number) or NAMM format, plus the partner entity’s name, address, phone, email, and other contact information.
 
-[Sample Party document](https://github.com/namm-standards/namm-json/blob/master/examples/Party.json)
-[Raw Party schema](https://github.com/namm-standards/namm-json/blob/master/schema/Party-v2009.1.schema.json)
-[Party schema technical reference](./party/index.html)
+- [Sample Party document](https://github.com/namm-standards/namm-json/blob/master/examples/Party.json)
+- [Raw Party schema](https://github.com/namm-standards/namm-json/blob/master/schema/Party-v2009.1.schema.json)
+- [Party schema technical reference](./party/index.html)
 
 <!-- **********************************************************
 ## Functional Acknowledgement
@@ -246,7 +246,8 @@ This common element localization is an important factor in the success of the ov
 
 Because this schema comprises only schema elements that are referenced by other schemas, it does not have an accompanying content document.
 
-[Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/CommonSchema.json)
-[Common Elements schema technical reference](./common/index.html)
+- <a href="https://github.com/namm-standards/namm-json/blob/master/schema/CommonSchema.json" target="_blank">Raw Common Elements schema</a>
+- [Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/CommonSchema.json)
+- [Common Elements schema technical reference](./common/index.html)
 
 >End of document.
