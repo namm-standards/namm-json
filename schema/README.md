@@ -132,7 +132,7 @@ Schemas ensure that both the structure of the data and the data itself conform t
 
 The various data and schema documents in the NAMM B2B specification are described below, with links to samples and more details. 
 
->**The B2B "Core" documents &mdash; Purchase Order, Invoice, Advanced Shipping Notice, and Item &mdash; are listed first, followed by the "Auxiliary" documents &mdash; Purchase Order Status Request, Purchase Order Status, Electronic Delivery, Payment Advice, and Party.**
+>**The B2B "Core" documents &mdash; Purchase Order, Invoice, Advanced Shipping Notice, and Item &mdash; are listed first, followed by the "Auxiliary" documents &mdash; Purchase Order Status Request, Purchase Order Status, Electronic Delivery, and Party, and finally by the Common Elements document.**
 
 ## Purchase Order
 
@@ -195,7 +195,6 @@ The Purchase Order Status document, **postatus.json**, is a dual-purpose transac
 
 <!--
 ## Payment Advice
-**No description available at this time**
 
 - [Sample Payment Advice document](https://github.com/namm-standards/namm-json/blob/master/examples/PaymentAdvice.json)
 - [Raw Payment Advice schema](https://github.com/namm-standards/namm-json/blob/master/schema/PaymentAdvice-v2015.1.schema.json)
@@ -213,18 +212,19 @@ The Party document contains public identifying information about one trading par
 - [Party schema technical reference](./ref/party/index.html)
 
 <!-- 
-**********************************************************
 ## Functional Acknowledgement
 >**Internal note: FunAck may be removed from the spec.**
 
 The Functional Acknowledgement document, **funack.json**, is a simple notification from party to party acknowledging the receipt of another transaction such as an item document, purchase order, advanced shipment notice, or invoice. It may also provide information indicating the status of the transactional document. This document is used repeatedly throughout the supply chain.
 
 >**Internal note: These two files also aren't in the JSON repo; I assume they aren't used in the new system.**
-
+-->
+<!--
 ## Price Book
 
 The Price Book document, **pricebook.json**, contains pricing information for various items offered by the supplier. It can specify price changes (breaks) at different purchase tiers (e.g., 1-100 units, 101-500 units, etc.) as well as indicate units of measure (UOM) for the tiers. This document is optional.
-
+-->
+<!--
 ## Sell Through
 
 The Sell Through document, **sellthrough.json**, is an optional post-transaction report sent by the buyer to the supplier, indicating what products have been sold, to which locations, for what price, etc. This document is discretionary and informational only, and thus does not trigger any further action, acknowledgement, or event.
