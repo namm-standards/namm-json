@@ -119,7 +119,6 @@ There are also many completely free JSON tutorials, services, and utilities avai
 For more information or to ask specific questions, please email us at  [b2b@namm.org](mailto:b2b@namm.org).
 
 # JSON Documents and Schemas
-> **Internal note: The file names and/or versions in the descriptions below may not be accurate per the new spec; update accordingly.**
 
 ## Content Documents
 Below are descriptions of the JSON content documents currently defined by the NAMM B2B standard. Note that, as with any content-only implementation, these files merely define the structure of the data and do not require nor support any specific processing agents (i.e., application software).  
