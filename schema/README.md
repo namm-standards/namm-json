@@ -2,6 +2,8 @@
 
 #### Revision 2020.1 &mdash; Last edit: 20 Nov 2019
 
+>**Note to readers: To open this document's links in a new tab, ctrl-click the link or right-click it and choose "Open link in new tab".**
+
 # Executive Overview
 
 In any economy, robust or challenging, finding efficiencies and cost savings in your business processes is imperative, and the shortest path to savings is the adoption of standard transaction formats. Whether you are a manufacturer, a distributor, or a retailer, you can streamline and automate the production of orders, product catalogs, shipping documents, and forecasts using industry standards for data transfer.
@@ -10,13 +12,13 @@ In any economy, robust or challenging, finding efficiencies and cost savings in 
 
 1. **Your business can benefit from increased efficiency.** Trading partners who share information through standardized data exchange enjoy reduced operational costs as a result of less human interaction in business transactions.
 
-2. **Your business can profit from higher accuracy.** Using standardized transaction formats allows business trading partners to easily share information, thereby preventing costly mistakes.
+1. **Your business can profit from higher accuracy.** Using standardized transaction formats allows business trading partners to easily share information, thereby preventing costly mistakes.
 
-3. **You can provide better customer service.** Access to timely information in known, predictable formats allows for faster response time and better service to your customers.
+1. **You can provide better customer service.** Access to timely information in known, predictable formats allows for faster response time and better service to your customers.
 
-4. **You can make better decisions.** Timely, accurate, and complete information gives you the big picture you need to make informed business decisions.
+1. **You can make better decisions.** Timely, accurate, and complete information gives you the big picture you need to make informed business decisions.
 
-5. **Your business communications can be simpler.** A standardized, agreed-upon data transfer format simplifies transactions between business partners and removes obstacles imposed by the businesses' individual systems.
+1. **Your business communications can be simpler.** A standardized, agreed-upon data transfer format simplifies transactions between business partners and removes obstacles imposed by the businesses' individual systems.
 
 Product vendors, suppliers, and purchasers use different computer hardware and software systems to process their business transactions. These systems all have their own proprietary data formats, and yet they all need to process substantially similar kinds of data. Thus, the need for a common language for sharing data among business trading partners becomes critical. More efficient and reliable data transfer means fewer errors in your business transactions, and that means a better bottom line.
 
@@ -63,27 +65,18 @@ The NAMM B2B standard comprises a set of JSON files containing data in a predefi
 ## Transaction Sequence
 
 A typical sequence of events between a product supplier and product buyer and the associated documents, observed in chronological order, might be as follows.  
->**Internal note: The Functional Acknowledgement document may be removed from this specification.**
 
 1. Both supplier and buyer complete and release mutually-available identification information in a **Party** document.  
-2. The supplier sends a catalog of available products to the buyer in an **Item** document.  
-3. The buyer acknowledges receipt of the Item document with a **Functional Acknowledgement** document.  
-4. The supplier sends a price list for available products to the buyer in a **PriceBook** document (optional).  
-5. The buyer acknowledges receipt of the PriceBook document with a **Functional Acknowledgement** document.  
-6. The buyer decides to purchase items from the catalog and sends a request for them to the supplier in a **Purchase Order** document.  
-7. The supplier acknowledges receipt of the Purchase Order with a **Functional Acknowledgement** document.  
-8. The buyer requests the status of their order with a **PO Status Request** document.  
-9. The seller provides the status of the order in a **PO Status Acknowledgement** document.  
-10. The supplier makes one or more product shipments to the buyer and sends detailed information for each shipment in an **Advanced Shipment Notification** document.  
-11. The buyer acknowledges receipt of the Advanced Shipment Notification with a **Functional Acknowledgement** document.  
-12. The supplier sends a request for payment to the buyer in an **Invoice** document.  
-13. The buyer acknowledges receipt of the Invoice with a **Functional Acknowledgement** document.  
-14. The supplier sends a report to the buyer indicating which products have been sold in a **SellThrough** document (optional).  
-15. The buyer acknowledges receipt of the SellThrough with a **Functional Acknowledgement** document.
+1. The supplier sends a catalog of available products to the buyer in an **Item** document.  
+1. The buyer decides to purchase items from the catalog and sends a request for them to the supplier in a **Purchase Order** document.  
+1. The buyer requests the status of their order with a **PO Status Request** document.  
+1. The seller provides the status of the order in a **PO Status Acknowledgement** document.  
+1. The supplier makes one or more product shipments to the buyer and sends detailed information for each shipment in an **Advanced Shipment Notification** document.  
+1. The supplier sends a request for payment to the buyer in an **Invoice** document.  
 
 Below is a diagram of this process, referencing the step/document numbers above.
 
-> Internal note: The flowchart graphic needs to be redone, especially if FunAck is removed.
+>**Internal note: The flowchart graphic is being redone, to be included here later.**
 
 ## Transport Options
 
@@ -134,13 +127,13 @@ Below are descriptions of the JSON content documents currently defined by the NA
 The responsibility for creating, validating, transmitting, receiving, and parsing the files and their content therefore rests solely with the business entities (suppliers and buyers) using them. That, of course, is where the beauty of predefined and globally accepted standards shines. 
 
 ## Schemas
-To facilitate data accuracy, each JSON content (data) document has an accompanying control document, also coded in JSON. This document, called a *schema*, contains specific, clearly defined rules against which the content document's structure and data can be validated. The content document **invoice.json**, for example, would have **invoice.schema.json** as its control document. 
+To facilitate data accuracy, each JSON content (data) document has an accompanying control document, also coded in JSON. This document, called a *schema*, contains specific, clearly defined rules against which the content document's structure and data can be validated. A JSON invoice (data) document, for example, would have **invoice.json** as its schema (control) document. 
 
 Schemas ensure that both the structure of the data and the data itself conform to the system's expectations. Using schemas, errors in either data layout or data values can be identified quickly, before they become processing problems.
 
 The various data and schema documents in the NAMM B2B specification are described below, with links to samples and more details. 
 
->The B2B "Core" documents &mdash; Purchase Order, Invoice, Advanced Shipping Notice, and Item &mdash; are listed first, followed by the "Auxiliary" documents &mdash; Purchase Order Status Request, Purchase Order Status, Electronic Delivery, Payment Advice, and Party.
+>**The B2B "Core" documents &mdash; Purchase Order, Invoice, Advanced Shipping Notice, and Item &mdash; are listed first, followed by the "Auxiliary" documents &mdash; Purchase Order Status Request, Purchase Order Status, Electronic Delivery, Payment Advice, and Party.**
 
 ## Purchase Order
 
@@ -149,24 +142,24 @@ The Purchase Order document, **po.json**, contains a list of items the buyer has
 The Purchase Order document first provides basic information about the proposed sale, such as buyer, billing, and supplier data. It then provides overall sale specifics, such as terms and shipping instructions. Finally, it provides a shipping location and a list of ordered items.
 
 - [Sample Purchase Order document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_v2015.1.json)
-- [Raw Purchase Order schema](https://github.com/namm-standards/namm-json/blob/master/schema/PO_v2015.1.schema.json)
-- [Purchase Order schema technical reference](./po/index.html)
+- [Raw Purchase Order schema](https://github.com/namm-standards/namm-json/blob/master/schema/purchase_order.json)
+- [Purchase Order schema technical reference](./ref/po/index.html)
 
 ## Invoice
 
 The Invoice document, **invoice.json**, is a supplier’s request for payment from the buyer. It contains information about the supplier, payee, and buyer, as well as invoice terms and detailed information about the referenced purchase, down to the individual items.
 
 - [Sample Invoice document](https://github.com/namm-standards/namm-json/blob/master/examples/Invoice.json)
-- [Raw Invoice schema](https://github.com/namm-standards/namm-json/blob/master/schema/Invoice-v2009.2.schema.json)
-- [Invoice schema technical reference](./invoice/index.html)
+- [Raw Invoice schema](https://github.com/namm-standards/namm-json/blob/master/schema/invoice.json)
+- [Invoice schema technical reference](./ref/invoice/index.html)
 
 ## Advanced Shipping Notice
 
 The Advanced Shipping Notice (ASN) document, **asn.json**, contains detailed information about one or more orders in progress from supplier to buyer. It may be requested via the Purchase Order document, and provides specific partial or full order shipment details, enabling the buyer to reconcile items ordered with those actually received.
 
 - [Sample ASN document](https://github.com/namm-standards/namm-json/blob/master/examples/ASN.json)
-- [Raw ASN schema](https://github.com/namm-standards/namm-json/blob/master/schema/ASN_v2015.1.schema.json)
-- [ASN schema technical reference](./asn/index.html)
+- [Raw ASN schema](https://github.com/namm-standards/namm-json/blob/master/schema/asn.json)
+- [ASN schema technical reference](./ref/asn/index.html)
 
 ## Item
 
@@ -175,38 +168,40 @@ The Item document, **item.json**, essentially contains a catalog of items availa
 The Item document structure is reasonably “flat”, presenting salable items in a simple hierarchy with few levels. Each item has many possible descriptive characteristics, most of which are optional, but provide ease of description for virtually any product, including packaging, origin, and warranty information.
 
 - [Sample Item document](https://github.com/namm-standards/namm-json/blob/master/examples/Item.json)
-- [Raw Item schema](https://github.com/namm-standards/namm-json/blob/master/schema/Item-v2019.1.schema.json)
-- [Item schema technical reference](./item/index.html)
+- [Raw Item schema](https://github.com/namm-standards/namm-json/blob/master/schema/item.json)
+- [Item schema technical reference](./ref/item/index.html)
 
 ## Purchase Order Status Request
 
 The Purchase Order Status Request document, **postatusrequest.json**, requests from the supplier the status of an outstanding Purchase Order. In fact, the status of multiple Purchase Orders may be requested in one transaction, obviating the need for multiple requests.
 
 - [Sample Purchase Order Status Request document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_StatusRequest.json)
-- [Raw Purchase Order Status Request schema](https://github.com/namm-standards/namm-json/blob/master/schema/POStatusRequest-v2015.1.schema.json)
-- [Purchase Order Status Request schema technical reference](./postatusreq/index.html)
+- [Raw Purchase Order Status Request schema](https://github.com/namm-standards/namm-json/blob/master/schema/po_status_request.json)
+- [Purchase Order Status Request schema technical reference](./ref/postatusreq/index.html)
 
-## Purchase Order Status / Detail Acknowledgement
+## Purchase Order Status
 
-As evidenced by its name, the Purchase Order Status / Detail Acknowledgement document, **postatus.json**, is a dual-purpose transactional document. It may be transmitted from supplier to buyer as a detailed acknowledgement of a submitted Purchase Order (in lieu of a Functional Acknowledgment). It may also be sent as a status report for a buyer's Purchase Orders, generated either periodically or in specific response to a Purchase Order Status Request.
+The Purchase Order Status document, **postatus.json**, is a dual-purpose transactional document. It may be transmitted from supplier to buyer as an acknowledgement of a submitted Purchase Order, or as a status report for a buyer's open Purchase Orders, generated either periodically or in response to a specific Purchase Order Status Request.
 
 - [Sample Purchase Order Status / Detail Acknowledgement document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_Status.json)
-- [Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/POStatus_v2015.1.schema.json)
-- [Purchase Order Status / Detail Acknowledgement schema technical reference](./postatus/index.html)
+- [Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/po_status.json)
+- [Purchase Order Status / Detail Acknowledgement schema technical reference](./ref/postatus/index.html)
 
 ## Electronic Delivery
-**No description available at this time**
+**NEED DESCRIPTION**
 
 - [Sample Electronic Delivery document](https://github.com/namm-standards/namm-json/blob/master/examples/ElectronicDelivery.json)
-- [Raw Electronic Delivery schema](https://github.com/namm-standards/namm-json/blob/master/schema/ElectronicDelivery-v2015.1-schema.json)
-- [Electronic Delivery schema technical reference](./elecdeliv/index.html)
+- [Raw Electronic Delivery schema](https://github.com/namm-standards/namm-json/blob/master/schema/ed_response.json)
+- [Electronic Delivery schema technical reference](./ref/elecdeliv/index.html)
 
+<!--
 ## Payment Advice
 **No description available at this time**
 
 - [Sample Payment Advice document](https://github.com/namm-standards/namm-json/blob/master/examples/PaymentAdvice.json)
 - [Raw Payment Advice schema](https://github.com/namm-standards/namm-json/blob/master/schema/PaymentAdvice-v2015.1.schema.json)
 - [Payment Advice schema technical reference](./payadvice/index.html)
+-->
 
 ## Party  
 
@@ -215,10 +210,11 @@ The Party document, **party.json**, contains general information about the parti
 The Party document contains public identifying information about one trading partner. However, for added flexibility, multiple trading locations for the partner may be specified in the same document. These locations might be such things as different branch offices, product warehouses, or shipping destinations. Each party and each location includes a unique ID, which may be in GLN (Global Location Number) or NAMM format, plus the partner entity’s name, address, phone, email, and other contact information.
 
 - [Sample Party document](https://github.com/namm-standards/namm-json/blob/master/examples/Party.json)
-- [Raw Party schema](https://github.com/namm-standards/namm-json/blob/master/schema/Party-v2009.1.schema.json)
-- [Party schema technical reference](./party/index.html)
+- [Raw Party schema](https://github.com/namm-standards/namm-json/blob/master/schema/party.json)
+- [Party schema technical reference](./ref/party/index.html)
 
-<!-- **********************************************************
+<!-- 
+**********************************************************
 ## Functional Acknowledgement
 >**Internal note: FunAck may be removed from the spec.**
 
@@ -233,20 +229,21 @@ The Price Book document, **pricebook.json**, contains pricing information for va
 ## Sell Through
 
 The Sell Through document, **sellthrough.json**, is an optional post-transaction report sent by the buyer to the supplier, indicating what products have been sold, to which locations, for what price, etc. This document is discretionary and informational only, and thus does not trigger any further action, acknowledgement, or event.
-***************************************************************** -->
+***************************************************************** 
+-->
 
 ## Common Elements  
-Among the schema files, the Common Elements schema, **CommonSchema.json**, is of particular importance to the NAMM B2B system.
+Among the schema files, the Common Elements schema, **common.json**, is of particular importance to the NAMM B2B system.
 
-As in any data processing system, certain elements often appear in multiple places, both within and across files. For example, the *Address* element might appear in various places in a single document or in different documents, and its sub-components &mdash; *City*, *State*, *Postal Code*, etc. &mdash; might vary in format from document to document. When coded individually, recurring "almost identical" elements such as these present problems in development, maintenance, and usage. A change to or variation in one instance of an element might "break" other instances, especially with regard to processing software.
+As in any data processing system, certain identical elements can appear in multiple places, both within and across files. For example, the *Address* element might appear in various places in a single document or in different documents, and its sub-components &mdash; *City*, *State*, *Postal Code*, etc. &mdash; might vary in format from document to document. When coded individually, recurring "almost identical" elements such as these present problems in development, maintenance, and usage. A change to or variation in one instance of an element might "break" other instances, especially with regard to processing software.
 
-One significant feature of JSON schemas is the ability to define once some common elements that are used in multiple documents and simply refer to them later. The NAMM B2B system takes advantage of this feature by collecting common elements in a single schema file. In this file are defined many commonly used B2B elements, from general elements like *Address* and *Currency Code* to more specific elements like *Weight Unit of Measure* and *Purchase Order Line Number*. In other schemas that use these elements, the elements are then included by reference rather than by repitition, thereby eliminating redundant code and potential inconsistencies. Changing an element in one place changes it instantly and identically everywhere it occurs.
+A significant feature of JSON schemas is the ability to define in one place the common elements that are used in multiple documents, and then simply refer to them later. The NAMM B2B system takes advantage of this feature by collecting common elements into a single schema file. In this file are defined many commonly used B2B elements, from general elements like *Address* and *Currency Code* to more specific elements like *Weight Unit of Measure* and *Purchase Order Line Number*. In other schemas that use these elements, the elements are then included by reference rather than by repitition, thereby eliminating redundant code and potential inconsistencies. Changing an element in one place changes it instantly and identically everywhere it occurs.
 
 This common element localization is an important factor in the success of the overall system. Defining common elements in a single place simplifies development, reduces maintenance, and standardizes processing.
 
-Because this schema comprises only schema elements that are referenced by other schemas, it does not have an accompanying content document.
+Because this file comprises only schema elements that are referenced by other schemas, it does not have an accompanying content document.
 
 - [Raw Common Elements schema](https://github.com/namm-standards/namm-json/blob/master/schema/common.json)
-- [Common Elements schema technical reference](./common/index.html)
+- [Common Elements schema technical reference](./ref/common/index.html)
 
->End of document.
+>End of document
