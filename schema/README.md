@@ -1,6 +1,6 @@
 # NAMM B2B JSON Implementation Guide
 
-#### Revision 2020.1 &mdash; Last edit: 20 Nov 2019
+#### Revision 2020.1 &mdash; Last edit: 6 Dec 2019
 
 >**Note to readers: To open this document's links in a new tab, ctrl-click the link or right-click it and choose "Open link in new tab".**
 
