@@ -77,7 +77,7 @@ A typical sequence of events between a product supplier (a vendor) and product b
 
 Below is a diagram of this process, referencing the step/document numbers above.
 
-![B2B Transaction Diagram](https://github.com/namm-standards/namm-json/tree/jan2020/schema/b2bsmall.png)
+![B2B Transaction Diagram](b2bsmall.png)
 
 ## Transport Options
 
