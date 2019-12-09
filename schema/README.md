@@ -1,8 +1,8 @@
 # NAMM B2B JSON Implementation Guide
 
-#### Revision 2020.1 &mdash; Last edit: 6 Dec 2019
+#### Revision 2020.1 &mdash; Last edit: 9 Dec 2019
 
->**Note to readers: To open this document's links in a new tab, ctrl-click the link or right-click it and choose "Open link in new tab".**
+>**Note to readers: This document contains links to external sites. To avoid losing your place, you can open links in a new tab; just ctrl-click a link or right-click it and choose "Open link in new tab".**
 
 # Executive Overview
 
@@ -64,19 +64,20 @@ The NAMM B2B standard comprises a set of JSON files containing data in a predefi
 
 ## Transaction Sequence
 
-A typical sequence of events between a product supplier and product buyer and the associated documents, observed in chronological order, might be as follows.  
+A typical sequence of events between a product supplier (a vendor) and product buyer (a retailer) and the associated documents, observed in chronological order, might be as follows.  
 
 1. Both supplier and buyer complete and release mutually-available identification information in a **Party** document.  
 1. The supplier sends a catalog of available products to the buyer in an **Item** document.  
 1. The buyer decides to purchase items from the catalog and sends a request for them to the supplier in a **Purchase Order** document.  
+1. The supplier sends details about the items ordered to the buyer in an **Electronic Delivery Response** document.
 1. The buyer requests the status of their order with a **PO Status Request** document.  
-1. The seller provides the status of the order in a **PO Status Acknowledgement** document.  
-1. The supplier makes one or more product shipments to the buyer and sends detailed information for each shipment in an **Advanced Shipment Notification** document.  
+1. The supplier provides the status of the order in a **PO Status** document.  
+1. The supplier makes one or more product shipments to the buyer and sends details for each shipment in an **Advanced Shipment Notification** document.  
 1. The supplier sends a request for payment to the buyer in an **Invoice** document.  
 
 Below is a diagram of this process, referencing the step/document numbers above.
 
->**Internal note: The flowchart graphic is being redone, to be included here later.**
+![B2B Transaction Diagram](https://github.com/namm-standards/namm-json/jan2020/schema/b2bsmall.png)
 
 ## Transport Options
 
@@ -186,8 +187,8 @@ The Purchase Order Status document, **postatus.json**, is a dual-purpose transac
 - [Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/po_status.json)
 - [Purchase Order Status / Detail Acknowledgement schema technical reference](./ref/postatus/index.html)
 
-## Electronic Delivery
-**NEED DESCRIPTION**
+## Electronic Delivery Response
+The Electronic Delivery Response document, **ed_response.json**, sent by the supplier to the buyer, contains specific information about items ordered, including barcodes, serial numbers, prices, etc. It may be used by the buyer to confirm that the order was received and processed correctly by the supplier.
 
 - [Sample Electronic Delivery document](https://github.com/namm-standards/namm-json/blob/master/examples/ElectronicDelivery.json)
 - [Raw Electronic Delivery schema](https://github.com/namm-standards/namm-json/blob/master/schema/ed_response.json)
@@ -216,14 +217,14 @@ The Party document contains public identifying information about one trading par
 >**Internal note: FunAck may be removed from the spec.**
 
 The Functional Acknowledgement document, **funack.json**, is a simple notification from party to party acknowledging the receipt of another transaction such as an item document, purchase order, advanced shipment notice, or invoice. It may also provide information indicating the status of the transactional document. This document is used repeatedly throughout the supply chain.
-
->**Internal note: These two files also aren't in the JSON repo; I assume they aren't used in the new system.**
 -->
+
 <!--
 ## Price Book
 
 The Price Book document, **pricebook.json**, contains pricing information for various items offered by the supplier. It can specify price changes (breaks) at different purchase tiers (e.g., 1-100 units, 101-500 units, etc.) as well as indicate units of measure (UOM) for the tiers. This document is optional.
 -->
+
 <!--
 ## Sell Through
 
