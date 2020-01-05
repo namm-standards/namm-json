@@ -1,12 +1,12 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "po_status_request.json",
+    "$id": "https://standards.namm.org/schema/2020.1/po_status_request.json",
     "type": "object",
     "title": "NAMM_POStatusRequest",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "Id": {
             "type": "string",

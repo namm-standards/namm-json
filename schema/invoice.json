@@ -1,13 +1,13 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "invoice.json",
+    "$id": "https://standards.namm.org/schema/2020.1/invoice.json",
     "type": "object",
     "title": "Invoice",
     "description": "JSON Schema version of NAMM Invoice 2009.2",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "InvoiceHeader": {
             "type": "object",
@@ -60,22 +60,22 @@
                     ]
                 },
                 "Supplier": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "RemitTo": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "BillTo": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "ShipTo": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "CurrencyCode": {
-                    "$ref": "common.json#/definitions/CurrencyCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                 },
                 "TermsCode": {
-                    "$ref": "common.json#/definitions/TermsCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermsCode"
                 },
                 "TermsDays": {
                     "type": "integer",
@@ -99,7 +99,7 @@
                     "maxLength": 250
                 },
                 "TranspCode": {
-                    "$ref": "common.json#/definitions/TranspCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
                 },
                 "TranspDesc": {
                     "type": "string",
@@ -120,7 +120,7 @@
                     "description": "Transport terms"
                 },
                 "IncoTermsCode": {
-                    "$ref": "common.json#/definitions/IncoTermsCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/IncoTermsCode"
                 },
                 "IncoTermsDesc": {
                     "type": "string",
@@ -260,14 +260,14 @@
                                         "description": "Unit cost"
                                     },
                                     "UCCurrencyCode": {
-                                        "$ref": "common.json#/definitions/CurrencyCode"
+                                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                                     },
                                     "ExtendedCostValue": {
                                         "type": "number",
                                         "description": "Extended cost"
                                     },
                                     "ExtendedCurrencyCode": {
-                                        "$ref": "common.json#/definitions/CurrencyCode"
+                                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                                     },
                                     "RetailValue": {
                                         "type": "number",
@@ -309,7 +309,7 @@
                                         "maxLength": 14
                                     },
                                     "BarCodeType": {
-                                        "$ref": "common.json#/definitions/BarCodeType"
+                                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
                                     }
                                 },
                                 "required": [

@@ -1,0 +1,597 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema File 
+         in ASN
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('SchemaFile', 'file-asn_json');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema File 
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="Changes the URI resolution scope">
+                  <h3>ID</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">https://standards.namm.org/schema/2020.1/asn.json</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A short description of the instance described by this schema.">
+                  <h3>
+                     Title
+                     
+                  </h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">NAMM ASN</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A description explaining the purpose of the instance described by this schema.">
+                  <h3>Description</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">This is a json-schema version of NAMM ASN XSD</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="309,1149,545,1181" href="property-orders.html" alt="Drilldown into /properties/Orders"></area>
+                        <area shape="rect" coords="309,1131,545,1149" href="property-orders.html" alt="Drilldown into /properties/Orders"></area>
+                        <area shape="rect" coords="305,1097,549,1186" href="property-orders.html" alt="Drilldown into /properties/Orders"></area>
+                        <area shape="rect" coords="305,1059,471,1089" href="property-vehicle.html" alt="Drilldown into /properties/Vehicle"></area>
+                        <area shape="rect" coords="305,964,612,1051" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="305,869,612,956" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="305,709,653,796" href="def-transpcode.html" alt="Drilldown into /definitions/TranspCode"></area>
+                        <area shape="rect" coords="305,615,611,702" href="def-weight.html" alt="Drilldown into /definitions/Weight"></area>
+                        <area shape="rect" coords="305,520,616,607" href="def-volume.html" alt="Drilldown into /definitions/Volume"></area>
+                        <area shape="rect" coords="305,482,517,512" href="property-shipmentqty.html" alt="Drilldown into /properties/ShipmentQty"></area>
+                        <area shape="rect" coords="305,445,526,475" href="property-shipmentrefs.html" alt="Drilldown into /properties/ShipmentRefs"></area>
+                        <area shape="rect" coords="305,350,634,437" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="305,312,547,342" href="property-shipmentheader.html" alt="Drilldown into /properties/ShipmentHeader"></area>
+                        <area shape="rect" coords="305,37,617,124" href="def-version.html" alt="Drilldown into /definitions/Version"></area></map><img src="images/file-asn_json.png" border="0" alt="JSON Schema Diagram of /" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { Version : ... }">Version</td>
+                                       <td>number</td>
+                                       <td><a href="def-version.html" title="/definitions/Version">Version
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Id : ... }">Id</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                50</i></strong><div>
+                                             Description : Document ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Timestamp : ... }">Timestamp</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Date/time stamp for this document
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipmentHeader : ... }">ShipmentHeader</td>
+                                       <td>object</td>
+                                       <td><a href="property-shipmentheader.html" title="/properties/ShipmentHeader">ShipmentHeader
+                                             (asn.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipFrom : ... }">ShipFrom</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipmentRefs : ... }">ShipmentRefs</td>
+                                       <td>object</td>
+                                       <td><a href="property-shipmentrefs.html" title="/properties/ShipmentRefs">ShipmentRefs
+                                             (asn.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipmentQty : ... }">ShipmentQty</td>
+                                       <td>object</td>
+                                       <td><a href="property-shipmentqty.html" title="/properties/ShipmentQty">ShipmentQty
+                                             (asn.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Volume : ... }">Volume</td>
+                                       <td>object</td>
+                                       <td><a href="def-volume.html" title="/definitions/Volume">Volume
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Weight : ... }">Weight</td>
+                                       <td>object</td>
+                                       <td><a href="def-weight.html" title="/definitions/Weight">Weight
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { TranspCode : ... }">TranspCode</td>
+                                       <td>string</td>
+                                       <td><a href="def-transpcode.html" title="/definitions/TranspCode">TranspCode
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { TranspDesc : ... }">TranspDesc</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                50</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SoldTo : ... }">SoldTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipTo : ... }">ShipTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Vehicle : ... }">Vehicle</td>
+                                       <td>object</td>
+                                       <td><a href="property-vehicle.html" title="/properties/Vehicle">Vehicle
+                                             (asn.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Orders : ... }">Orders</td>
+                                       <td>array</td>
+                                       <td><a href="property-orders.html" title="/properties/Orders">Orders
+                                             (asn.json)
+                                             </a></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.namm.org/schema/2020.1/asn.json",
+    "type": "object",
+    "title": "NAMM ASN",
+    "description": "This is a json-schema version of NAMM ASN XSD",
+    "additionalProperties": false,
+    "properties": {
+        "Version": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
+        },
+        "Id": {
+            "type": "string",
+            "description": "Document ID",
+            "maxLength": 50
+        },
+        "Timestamp": {
+            "type": "string",
+            "description": "Date/time stamp for this document",
+            "format": "date-time"
+        },
+        "ShipmentHeader": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "ShipmentType": {
+                    "type": "string",
+                    "description": "Shipment type description",
+                    "maxLength": 25
+                },
+                "ShipmentId": {
+                    "type": "string",
+                    "description": "Supplier ASN document number",
+                    "maxLength": 25
+                },
+                "Shipped": {
+                    "type": "string",
+                    "description": "Shipment date",
+                    "format": "date"
+                },
+                "EstDeliver": {
+                    "type": "string",
+                    "description": "Estimated Delivery Date",
+                    "format": "date"
+                },
+                "Supplier": {
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                }
+            }
+        },
+        "ShipFrom": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        },
+        "ShipmentRefs": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "MasterBOL": {
+                    "type": "string",
+                    "description": "Shipment master Bill Of Lading number",
+                    "maxLength": 25
+                },
+                "PRONbr": {
+                    "type": "string",
+                    "description": "Shipment PRO number",
+                    "maxLength": 25
+                },
+                "ConfNbr": {
+                    "type": "string",
+                    "description": "Shipment confirmation number",
+                    "maxLength": 25
+                }
+            }
+        },
+        "ShipmentQty": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "ContainerQty": {
+                    "type": "integer",
+                    "description": "Number of units per container"
+                },
+                "ShipmentItemQty": {
+                    "type": "integer",
+                    "description": "Number of units in shipment"
+                }
+            },
+            "required": [
+                "ContainerQty"
+            ]
+        },
+        "Volume": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Volume"
+        },
+        "Weight": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Weight"
+        },
+        "TranspCode": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
+        },
+        "TranspDesc": {
+            "type": "string",
+            "maxLength": 50
+        },
+        "SoldTo": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        },
+        "ShipTo": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        },
+        "Vehicle": {
+            "type": "object",
+            "additionalProperties": {},
+            "properties": {
+                "VehicleId": {
+                    "type": "string",
+                    "description": "Shipper vehicle ID",
+                    "maxLength": 25
+                },
+                "VehicleType": {
+                    "type": "string",
+                    "description": "Shipper vehicle type"
+                },
+                "SealId": {
+                    "type": "string",
+                    "description": "Shipper container seal ID",
+                    "maxLength": 25
+                }
+            }
+        },
+        "Orders": {
+            "type": "array",
+            "description": "Buyer purchase order IDs",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "BuyerOrderId": {
+                        "type": "string",
+                        "description": "Buyer purchase order ID",
+                        "maxLength": 25
+                    },
+                    "Containers": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "ContainerId": {
+                                    "type": "string",
+                                    "description": "Shipper container ID",
+                                    "maxLength": 25
+                                },
+                                "ShipperTrackingNumber": {
+                                    "type": "string",
+                                    "description": "Shipper tracking number",
+                                    "maxLength": 25
+                                },
+                                "Length": {
+                                    "type": "number"
+                                },
+                                "Width": {
+                                    "type": "number"
+                                },
+                                "Height": {
+                                    "type": "number"
+                                },
+                                "DimUOM": {
+                                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/DimUOM"
+                                },
+                                "Weight": {
+                                    "type": "number"
+                                },
+                                "WeightUOM": {
+                                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/WeightUOM"
+                                },
+                                "Item": {
+                                    "type": "array",
+                                    "minItems": 1,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": {},
+                                        "properties": {
+                                            "ItemId": {
+                                                "type": "object",
+                                                "additionalProperties": {},
+                                                "properties": {
+                                                    "BarCodeId": {
+                                                        "type": "string",
+                                                        "maxLength": 14
+                                                    },
+                                                    "BarCodeType": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "GTIN-12",
+                                                            "GTIN-13",
+                                                            "GTIN-14",
+                                                            "PartNumber"
+                                                        ]
+                                                    },
+                                                    "BuyerItemId": {
+                                                        "type": "string",
+                                                        "maxLength": 25
+                                                    },
+                                                    "BuyerItemDesc": {
+                                                        "type": "string",
+                                                        "maxLength": 50
+                                                    },
+                                                    "SupplierItemId": {
+                                                        "type": "string",
+                                                        "maxLength": 25
+                                                    },
+                                                    "SupplierItemDesc": {
+                                                        "type": "string",
+                                                        "maxLength": 50
+                                                    }
+                                                },
+                                                "required": [
+                                                    "BarCodeId",
+                                                    "BarCodeType",
+                                                    "BuyerItemId",
+                                                    "SupplierItemId"
+                                                ]
+                                            },
+                                            "POLineNbr": {
+                                                "type": "integer"
+                                            },
+                                            "ItemQty": {
+                                                "type": "object",
+                                                "additionalProperties": {},
+                                                "properties": {
+                                                    "Qty": {
+                                                        "type": "number"
+                                                    },
+                                                    "ItemUOMCode": {
+                                                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+                                                    },
+                                                    "ItemUOMDesc": {
+                                                        "type": "string",
+                                                        "maxLength": 15
+                                                    }
+                                                },
+                                                "required": [
+                                                    "Qty"
+                                                ]
+                                            },
+                                            "ItemAttrs": {
+                                                "type": "object",
+                                                "additionalProperties": {},
+                                                "properties": {
+                                                    "SerialNbrs": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "string",
+                                                            "description": "Item serial number"
+                                                        }
+                                                    },
+                                                    "StdPack": {
+                                                        "type": "object",
+                                                        "additionalProperties": {},
+                                                        "properties": {
+                                                            "ICQtyPerUOM": {
+                                                                "type": "number",
+                                                                "description": "Inner Carton quantity per Unit of Measure"
+                                                            },
+                                                            "ICUOM": {
+                                                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+                                                            },
+                                                            "StdPackType": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "StdContainer": {
+                                                        "type": "object",
+                                                        "additionalProperties": {},
+                                                        "properties": {
+                                                            "MCQtyPerUOM": {
+                                                                "type": "number",
+                                                                "description": "Master Carton quantity per Unit of Measure"
+                                                            },
+                                                            "MCUOM": {
+                                                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+                                                            },
+                                                            "StdContainerType": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "ItemId",
+                                            "POLineNbr",
+                                            "ItemQty"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "BuyerOrderId"
+                ]
+            }
+        }
+    },
+    "required": []
+}</pre><div><i>https://standards.namm.org/schema/2020.1/asn.json (1:2)
+                           </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="schema.html" title="/additionalProperties">/additionalProperties
+                              (asn.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for ASN
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2019 - Data Designer Edition 17.1.14.9682</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema Property Media
+         in Item
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('Property', 'property-media');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema Property 'Media'
+                     
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="201,144,360,174" href="property-audios.html" alt="Drilldown into /definitions/Item/properties/MarketingInfo/properties/Media/properties/Audios"></area>
+                        <area shape="rect" coords="201,107,395,137" href="property-documents.html" alt="Drilldown into /definitions/Item/properties/MarketingInfo/properties/Media/properties/Documents"></area>
+                        <area shape="rect" coords="201,69,358,99" href="property-videos.html" alt="Drilldown into /definitions/Item/properties/MarketingInfo/properties/Media/properties/Videos"></area>
+                        <area shape="rect" coords="201,32,361,62" href="property-images.html" alt="Drilldown into /definitions/Item/properties/MarketingInfo/properties/Media/properties/Images"></area></map><img src="images/property-media.png" border="0" alt="JSON Schema Diagram of /definitions/Item/properties/MarketingInfo/properties/Media" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { Images : ... }">Images</td>
+                                       <td>array</td>
+                                       <td><a href="property-images.html" title="/definitions/Item/properties/MarketingInfo/properties/Media/properties/Images">Images
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Videos : ... }">Videos</td>
+                                       <td>array</td>
+                                       <td><a href="property-videos.html" title="/definitions/Item/properties/MarketingInfo/properties/Media/properties/Videos">Videos
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Documents : ... }">Documents</td>
+                                       <td>array</td>
+                                       <td><a href="property-documents.html" title="/definitions/Item/properties/MarketingInfo/properties/Media/properties/Documents">Documents
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Audios : ... }">Audios</td>
+                                       <td>array</td>
+                                       <td><a href="property-audios.html" title="/definitions/Item/properties/MarketingInfo/properties/Media/properties/Audios">Audios
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">"Media": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "Images": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Image"
+            }
+        },
+        "Videos": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Video"
+            }
+        },
+        "Documents": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Document"
+            }
+        },
+        "Audios": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Audio"
+            }
+        }
+    }
+}</pre><div><i>https://standards.namm.org/schema/2020.1/item.json (280:26)
+                           </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="property-marketinginfo.html" title="/definitions/Item/properties/MarketingInfo">/definitions/Item/properties/MarketingInfo
+                              (item.json)
+                              </a></li>
+                        <li><a href="schema-13.html" title="/definitions/Item/properties/MarketingInfo/additionalProperties">/definitions/Item/properties/MarketingInfo/additionalProperties
+                              (item.json)
+                              </a></li>
+                        <li><a href="schema-14.html" title="/definitions/Item/properties/MarketingInfo/properties/Media/additionalProperties">/definitions/Item/properties/MarketingInfo/properties/Media/additionalProperties
+                              (item.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for Item
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2019 - Data Designer Edition 17.1.14.9682</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

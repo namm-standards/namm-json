@@ -1,0 +1,802 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema Definition Item
+         in Item
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('Definition', 'def-item');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema Definition 'Item'
+                     
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="197,1914,393,1944" href="property-availability.html" alt="Drilldown into /definitions/Item/properties/Availability"></area>
+                        <area shape="rect" coords="197,1876,392,1906" href="property-itemfamily.html" alt="Drilldown into /definitions/Item/properties/ItemFamily"></area>
+                        <area shape="rect" coords="197,1839,404,1869" href="property-relateditems.html" alt="Drilldown into /definitions/Item/properties/RelatedItems"></area>
+                        <area shape="rect" coords="197,1801,455,1831" href="property-extendedattributes.html" alt="Drilldown into /definitions/Item/properties/ExtendedAttributes"></area>
+                        <area shape="rect" coords="197,1764,415,1794" href="property-marketinginfo.html" alt="Drilldown into /definitions/Item/properties/MarketingInfo"></area>
+                        <area shape="rect" coords="201,1733,385,1751" href="property-kititems.html" alt="Drilldown into /definitions/Item/properties/KitItems"></area>
+                        <area shape="rect" coords="197,1699,389,1756" href="property-kititems.html" alt="Drilldown into /definitions/Item/properties/KitItems"></area>
+                        <area shape="rect" coords="201,1668,407,1686" href="property-containers.html" alt="Drilldown into /definitions/Item/properties/Containers"></area>
+                        <area shape="rect" coords="197,1634,411,1691" href="property-containers.html" alt="Drilldown into /definitions/Item/properties/Containers"></area>
+                        <area shape="rect" coords="201,1603,376,1621" href="property-pricing.html" alt="Drilldown into /definitions/Item/properties/Pricing"></area>
+                        <area shape="rect" coords="197,1569,380,1626" href="property-pricing.html" alt="Drilldown into /definitions/Item/properties/Pricing"></area>
+                        <area shape="rect" coords="197,1532,376,1562" href="property-barcodes.html" alt="Drilldown into /definitions/Item/properties/Barcodes"></area>
+                        <area shape="rect" coords="197,1399,590,1486" href="def-termuom.html" alt="Drilldown into /definitions/TermUOM"></area>
+                        <area shape="rect" coords="197,1221,593,1308" href="def-termuom.html" alt="Drilldown into /definitions/TermUOM"></area>
+                        <area shape="rect" coords="197,746,543,833" href="def-weightuom.html" alt="Drilldown into /definitions/WeightUOM"></area>
+                        <area shape="rect" coords="197,613,518,700" href="def-dimuom.html" alt="Drilldown into /definitions/DimUOM"></area>
+                        <area shape="rect" coords="201,335,400,367" href="property-serialized.html" alt="Drilldown into /definitions/Item/properties/Serialized"></area>
+                        <area shape="rect" coords="197,301,404,372" href="property-serialized.html" alt="Drilldown into /definitions/Item/properties/Serialized"></area>
+                        <area shape="rect" coords="201,257,476,289" href="property-kitcomponentonly.html" alt="Drilldown into /definitions/Item/properties/KitComponentOnly"></area>
+                        <area shape="rect" coords="197,223,480,294" href="property-kitcomponentonly.html" alt="Drilldown into /definitions/Item/properties/KitComponentOnly"></area>
+                        <area shape="rect" coords="201,178,365,210" href="property-kit.html" alt="Drilldown into /definitions/Item/properties/Kit"></area>
+                        <area shape="rect" coords="197,144,369,215" href="property-kit.html" alt="Drilldown into /definitions/Item/properties/Kit"></area></map><img src="images/def-item.png" border="0" alt="JSON Schema Diagram of /definitions/Item" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { SupplierItemId : ... }">SupplierItemId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SupplierModel : ... }">SupplierModel</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SupplierItemDesc : ... }">SupplierItemDesc</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Kit : ... }">Kit</td>
+                                       <td>string</td>
+                                       <td><a href="property-kit.html" title="/definitions/Item/properties/Kit">Kit
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { KitComponentOnly : ... }">KitComponentOnly</td>
+                                       <td>string</td>
+                                       <td><a href="property-kitcomponentonly.html" title="/definitions/Item/properties/KitComponentOnly">KitComponentOnly
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Serialized : ... }">Serialized</td>
+                                       <td>string</td>
+                                       <td><a href="property-serialized.html" title="/definitions/Item/properties/Serialized">Serialized
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BrandName : ... }">BrandName</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { CountryOrigin : ... }">CountryOrigin</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &gt;=
+                                                2</i></strong>
+                                          and
+                                          <strong><i>
+                                                length &lt;=
+                                                2</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Length : ... }">Length</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Width : ... }">Width</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Height : ... }">Height</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { DimUOM : ... }">DimUOM</td>
+                                       <td>string</td>
+                                       <td><a href="def-dimuom.html" title="/definitions/DimUOM">DimUOM
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Weight : ... }">Weight</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { WeightUOM : ... }">WeightUOM</td>
+                                       <td>string</td>
+                                       <td><a href="def-weightuom.html" title="/definitions/WeightUOM">WeightUOM
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { AnnounceDate : ... }">AnnounceDate</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { AvailableDate : ... }">AvailableDate</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { UnavailableDate : ... }">UnavailableDate</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { EndOfProductionDate : ... }">EndOfProductionDate</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ReplacementID : ... }">ReplacementID</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { WarrantyPartTerm : ... }">WarrantyPartTerm</td>
+                                       <td>integer</td>
+                                       <td>
+                                          A Integer
+                                          value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                value
+                                                
+                                                &gt;=
+                                                0</i></strong>
+                                          and
+                                          <strong><i>
+                                                value
+                                                
+                                                &lt;=
+                                                65535</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { WarrantyPartUOM : ... }">WarrantyPartUOM</td>
+                                       <td>string</td>
+                                       <td><a href="def-termuom.html" title="/definitions/TermUOM">TermUOM
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { WarrantyLabTerm : ... }">WarrantyLabTerm</td>
+                                       <td>integer</td>
+                                       <td>
+                                          A Integer
+                                          value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                value
+                                                
+                                                &gt;=
+                                                0</i></strong>
+                                          and
+                                          <strong><i>
+                                                value
+                                                
+                                                &lt;=
+                                                255</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { WarrantyLabUOM : ... }">WarrantyLabUOM</td>
+                                       <td>string</td>
+                                       <td><a href="def-termuom.html" title="/definitions/TermUOM">TermUOM
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Condition : ... }">Condition</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Barcodes : ... }">Barcodes</td>
+                                       <td>array</td>
+                                       <td><a href="property-barcodes.html" title="/definitions/Item/properties/Barcodes">Barcodes
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Pricing : ... }">Pricing</td>
+                                       <td>array</td>
+                                       <td><a href="property-pricing.html" title="/definitions/Item/properties/Pricing">Pricing
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Containers : ... }">Containers</td>
+                                       <td>array</td>
+                                       <td><a href="property-containers.html" title="/definitions/Item/properties/Containers">Containers
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { KitItems : ... }">KitItems</td>
+                                       <td>array</td>
+                                       <td><a href="property-kititems.html" title="/definitions/Item/properties/KitItems">KitItems
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { MarketingInfo : ... }">MarketingInfo</td>
+                                       <td>object</td>
+                                       <td><a href="property-marketinginfo.html" title="/definitions/Item/properties/MarketingInfo">MarketingInfo
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ExtendedAttributes : ... }">ExtendedAttributes</td>
+                                       <td>array</td>
+                                       <td><a href="property-extendedattributes.html" title="/definitions/Item/properties/ExtendedAttributes">ExtendedAttributes
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { RelatedItems : ... }">RelatedItems</td>
+                                       <td>array</td>
+                                       <td><a href="property-relateditems.html" title="/definitions/Item/properties/RelatedItems">RelatedItems
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ItemFamily : ... }">ItemFamily</td>
+                                       <td>object</td>
+                                       <td><a href="property-itemfamily.html" title="/definitions/Item/properties/ItemFamily">ItemFamily
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Availability : ... }">Availability</td>
+                                       <td>object</td>
+                                       <td><a href="property-availability.html" title="/definitions/Item/properties/Availability">Availability
+                                             (item.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Prop65Message : ... }">Prop65Message</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Prop65Chemical : ... }">Prop65Chemical</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">"Item": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "SupplierItemId": {
+            "type": "string"
+        },
+        "SupplierModel": {
+            "type": "string"
+        },
+        "SupplierItemDesc": {
+            "type": "string"
+        },
+        "Kit": {
+            "type": "string",
+            "enum": [
+                "Y",
+                "N"
+            ]
+        },
+        "KitComponentOnly": {
+            "type": "string",
+            "enum": [
+                "Y",
+                "N"
+            ]
+        },
+        "Serialized": {
+            "type": "string",
+            "enum": [
+                "Y",
+                "N"
+            ]
+        },
+        "BrandName": {
+            "type": "string"
+        },
+        "CountryOrigin": {
+            "type": "string",
+            "maxLength": 2,
+            "minLength": 2
+        },
+        "Length": {
+            "type": "number"
+        },
+        "Width": {
+            "type": "number"
+        },
+        "Height": {
+            "type": "number"
+        },
+        "DimUOM": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/DimUOM"
+        },
+        "Weight": {
+            "type": "number"
+        },
+        "WeightUOM": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/WeightUOM"
+        },
+        "AnnounceDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "AvailableDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "UnavailableDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "EndOfProductionDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "ReplacementID": {
+            "type": "string"
+        },
+        "WarrantyPartTerm": {
+            "type": "integer",
+            "maximum": 65535,
+            "minimum": 0
+        },
+        "WarrantyPartUOM": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermUOM"
+        },
+        "WarrantyLabTerm": {
+            "type": "integer",
+            "maximum": 255,
+            "minimum": 0
+        },
+        "WarrantyLabUOM": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermUOM"
+        },
+        "Condition": {
+            "type": "string"
+        },
+        "Barcodes": {
+            "type": "array",
+            "items": {
+                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
+            }
+        },
+        "Pricing": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Value": {
+                        "type": "number"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "MSRP",
+                            "MAP",
+                            "Cost"
+                        ]
+                    },
+                    "Currency": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
+                    },
+                    "Qty": {
+                        "type": "integer",
+                        "maximum": 255,
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "type",
+                    "Currency"
+                ]
+            }
+        },
+        "Containers": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Type": {
+                        "type": "string"
+                    },
+                    "Length": {
+                        "type": "number"
+                    },
+                    "Width": {
+                        "type": "number"
+                    },
+                    "Height": {
+                        "type": "number"
+                    },
+                    "DimUOM": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/DimUOM"
+                    },
+                    "Weight": {
+                        "type": "number"
+                    },
+                    "WeightUOM": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/WeightUOM"
+                    },
+                    "UOM": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+                    },
+                    "QtyPerUOM": {
+                        "type": "integer",
+                        "maximum": 65535,
+                        "minimum": 0
+                    },
+                    "Barcodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
+                        }
+                    }
+                },
+                "required": [
+                    "Type",
+                    "Length",
+                    "Width",
+                    "Height",
+                    "DimUOM",
+                    "Weight",
+                    "WeightUOM",
+                    "UOM",
+                    "QtyPerUOM"
+                ]
+            }
+        },
+        "KitItems": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "SupplierItemId": {
+                        "type": "string"
+                    },
+                    "Qty": {
+                        "type": "number"
+                    },
+                    "UOM": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+                    },
+                    "Barcodes": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
+                        }
+                    }
+                },
+                "required": [
+                    "SupplierItemId",
+                    "Qty",
+                    "UOM"
+                ]
+            }
+        },
+        "MarketingInfo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "PrimaryCategory": {
+                    "type": "string"
+                },
+                "ProductURL": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "ItemDescLong": {
+                    "type": "string"
+                },
+                "SecondaryCategories": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Bullets": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Media": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Images": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Image"
+                            }
+                        },
+                        "Videos": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Video"
+                            }
+                        },
+                        "Documents": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Document"
+                            }
+                        },
+                        "Audios": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Audio"
+                            }
+                        }
+                    }
+                },
+                "Keywords": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "PrimaryCategory"
+            ]
+        },
+        "ExtendedAttributes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/ExtendedAttribute"
+            }
+        },
+        "RelatedItems": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/RelatedItem"
+            }
+        },
+        "ItemFamily": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "property": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "property",
+                "code"
+            ]
+        },
+        "Availability": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "QtyOnHand": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "Available": {
+                    "type": "string",
+                    "enum": [
+                        "YES",
+                        "NO",
+                        "LOW",
+                        "MEDIUM",
+                        "HIGH"
+                    ]
+                },
+                "QueryURL": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "required": [
+                "Available"
+            ]
+        },
+        "Prop65Message": {
+            "type": "string"
+        },
+        "Prop65Chemical": {
+            "type": "string"
+        }
+    },
+    "required": []
+}</pre><div><i>https://standards.namm.org/schema/2020.1/item.json (30:21)
+                           </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="file-item_json.html" title="/">/
+                              (item.json)
+                              </a></li>
+                        <li><a href="schema-6.html" title="/definitions/Item/additionalProperties">/definitions/Item/additionalProperties
+                              (item.json)
+                              </a></li>
+                        <li><a href="property-items.html" title="/properties/Items">/properties/Items
+                              (item.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for Item
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2019 - Data Designer Edition 17.1.14.9682</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

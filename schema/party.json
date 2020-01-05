@@ -1,13 +1,13 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "party.json",
+    "$id": "https://standards.namm.org/schema/2020.1/party.json",
     "type": "object",
     "title": "Party",
-    "description": "This is a json-schema version of NAMM Party v2009.1 from XSD",
+    "description": "This is a json-schema version of NAMM Party XSD",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "RevisionDate": {
             "type": "string",
@@ -75,7 +75,7 @@
                                 "maxLength": 35
                             },
                             "Address": {
-                                "$ref": "common.json#/definitions/Address"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Address"
                             },
                             "Phone": {
                                 "type": "string",
