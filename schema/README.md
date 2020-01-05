@@ -117,7 +117,7 @@ You can get additional help with B2B planning and implementation at the [NAMM we
 
 There are also many completely free JSON tutorials, services, and utilities available online, such as the [W3Schools JSON section](https://www.w3schools.com/js/js_json_intro.asp), code editors like the excellent [Notepad++](https://notepad-plus-plus.org/), and web-based tools such as the [JSONLint validator](https://jsonlint.com/) and the [JSON Formatter and Validator](https://jsonformatter.org/).
 
-For more information or to ask specific questions, please email us at  [b2b@namm.org](mailto:b2b@namm.org).
+For more information or to ask specific questions, please email us at  [standards@namm.org](mailto:standards@namm.org).
 
 # JSON Documents and Schemas
 
@@ -143,7 +143,7 @@ The Purchase Order document first provides basic information about the proposed 
 
 - [Sample Purchase Order document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_v2015.1.json)
 - [Raw Purchase Order schema](https://github.com/namm-standards/namm-json/blob/master/schema/purchase_order.json)
-- [Purchase Order schema technical reference](https://standards.namm.org/docs/po/index.html)
+- [Purchase Order schema technical reference](https://standards.namm.org/docs/purchase_order/index.html)
 
 ## Invoice
 
@@ -177,7 +177,7 @@ The Purchase Order Status Request document, **postatusrequest.json**, requests f
 
 - [Sample Purchase Order Status Request document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_StatusRequest.json)
 - [Raw Purchase Order Status Request schema](https://github.com/namm-standards/namm-json/blob/master/schema/po_status_request.json)
-- [Purchase Order Status Request schema technical reference](https://standards.namm.org/docs/postatusreq/index.html)
+- [Purchase Order Status Request schema technical reference](https://standards.namm.org/docs/po_status_request/index.html)
 
 ## Purchase Order Status
 
@@ -185,7 +185,7 @@ The Purchase Order Status document, **postatus.json**, is a dual-purpose transac
 
 - [Sample Purchase Order Status / Detail Acknowledgement document](https://github.com/namm-standards/namm-json/blob/master/examples/PO_Status.json)
 - [Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/po_status.json)
-- [Purchase Order Status / Detail Acknowledgement schema technical reference](https://standards.namm.org/docs/postatus/index.html)
+- [Purchase Order Status / Detail Acknowledgement schema technical reference](https://standards.namm.org/docs/po_status/index.html)
 
 <!--
 ## Electronic Delivery Response
