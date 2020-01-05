@@ -66,10 +66,10 @@ The NAMM B2B standard comprises a set of JSON files containing data in a predefi
 
 A typical sequence of events between a product supplier (a vendor) and product buyer (a retailer) and the associated documents, observed in chronological order, might be as follows.  
 
+<!-- 4. The supplier sends details about the items ordered to the buyer in an **Electronic Delivery Response** document. -->
 1. Both supplier and buyer complete and release mutually-available identification information in a **Party** document.  
 1. The supplier sends a catalog of available products to the buyer in an **Item** document.  
 1. The buyer decides to purchase items from the catalog and sends a request for them to the supplier in a **Purchase Order** document.  
-1. The supplier sends details about the items ordered to the buyer in an **Electronic Delivery Response** document.
 1. The buyer requests the status of their order with a **PO Status Request** document.  
 1. The supplier provides the status of the order in a **PO Status** document.  
 1. The supplier makes one or more product shipments to the buyer and sends details for each shipment in an **Advanced Shipment Notification** document.  
@@ -133,7 +133,7 @@ Schemas ensure that both the structure of the data and the data itself conform t
 
 The various data and schema documents in the NAMM B2B specification are described below, with links to samples and more details. 
 
->**The B2B "Core" documents &mdash; Purchase Order, Invoice, Advanced Shipping Notice, and Item &mdash; are listed first, followed by the "Auxiliary" documents &mdash; Purchase Order Status Request, Purchase Order Status, Electronic Delivery, and Party, and finally by the Common Elements document.**
+>**The B2B "Core" documents &mdash; Purchase Order, Invoice, Advanced Shipping Notice, and Item &mdash; are listed first, followed by the "Auxiliary" documents &mdash; Purchase Order Status Request, Purchase Order Status, <!--Electronic Delivery,--> and Party, and finally by the Common Elements document.**
 
 ## Purchase Order
 
