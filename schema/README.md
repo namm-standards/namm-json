@@ -187,6 +187,7 @@ The Purchase Order Status document, **postatus.json**, is a dual-purpose transac
 - [Raw Purchase Order Status / Detail Acknowledgement schema](https://github.com/namm-standards/namm-json/blob/master/schema/po_status.json)
 - [Purchase Order Status / Detail Acknowledgement schema technical reference](./ref/postatus/index.html)
 
+<!--
 ## Electronic Delivery Response
 The Electronic Delivery Response document, **ed_response.json**, sent by the supplier to the buyer, contains specific information about items ordered, including barcodes, serial numbers, prices, etc. It may be used by the buyer to confirm that the order was received and processed correctly by the supplier.
 
@@ -194,7 +195,7 @@ The Electronic Delivery Response document, **ed_response.json**, sent by the sup
 - [Raw Electronic Delivery schema](https://github.com/namm-standards/namm-json/blob/master/schema/ed_response.json)
 - [Electronic Delivery schema technical reference](./ref/elecdeliv/index.html)
 
-<!--
+
 ## Payment Advice
 
 - [Sample Payment Advice document](https://github.com/namm-standards/namm-json/blob/master/examples/PaymentAdvice.json)
