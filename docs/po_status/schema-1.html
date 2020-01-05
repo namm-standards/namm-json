@@ -1,0 +1,367 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema /properties/Items/items[0]
+         in PO Status
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('Schema', 'schema-1');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema /properties/Items/items[0]
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="188,1185,495,1272" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="188,1090,548,1177" href="def-barcodetype.html" alt="Drilldown into /definitions/BarCodeType"></area>
+                        <area shape="rect" coords="188,652,579,739" href="def-currencycode.html" alt="Drilldown into /definitions/CurrencyCode"></area>
+                        <area shape="rect" coords="188,427,505,514" href="def-qtyuom.html" alt="Drilldown into /definitions/QtyUOM"></area>
+                        <area shape="rect" coords="188,175,529,225" href="def-statuscode.html" alt="Drilldown into /definitions/StatusCode"></area>
+                        <area shape="rect" coords="1,627,152,657" href="property-items.html" alt="Drilldown into /properties/Items"></area></map><img src="images/schema-1.png" border="0" alt="JSON Schema Diagram of /properties/Items/items[0]" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { POLineNbr : ... }">POLineNbr</td>
+                                       <td>integer</td>
+                                       <td>
+                                          A Integer
+                                          value
+                                          
+                                          <div>
+                                             Description : Item line number
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SequenceNbr : ... }">SequenceNbr</td>
+                                       <td>integer</td>
+                                       <td>
+                                          A Integer
+                                          value
+                                          
+                                          <div>
+                                             Description : Item sequence number
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { StatusCode : ... }">StatusCode</td>
+                                       <td>string</td>
+                                       <td><a href="def-statuscode.html" title="/definitions/StatusCode">StatusCode
+                                             (po_status.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { StatusMessage : ... }">StatusMessage</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Item Status Message
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Qty : ... }">Qty</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                          <div>
+                                             Description : Item Quantity
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { OriginalOrderQty : ... }">OriginalOrderQty</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                          <div>
+                                             Description : Original order quantity
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { QtyUOM : ... }">QtyUOM</td>
+                                       <td>string</td>
+                                       <td><a href="def-qtyuom.html" title="/definitions/QtyUOM">QtyUOM
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { UCValue : ... }">UCValue</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                          <div>
+                                             Description : Unit cost
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { OriginalOrderUCValue : ... }">OriginalOrderUCValue</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                          <div>
+                                             Description : Original Unit Cost
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { UCCurrencyCode : ... }">UCCurrencyCode</td>
+                                       <td>string</td>
+                                       <td><a href="def-currencycode.html" title="/definitions/CurrencyCode">CurrencyCode
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { EstimatedShipDate : ... }">EstimatedShipDate</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Estimated Shipping Date
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SupplierOrderId : ... }">SupplierOrderId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Suppliers Order ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BuyerItemId : ... }">BuyerItemId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Buyer Item ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SupplierItemId : ... }">SupplierItemId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Supplier Item ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BarCodeId : ... }">BarCodeId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Barcode Value
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BarCodeType : ... }">BarCodeType</td>
+                                       <td>string</td>
+                                       <td><a href="def-barcodetype.html" title="/definitions/BarCodeType">BarCodeType
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipTo : ... }">ShipTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "POLineNbr": {
+            "type": "integer",
+            "description": "Item line number"
+        },
+        "SequenceNbr": {
+            "type": "integer",
+            "description": "Item sequence number"
+        },
+        "StatusCode": {
+            "$ref": "#/definitions/StatusCode"
+        },
+        "StatusMessage": {
+            "type": "string",
+            "description": "Item Status Message"
+        },
+        "Qty": {
+            "type": "number",
+            "description": "Item Quantity"
+        },
+        "OriginalOrderQty": {
+            "type": "number",
+            "description": "Original order quantity"
+        },
+        "QtyUOM": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+        },
+        "UCValue": {
+            "type": "number",
+            "description": "Unit cost"
+        },
+        "OriginalOrderUCValue": {
+            "type": "number",
+            "description": "Original Unit Cost"
+        },
+        "UCCurrencyCode": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
+        },
+        "EstimatedShipDate": {
+            "type": "string",
+            "description": "Estimated Shipping Date",
+            "format": "date"
+        },
+        "SupplierOrderId": {
+            "type": "string",
+            "description": "Suppliers Order ID"
+        },
+        "BuyerItemId": {
+            "type": "string",
+            "description": "Buyer Item ID"
+        },
+        "SupplierItemId": {
+            "type": "string",
+            "description": "Supplier Item ID"
+        },
+        "BarCodeId": {
+            "type": "string",
+            "description": "Barcode Value"
+        },
+        "BarCodeType": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
+        },
+        "ShipTo": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        }
+    }
+}</pre><div><i>https://standards.namm.org/schema/2020.1/po_status.json (86:21)
+                           </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="property-items.html" title="/properties/Items">/properties/Items
+                              (po_status.json)
+                              </a></li>
+                        <li><a href="schema-2.html" title="/properties/Items/items[0]/additionalProperties">/properties/Items/items[0]/additionalProperties
+                              (po_status.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for PO Status
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2019 - Data Designer Edition 17.1.14.9682</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

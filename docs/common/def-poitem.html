@@ -1,0 +1,449 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema Definition POItem
+         in Common
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('Definition', 'def-poitem');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema Definition 'POItem'
+                     
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="541,1699,834,1729" href="schema-4.html" alt="Drilldown into /definitions/POItem/additionalProperties"></area>
+                        <area shape="rect" coords="521,1669,844,1741" href="schema-4.html" alt="Drilldown into /definitions/POItem/additionalProperties"></area>
+                        <area shape="rect" coords="541,1620,687,1650" href="schema-4.html" alt="Drilldown into /definitions/POItem/additionalProperties"></area>
+                        <area shape="rect" coords="521,1590,697,1662" href="schema-4.html" alt="Drilldown into /definitions/POItem/additionalProperties"></area>
+                        <area shape="rect" coords="212,1551,474,1581" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="216,1478,446,1538" href="property-barcodetype.html" alt="Drilldown into /definitions/POItem/properties/BarCodeType"></area>
+                        <area shape="rect" coords="212,1444,450,1543" href="property-barcodetype.html" alt="Drilldown into /definitions/POItem/properties/BarCodeType"></area>
+                        <area shape="rect" coords="216,1143,499,1161" href="property-retailcurrencycode.html" alt="Drilldown into /definitions/POItem/properties/RetailCurrencyCode"></area>
+                        <area shape="rect" coords="216,1097,499,1143" href="property-retailcurrencycode.html" alt="Drilldown into /definitions/POItem/properties/RetailCurrencyCode"></area>
+                        <area shape="rect" coords="212,1063,503,1167" href="property-retailcurrencycode.html" alt="Drilldown into /definitions/POItem/properties/RetailCurrencyCode"></area>
+                        <area shape="rect" coords="216,995,478,1013" href="property-uccurrencycode.html" alt="Drilldown into /definitions/POItem/properties/UCCurrencyCode"></area>
+                        <area shape="rect" coords="216,949,478,995" href="property-uccurrencycode.html" alt="Drilldown into /definitions/POItem/properties/UCCurrencyCode"></area>
+                        <area shape="rect" coords="212,915,482,1019" href="property-uccurrencycode.html" alt="Drilldown into /definitions/POItem/properties/UCCurrencyCode"></area>
+                        <area shape="rect" coords="216,363,404,864" href="property-qtyuom.html" alt="Drilldown into /definitions/POItem/properties/QtyUOM"></area>
+                        <area shape="rect" coords="212,329,408,870" href="property-qtyuom.html" alt="Drilldown into /definitions/POItem/properties/QtyUOM"></area></map><img src="images/def-poitem.png" border="0" alt="JSON Schema Diagram of /definitions/POItem" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { POLineNbr : ... }">POLineNbr</td>
+                                       <td>integer</td>
+                                       <td>
+                                          A Integer
+                                          value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                value
+                                                
+                                                &gt;=
+                                                1</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SupplierItemId : ... }">SupplierItemId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                25</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BuyerItemId : ... }">BuyerItemId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                25</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BuyerItemDesc : ... }">BuyerItemDesc</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                50</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Qty : ... }">Qty</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { QtyUOM : ... }">QtyUOM</td>
+                                       <td>string</td>
+                                       <td><a href="property-qtyuom.html" title="/definitions/POItem/properties/QtyUOM">QtyUOM
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { UCValue : ... }">UCValue</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { UCCurrencyCode : ... }">UCCurrencyCode</td>
+                                       <td>string</td>
+                                       <td><a href="property-uccurrencycode.html" title="/definitions/POItem/properties/UCCurrencyCode">UCCurrencyCode
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { RetailValue : ... }">RetailValue</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { RetailCurrencyCode : ... }">RetailCurrencyCode</td>
+                                       <td>string</td>
+                                       <td><a href="property-retailcurrencycode.html" title="/definitions/POItem/properties/RetailCurrencyCode">RetailCurrencyCode
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ICQtyPerUOM : ... }">ICQtyPerUOM</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ICUOM : ... }">ICUOM</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                5</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { MCQtyPerUOM : ... }">MCQtyPerUOM</td>
+                                       <td>number</td>
+                                       <td>
+                                          A Number
+                                          value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { MCUOM : ... }">MCUOM</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                5</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BarCodeId : ... }">BarCodeId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                14</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BarCodeType : ... }">BarCodeType</td>
+                                       <td>string</td>
+                                       <td><a href="property-barcodetype.html" title="/definitions/POItem/properties/BarCodeType">BarCodeType
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipTo : ... }">ShipTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="Any property not matched by the properties described above, must comply with the rules below.">Additional Properties</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="The property can have any name">
+                                          Any Property
+                                          
+                                       </td>
+                                       <td>any</td>
+                                       <td><a href="schema-4.html" title="/definitions/POItem/additionalProperties">/definitions/POItem/additionalProperties
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">"POItem": {
+    "type": "object",
+    "additionalProperties": {
+        "not": {}
+    },
+    "properties": {
+        "POLineNbr": {
+            "type": "integer",
+            "minimum": 1
+        },
+        "SupplierItemId": {
+            "type": "string",
+            "maxLength": 25
+        },
+        "BuyerItemId": {
+            "type": "string",
+            "maxLength": 25
+        },
+        "BuyerItemDesc": {
+            "type": "string",
+            "maxLength": 50
+        },
+        "Qty": {
+            "type": "number"
+        },
+        "QtyUOM": {
+            "type": "string",
+            "enum": [
+                "BAG",
+                "BKT",
+                "BND",
+                "BOWL",
+                "BX",
+                "CRD",
+                "CM",
+                "CS",
+                "CTN",
+                "DZ",
+                "EA",
+                "FT",
+                "GAL",
+                "GROSS",
+                "IN",
+                "KIT",
+                "LOT",
+                "M",
+                "MM",
+                "PC",
+                "PK",
+                "PK100",
+                "PK50",
+                "PR",
+                "RACK",
+                "RL",
+                "SET",
+                "SET3",
+                "SET4",
+                "SET5",
+                "SGL",
+                "SHT",
+                "SQFT",
+                "TUBE",
+                "YD"
+            ]
+        },
+        "UCValue": {
+            "type": "number"
+        },
+        "UCCurrencyCode": {
+            "type": "string",
+            "description": "ISO currency code",
+            "enum": [
+                "USD",
+                "EUR",
+                "JPY"
+            ]
+        },
+        "RetailValue": {
+            "type": "number"
+        },
+        "RetailCurrencyCode": {
+            "type": "string",
+            "description": "ISO currency code",
+            "enum": [
+                "USD",
+                "EUR",
+                "JPY"
+            ]
+        },
+        "ICQtyPerUOM": {
+            "type": "number"
+        },
+        "ICUOM": {
+            "type": "string",
+            "maxLength": 5
+        },
+        "MCQtyPerUOM": {
+            "type": "number"
+        },
+        "MCUOM": {
+            "type": "string",
+            "maxLength": 5
+        },
+        "BarCodeId": {
+            "type": "string",
+            "maxLength": 14
+        },
+        "BarCodeType": {
+            "type": "string",
+            "enum": [
+                "GTIN-12",
+                "GTIN-13",
+                "GTIN-14",
+                "PartNumber"
+            ]
+        },
+        "ShipTo": {
+            "$ref": "#/definitions/Party"
+        }
+    },
+    "required": [
+        "POLineNbr",
+        "BuyerItemId",
+        "Qty",
+        "QtyUOM",
+        "UCValue",
+        "UCCurrencyCode",
+        "BarCodeId",
+        "BarCodeType"
+    ]
+}</pre><div><i>https://standards.namm.org/schema/2020.1/common.json (207:10)
+                           </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="file-common_json.html" title="/">/
+                              (common.json)
+                              </a></li>
+                        <li><a href="schema-4.html" title="/definitions/POItem/additionalProperties">/definitions/POItem/additionalProperties
+                              (common.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for Common
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2019 - Data Designer Edition 17.1.14.9682</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema File 
+         in PO Status
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('SchemaFile', 'file-po_status_json');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema File 
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="Changes the URI resolution scope">
+                  <h3>ID</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">https://standards.namm.org/schema/2020.1/po_status.json</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A short description of the instance described by this schema.">
+                  <h3>
+                     Title
+                     
+                  </h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">NAMM_PO_Status</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="308,1198,550,1244" href="def-statuscode.html" alt="Drilldown into /definitions/StatusCode"></area>
+                        <area shape="rect" coords="308,1123,550,1197" href="def-statuscode.html" alt="Drilldown into /definitions/StatusCode"></area>
+                        <area shape="rect" coords="304,1089,554,1249" href="def-statuscode.html" alt="Drilldown into /definitions/StatusCode"></area>
+                        <area shape="rect" coords="304,1012,450,1042" href="property-items.html" alt="Drilldown into /properties/Items"></area>
+                        <area shape="rect" coords="304,917,611,1004" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="304,879,539,909" href="property-shipmentterms.html" alt="Drilldown into /properties/ShipmentTerms"></area>
+                        <area shape="rect" coords="304,842,533,872" href="property-paymentterms.html" alt="Drilldown into /properties/PaymentTerms"></area>
+                        <area shape="rect" coords="304,785,645,835" href="def-statuscode.html" alt="Drilldown into /definitions/StatusCode"></area>
+                        <area shape="rect" coords="304,690,611,777" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="304,595,621,682" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="304,37,616,124" href="def-version.html" alt="Drilldown into /definitions/Version"></area></map><img src="images/file-po_status_json.png" border="0" alt="JSON Schema Diagram of /" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { Version : ... }">Version</td>
+                                       <td>number</td>
+                                       <td><a href="def-version.html" title="/definitions/Version">Version
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Id : ... }">Id</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                50</i></strong><div>
+                                             Description : Document ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Timestamp : ... }">Timestamp</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { POStatusRequestId : ... }">POStatusRequestId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                50</i></strong><div>
+                                             Description : PO ID of status request
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BuyerOrderId : ... }">BuyerOrderId</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                25</i></strong><div>
+                                             Description : Buyer order ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { DateOrdered : ... }">DateOrdered</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Order Date
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { BuyerName : ... }">BuyerName</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Buyer Name
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Supplier : ... }">Supplier</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SoldTo : ... }">SoldTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { StatusCode : ... }">StatusCode</td>
+                                       <td>string</td>
+                                       <td><a href="def-statuscode.html" title="/definitions/StatusCode">StatusCode
+                                             (po_status.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { PaymentTerms : ... }">PaymentTerms</td>
+                                       <td>object</td>
+                                       <td><a href="property-paymentterms.html" title="/properties/PaymentTerms">PaymentTerms
+                                             (po_status.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipmentTerms : ... }">ShipmentTerms</td>
+                                       <td>object</td>
+                                       <td><a href="property-shipmentterms.html" title="/properties/ShipmentTerms">ShipmentTerms
+                                             (po_status.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { ShipTo : ... }">ShipTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Items : ... }">Items</td>
+                                       <td>array</td>
+                                       <td><a href="property-items.html" title="/properties/Items">Items
+                                             (po_status.json)
+                                             </a></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Reusable schema definitions that can be referenced in other parts of the document.">
+                  <h3>Definitions</h3>
+               </div>
+               <div class="col-md-6">
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th tooltip="The name of the schema definition">Name</th>
+                           <th tooltip="The types allowed within the definition">Type</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td><strong tooltip="Reference using '#/definitions/StatusCode'"><a href="def-statuscode.html" title="/definitions/StatusCode">StatusCode
+                                    (po_status.json)
+                                    </a></strong></td>
+                           <td>string</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://standards.namm.org/schema/2020.1/po_status.json",
+    "type": "object",
+    "title": "NAMM_PO_Status",
+    "additionalProperties": false,
+    "properties": {
+        "Version": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
+        },
+        "Id": {
+            "type": "string",
+            "description": "Document ID",
+            "maxLength": 50
+        },
+        "Timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "POStatusRequestId": {
+            "type": "string",
+            "description": "PO ID of status request",
+            "maxLength": 50
+        },
+        "BuyerOrderId": {
+            "type": "string",
+            "description": "Buyer order ID",
+            "maxLength": 25
+        },
+        "DateOrdered": {
+            "type": "string",
+            "description": "Order Date",
+            "format": "date"
+        },
+        "BuyerName": {
+            "type": "string",
+            "description": "Buyer Name"
+        },
+        "Supplier": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        },
+        "SoldTo": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        },
+        "StatusCode": {
+            "$ref": "#/definitions/StatusCode"
+        },
+        "PaymentTerms": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "StatusCode": {
+                    "type": "string",
+                    "description": "Payment status code"
+                },
+                "StatusMessage": {
+                    "type": "string"
+                },
+                "TermsCode": {
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermsCode"
+                }
+            },
+            "required": [
+                "StatusCode",
+                "StatusMessage",
+                "TermsCode"
+            ]
+        },
+        "ShipmentTerms": {
+            "type": "object",
+            "additionalProperties": {
+                "not": {}
+            },
+            "properties": {
+                "StatusCode": {
+                    "type": "string",
+                    "description": "Shipment status code"
+                }
+            }
+        },
+        "ShipTo": {
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+        },
+        "Items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "POLineNbr": {
+                        "type": "integer",
+                        "description": "Item line number"
+                    },
+                    "SequenceNbr": {
+                        "type": "integer",
+                        "description": "Item sequence number"
+                    },
+                    "StatusCode": {
+                        "$ref": "#/definitions/StatusCode"
+                    },
+                    "StatusMessage": {
+                        "type": "string",
+                        "description": "Item Status Message"
+                    },
+                    "Qty": {
+                        "type": "number",
+                        "description": "Item Quantity"
+                    },
+                    "OriginalOrderQty": {
+                        "type": "number",
+                        "description": "Original order quantity"
+                    },
+                    "QtyUOM": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
+                    },
+                    "UCValue": {
+                        "type": "number",
+                        "description": "Unit cost"
+                    },
+                    "OriginalOrderUCValue": {
+                        "type": "number",
+                        "description": "Original Unit Cost"
+                    },
+                    "UCCurrencyCode": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
+                    },
+                    "EstimatedShipDate": {
+                        "type": "string",
+                        "description": "Estimated Shipping Date",
+                        "format": "date"
+                    },
+                    "SupplierOrderId": {
+                        "type": "string",
+                        "description": "Suppliers Order ID"
+                    },
+                    "BuyerItemId": {
+                        "type": "string",
+                        "description": "Buyer Item ID"
+                    },
+                    "SupplierItemId": {
+                        "type": "string",
+                        "description": "Supplier Item ID"
+                    },
+                    "BarCodeId": {
+                        "type": "string",
+                        "description": "Barcode Value"
+                    },
+                    "BarCodeType": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
+                    },
+                    "ShipTo": {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                    }
+                }
+            }
+        }
+    },
+    "required": [],
+    "definitions": {
+        "StatusCode": {
+            "type": "string",
+            "description": "Status Codes for Document and Item (TBD)",
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "Changes",
+                "C1"
+            ]
+        }
+    }
+}</pre><div><i>https://standards.namm.org/schema/2020.1/po_status.json (1:2)
+                           </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="schema.html" title="/additionalProperties">/additionalProperties
+                              (po_status.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for PO Status
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2019 - Data Designer Edition 17.1.14.9682</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
