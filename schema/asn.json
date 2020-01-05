@@ -1,13 +1,13 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "asn.json",
+    "$id": "https://standards.namm.org/schema/2020.1/asn.json",
     "type": "object",
     "title": "NAMM ASN",
-    "description": "This is a json-schema version of NAMM ASN v2015.1",
+    "description": "This is a json-schema version of NAMM ASN XSD",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "Id": {
             "type": "string",
@@ -44,12 +44,12 @@
                     "format": "date"
                 },
                 "Supplier": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 }
             }
         },
         "ShipFrom": {
-            "$ref": "common.json#/definitions/Party"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
         },
         "ShipmentRefs": {
             "type": "object",
@@ -90,23 +90,23 @@
             ]
         },
         "Volume": {
-            "$ref": "common.json#/definitions/Volume"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Volume"
         },
         "Weight": {
-            "$ref": "common.json#/definitions/Weight"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Weight"
         },
         "TranspCode": {
-            "$ref": "common.json#/definitions/TranspCode"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
         },
         "TranspDesc": {
             "type": "string",
             "maxLength": 50
         },
         "SoldTo": {
-            "$ref": "common.json#/definitions/Party"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
         },
         "ShipTo": {
-            "$ref": "common.json#/definitions/Party"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
         },
         "Vehicle": {
             "type": "object",
@@ -168,13 +168,13 @@
                                     "type": "number"
                                 },
                                 "DimUOM": {
-                                    "$ref": "common.json#/definitions/DimUOM"
+                                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/DimUOM"
                                 },
                                 "Weight": {
                                     "type": "number"
                                 },
                                 "WeightUOM": {
-                                    "$ref": "common.json#/definitions/WeightUOM"
+                                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/WeightUOM"
                                 },
                                 "Item": {
                                     "type": "array",
@@ -235,7 +235,7 @@
                                                         "type": "number"
                                                     },
                                                     "ItemUOMCode": {
-                                                        "$ref": "common.json#/definitions/QtyUOM"
+                                                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                                                     },
                                                     "ItemUOMDesc": {
                                                         "type": "string",
@@ -266,7 +266,7 @@
                                                                 "description": "Inner Carton quantity per Unit of Measure"
                                                             },
                                                             "ICUOM": {
-                                                                "$ref": "common.json#/definitions/QtyUOM"
+                                                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                                                             },
                                                             "StdPackType": {
                                                                 "type": "string"
@@ -282,7 +282,7 @@
                                                                 "description": "Master Carton quantity per Unit of Measure"
                                                             },
                                                             "MCUOM": {
-                                                                "$ref": "common.json#/definitions/QtyUOM"
+                                                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                                                             },
                                                             "StdContainerType": {
                                                                 "type": "string"

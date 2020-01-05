@@ -1,13 +1,13 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "purchase_order.json",
+    "$id": "https://standards.namm.org/schema/2020.1/purchase_order.json",
     "type": "object",
     "title": "NAMM PO",
-    "description": "This is a json-schema version of NAMM PO v2015.1 from XSD",
+    "description": "This is a json-schema version of NAMM PO XSD",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "Id": {
             "type": "string",
@@ -26,10 +26,10 @@
             },
             "properties": {
                 "SoldTo": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "BillTo": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "BuyerOrderId": {
                     "type": "string",
@@ -40,7 +40,7 @@
                     "$ref": "common.json#/definitions/Party"
                 },
                 "TermsCode": {
-                    "$ref": "common.json#/definitions/TermsCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermsCode"
                 },
                 "TermsDays": {
                     "type": "integer",
@@ -64,10 +64,10 @@
                     "maxLength": 250
                 },
                 "ShipTo": {
-                    "$ref": "common.json#/definitions/Party"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                 },
                 "TranspCode": {
-                    "$ref": "common.json#/definitions/TranspCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
                 },
                 "TranspDesc": {
                     "type": "string",
@@ -87,7 +87,7 @@
                     "description": "Transport terms"
                 },
                 "IncoTermsCode": {
-                    "$ref": "common.json#/definitions/IncoTermsCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/IncoTermsCode"
                 },
                 "IncoTermsDesc": {
                     "type": "string",
@@ -201,35 +201,35 @@
                                 "type": "number"
                             },
                             "QtyUOM": {
-                                "$ref": "common.json#/definitions/QtyUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                             },
                             "UCValue": {
                                 "type": "number",
                                 "description": "Unit cost value"
                             },
                             "UCCurrencyCode": {
-                                "$ref": "common.json#/definitions/CurrencyCode"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                             },
                             "RetailValue": {
                                 "type": "number",
                                 "description": "Retail value"
                             },
                             "RetailCurrencyCode": {
-                                "$ref": "common.json#/definitions/CurrencyCode"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                             },
                             "ICQtyPerUOM": {
                                 "type": "number",
                                 "description": "Inner Carton quantity per Unit of Measure"
                             },
                             "ICUOM": {
-                                "$ref": "common.json#/definitions/QtyUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                             },
                             "MCQtyPerUOM": {
                                 "type": "number",
                                 "description": "Master Carton quantity per Unit of Measure"
                             },
                             "MCUOM": {
-                                "$ref": "common.json#/definitions/QtyUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                             },
                             "SupplierItemId": {
                                 "type": "string",
@@ -242,7 +242,7 @@
                                 "maxLength": 14
                             },
                             "BarCodeType": {
-                                "$ref": "common.json#/definitions/BarCodeType"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
                             },
                             "DateBeginShip": {
                                 "type": "string",
@@ -260,10 +260,10 @@
                                 "format": "date-time"
                             },
                             "TranspCode": {
-                                "$ref": "common.json#/definitions/TranspCode"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
                             },
                             "ShipTo": {
-                                "$ref": "common.json#/definitions/Party"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                             }
                         },
                         "required": [

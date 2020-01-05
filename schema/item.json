@@ -1,13 +1,13 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "item.json",
+    "$id": "https://standards.namm.org/schema/2020.1/item.json",
     "type": "object",
     "title": "Item",
     "description": "NAMM Item v2019.1",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "Timestamp": {
             "type": "string"
@@ -80,13 +80,13 @@
                     "type": "number"
                 },
                 "DimUOM": {
-                    "$ref": "common.json#/definitions/DimUOM"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/DimUOM"
                 },
                 "Weight": {
                     "type": "number"
                 },
                 "WeightUOM": {
-                    "$ref": "common.json#/definitions/WeightUOM"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/WeightUOM"
                 },
                 "AnnounceDate": {
                     "type": "string",
@@ -113,7 +113,7 @@
                     "minimum": 0
                 },
                 "WarrantyPartUOM": {
-                    "$ref": "common.json#/definitions/TermUOM"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermUOM"
                 },
                 "WarrantyLabTerm": {
                     "type": "integer",
@@ -121,7 +121,7 @@
                     "minimum": 0
                 },
                 "WarrantyLabUOM": {
-                    "$ref": "common.json#/definitions/TermUOM"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermUOM"
                 },
                 "Condition": {
                     "type": "string"
@@ -129,7 +129,7 @@
                 "Barcodes": {
                     "type": "array",
                     "items": {
-                        "$ref": "common.json#/definitions/Barcode"
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
                     }
                 },
                 "Pricing": {
@@ -151,7 +151,7 @@
                                 ]
                             },
                             "Currency": {
-                                "$ref": "common.json#/definitions/CurrencyCode"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                             },
                             "Qty": {
                                 "type": "integer",
@@ -185,16 +185,16 @@
                                 "type": "number"
                             },
                             "DimUOM": {
-                                "$ref": "common.json#/definitions/DimUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/DimUOM"
                             },
                             "Weight": {
                                 "type": "number"
                             },
                             "WeightUOM": {
-                                "$ref": "common.json#/definitions/WeightUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/WeightUOM"
                             },
                             "UOM": {
-                                "$ref": "common.json#/definitions/QtyUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                             },
                             "QtyPerUOM": {
                                 "type": "integer",
@@ -204,7 +204,7 @@
                             "Barcodes": {
                                 "type": "array",
                                 "items": {
-                                    "$ref": "common.json#/definitions/Barcode"
+                                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
                                 }
                             }
                         },
@@ -235,13 +235,13 @@
                                 "type": "number"
                             },
                             "UOM": {
-                                "$ref": "common.json#/definitions/QtyUOM"
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                             },
                             "Barcodes": {
                                 "type": "array",
                                 "minItems": 1,
                                 "items": {
-                                    "$ref": "common.json#/definitions/Barcode"
+                                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
                                 }
                             }
                         },
@@ -407,7 +407,7 @@
                     "type": "string"
                 },
                 "Barcode": {
-                    "$ref": "common.json#/definitions/Barcode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Barcode"
                 }
             }
         },

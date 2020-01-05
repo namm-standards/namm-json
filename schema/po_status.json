@@ -1,12 +1,12 @@
 ﻿{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "po_status.json",
+    "$id": "https://standards.namm.org/schema/2020.1/po_status.json",
     "type": "object",
     "title": "NAMM_PO_Status",
     "additionalProperties": false,
     "properties": {
         "Version": {
-            "$ref": "common.json#/definitions/Version"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
         },
         "Id": {
             "type": "string",
@@ -37,10 +37,10 @@
             "description": "Buyer Name"
         },
         "Supplier": {
-            "$ref": "common.json#/definitions/Party"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
         },
         "SoldTo": {
-            "$ref": "common.json#/definitions/Party"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
         },
         "StatusCode": {
             "$ref": "#/definitions/StatusCode"
@@ -57,7 +57,7 @@
                     "type": "string"
                 },
                 "TermsCode": {
-                    "$ref": "common.json#/definitions/TermsCode"
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TermsCode"
                 }
             },
             "required": [
@@ -79,7 +79,7 @@
             }
         },
         "ShipTo": {
-            "$ref": "common.json#/definitions/Party"
+            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
         },
         "Items": {
             "type": "array",
@@ -111,7 +111,7 @@
                         "description": "Original order quantity"
                     },
                     "QtyUOM": {
-                        "$ref": "common.json#/definitions/QtyUOM"
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/QtyUOM"
                     },
                     "UCValue": {
                         "type": "number",
@@ -122,7 +122,7 @@
                         "description": "Original Unit Cost"
                     },
                     "UCCurrencyCode": {
-                        "$ref": "common.json#/definitions/CurrencyCode"
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/CurrencyCode"
                     },
                     "EstimatedShipDate": {
                         "type": "string",
@@ -146,10 +146,10 @@
                         "description": "Barcode Value"
                     },
                     "BarCodeType": {
-                        "$ref": "common.json#/definitions/BarCodeType"
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
                     },
                     "ShipTo": {
-                        "$ref": "common.json#/definitions/Party"
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
                     }
                 }
             }
