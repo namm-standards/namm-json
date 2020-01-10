@@ -34,7 +34,9 @@
                   <h3>Diagram</h3>
                </div>
                <div class="col-md-10">
-                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap"></map><img src="images/property-soldto.png" border="0" alt="JSON Schema Diagram of /properties/SoldTo" usemap="#DiagramMap"></img></div>
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="214,103,431,135" href="property-partyidtype.html" alt="Drilldown into /properties/SoldTo/properties/PartyIdType"></area>
+                        <area shape="rect" coords="210,69,435,140" href="property-partyidtype.html" alt="Drilldown into /properties/SoldTo/properties/PartyIdType"></area></map><img src="images/property-soldto.png" border="0" alt="JSON Schema Diagram of /properties/SoldTo" usemap="#DiagramMap"></img></div>
                </div>
             </div>
          </div>
@@ -73,6 +75,13 @@
                                           
                                        </td>
                                     </tr>
+                                    <tr>
+                                       <td tooltip="Example { PartyIdType : ... }">PartyIdType</td>
+                                       <td>string</td>
+                                       <td><a href="property-partyidtype.html" title="/properties/SoldTo/properties/PartyIdType">PartyIdType
+                                             (po_status_request.json)
+                                             </a></td>
+                                    </tr>
                                  </table>
                               </div>
                            </div>
@@ -94,12 +103,19 @@
     "properties": {
         "PartyId": {
             "type": "string"
+        },
+        "PartyIdType": {
+            "type": "string",
+            "enum": [
+                "GLN",
+                "NAMM"
+            ]
         }
     },
     "required": [
         "PartyId"
     ]
-}</pre><div><i>https://standards.namm.org/schema/2020.1/po_status_request.json (31:10)
+}</pre><div><i>https://standards.namm.org/schema/2020.1/po_status_request.json (38:10)
                            </i></div>
                   </div>
                </div>

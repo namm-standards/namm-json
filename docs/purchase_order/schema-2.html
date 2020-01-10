@@ -34,11 +34,11 @@
                </div>
                <div class="col-md-10">
                   <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
-                        <area shape="rect" coords="517,1960,810,1990" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="497,1930,820,2002" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="517,1881,663,1911" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="497,1851,673,1923" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="188,1755,495,1842" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="517,1903,810,1933" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="497,1873,820,1945" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="517,1824,663,1854" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="497,1794,673,1866" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="188,1755,347,1785" href="property-shipto.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/properties/ShipTo"></area>
                         <area shape="rect" coords="188,1660,536,1747" href="def-transpcode.html" alt="Drilldown into /definitions/TranspCode"></area>
                         <area shape="rect" coords="188,1288,548,1375" href="def-barcodetype.html" alt="Drilldown into /definitions/BarCodeType"></area>
                         <area shape="rect" coords="188,1013,503,1100" href="def-qtyuom.html" alt="Drilldown into /definitions/QtyUOM"></area>
@@ -46,7 +46,7 @@
                         <area shape="rect" coords="188,666,601,753" href="def-currencycode.html" alt="Drilldown into /definitions/CurrencyCode"></area>
                         <area shape="rect" coords="188,506,579,593" href="def-currencycode.html" alt="Drilldown into /definitions/CurrencyCode"></area>
                         <area shape="rect" coords="188,347,505,434" href="def-qtyuom.html" alt="Drilldown into /definitions/QtyUOM"></area>
-                        <area shape="rect" coords="1,1072,152,1102" href="property-items.html" alt="Drilldown into /properties/PODetail/properties/Items"></area></map><img src="images/schema-2.png" border="0" alt="JSON Schema Diagram of /properties/PODetail/properties/Items/items[0]" usemap="#DiagramMap"></img></div>
+                        <area shape="rect" coords="1,1043,152,1073" href="property-items.html" alt="Drilldown into /properties/PODetail/properties/Items"></area></map><img src="images/schema-2.png" border="0" alt="JSON Schema Diagram of /properties/PODetail/properties/Items/items[0]" usemap="#DiagramMap"></img></div>
                </div>
             </div>
          </div>
@@ -296,9 +296,9 @@
                                     </tr>
                                     <tr>
                                        <td tooltip="Example { ShipTo : ... }">ShipTo</td>
-                                       <td>object</td>
-                                       <td><a href="def-party.html" title="/definitions/Party">Party
-                                             (common.json)
+                                       <td>any</td>
+                                       <td><a href="property-shipto.html" title="/properties/PODetail/properties/Items/items[0]/properties/ShipTo">ShipTo
+                                             (purchase_order.json)
                                              </a></td>
                                     </tr>
                                     <thead>
@@ -420,7 +420,27 @@
             "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
         },
         "ShipTo": {
-            "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+            "oneOf": [
+                {
+                    "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "Name": {
+                            "type": "string",
+                            "maxLength": 35
+                        },
+                        "Address": {
+                            "#ref": "https://standards.namm.org/schema/common.json#Address"
+                        }
+                    },
+                    "required": [
+                        "Address",
+                        "Name"
+                    ]
+                }
+            ]
         }
     },
     "required": [
@@ -434,7 +454,7 @@
         "BarCodeId",
         "BarCodeType"
     ]
-}</pre><div><i>https://standards.namm.org/schema/2020.1/purchase_order.json (179:29)
+}</pre><div><i>https://standards.namm.org/schema/2020.1/purchase_order.json (178:36)
                            </i></div>
                   </div>
                </div>

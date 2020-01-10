@@ -35,12 +35,12 @@
                </div>
                <div class="col-md-10">
                   <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
-                        <area shape="rect" coords="379,1216,686,1303" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="379,1216,538,1246" href="property-shipto.html" alt="Drilldown into /properties/Items/items[0]/properties/ShipTo"></area>
                         <area shape="rect" coords="379,1121,739,1208" href="def-barcodetype.html" alt="Drilldown into /definitions/BarCodeType"></area>
                         <area shape="rect" coords="379,683,770,770" href="def-currencycode.html" alt="Drilldown into /definitions/CurrencyCode"></area>
                         <area shape="rect" coords="379,458,696,545" href="def-qtyuom.html" alt="Drilldown into /definitions/QtyUOM"></area>
                         <area shape="rect" coords="379,206,720,256" href="def-statuscode.html" alt="Drilldown into /definitions/StatusCode"></area>
-                        <area shape="rect" coords="359,33,783,1314" href="schema-1.html" alt="Drilldown into /properties/Items/items[0]"></area></map><img src="images/property-items.png" border="0" alt="JSON Schema Diagram of /properties/Items" usemap="#DiagramMap"></img></div>
+                        <area shape="rect" coords="359,33,783,1256" href="schema-1.html" alt="Drilldown into /properties/Items/items[0]"></area></map><img src="images/property-items.png" border="0" alt="JSON Schema Diagram of /properties/Items" usemap="#DiagramMap"></img></div>
                </div>
             </div>
          </div>
@@ -158,7 +158,27 @@
                 "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
             },
             "ShipTo": {
-                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                "oneOf": [
+                    {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "Name": {
+                                "type": "string",
+                                "maxLength": 35
+                            },
+                            "Address": {
+                                "#ref": "https://standards.namm.org/schema/common.json#Address"
+                            }
+                        },
+                        "required": [
+                            "Address",
+                            "Name"
+                        ]
+                    }
+                ]
             }
         }
     }

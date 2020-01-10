@@ -4,7 +4,7 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
       <title>
-         Documentation for JSON Schema /properties/PaymentTerms/additionalProperties
+         Documentation for JSON Schema /properties/Items/items[0]/properties/ShipTo/oneOf[1]
          in PO Status
       </title>
       <!-- saved from url=(0014)about:internet -->
@@ -22,7 +22,7 @@
             <div class="row">
                <div class="col-md-12">
                   <h1>
-                     JSON Schema /properties/PaymentTerms/additionalProperties
+                     JSON Schema /properties/Items/items[0]/properties/ShipTo/oneOf[1]
                   </h1>
                </div>
             </div>
@@ -33,9 +33,7 @@
                   <h3>Diagram</h3>
                </div>
                <div class="col-md-10">
-                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
-                        <area shape="rect" coords="21,148,364,235" href="def-termscode.html" alt="Drilldown into /definitions/TermsCode"></area>
-                        <area shape="rect" coords="1,2,377,246" href="property-paymentterms.html" alt="Drilldown into /properties/PaymentTerms"></area></map><img src="images/schema-3.png" border="0" alt="JSON Schema Diagram of /properties/PaymentTerms/additionalProperties" usemap="#DiagramMap"></img></div>
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap"></map><img src="images/schema-3.png" border="0" alt="JSON Schema Diagram of /properties/Items/items[0]/properties/ShipTo/oneOf[1]" usemap="#DiagramMap"></img></div>
                </div>
             </div>
          </div>
@@ -47,18 +45,69 @@
                <div class="col-md-10">
                   <div class="row value-type-row is-flex">
                      <div class="col-md-2">
-                        <h4>
-                           Any
-                           
-                        </h4>
+                        <h4>Object</h4>
                      </div>
                      <div class="col-md-10">
                         <div class="valign-center">
                            <div class="row">
                               <div class="col-md-12">
-                                 Can contain any type of value (boolean, integer, number, string, object, array or
-                                 null).
-                                 
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { Name : ... }">Name</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                35</i></strong></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Address : ... }">Address</td>
+                                       <td>any</td>
+                                       <td>
+                                          <div>
+                                             Any type of value (<i>boolean</i>, <i>integer</i>, <i>number</i>, <i>string</i>, <i>object</i>, <i>array</i> or <i>null</i>).
+                                             
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="Any property not matched by the properties described above, must comply with the rules below.">Additional Properties</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="The property can have any name">
+                                          Any Property
+                                          
+                                       </td>
+                                       <td tooltip="The property can have any type">
+                                          Any
+                                          
+                                       </td>
+                                       <td>
+                                          All values are valid, no restrictions.
+                                          
+                                       </td>
+                                    </tr>
+                                 </table>
                               </div>
                            </div>
                         </div>
@@ -73,8 +122,39 @@
                   <h3>Source</h3>
                </div>
                <div class="col-md-10">
-                  <div class="valign-center"><pre class="json">false</pre><div><i>https://standards.namm.org/schema/2020.1/po_status.json (50:36)
+                  <div class="valign-center"><pre class="json">{
+    "type": "object",
+    "properties": {
+        "Name": {
+            "type": "string",
+            "maxLength": 35
+        },
+        "Address": {
+            "#ref": "https://standards.namm.org/schema/common.json#Address"
+        }
+    },
+    "required": [
+        "Address",
+        "Name"
+    ]
+}</pre><div><i>https://standards.namm.org/schema/2020.1/po_status.json (155:30)
                            </i></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="property-shipto.html" title="/properties/Items/items[0]/properties/ShipTo">/properties/Items/items[0]/properties/ShipTo
+                              (po_status.json)
+                              </a></li>
+                     </ul>
                   </div>
                </div>
             </div>

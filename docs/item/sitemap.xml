@@ -1,541 +1,541 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/index.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/file-item_json.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-audio.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-1.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-audience.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-contributor.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-contribution.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-document.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-2.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-type.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-extendedattribute.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-3.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-value.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-4.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-image.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-5.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-audience-1.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-view.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-item.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-6.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-availability.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-7.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-available.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-barcodes.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-containers.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-8.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-9.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-barcodes-1.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-extendedattributes.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-itemfamily.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-10.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-kit.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-kitcomponentonly.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-kititems.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-11.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-12.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-barcodes-2.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-marketinginfo.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-13.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-bullets.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-keywords.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-media.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-14.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-audios.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-documents.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-images.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-videos.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-secondarycategories.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-pricing.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-15.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-16.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-type-1.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-relateditems.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-serialized.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-relateditem.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-17.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-included.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-type-2.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-video.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-18.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-type-3.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-items.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/file-common_json.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-19.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-address.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-20.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-barcode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-21.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-barcodetype.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-currencycode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-dimuom.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-incotermscode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-party.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-22.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-partyidtype.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-poitem.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/schema-23.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-barcodetype.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-qtyuom.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-retailcurrencycode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/property-uccurrencycode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-qtyuom.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-termscode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-termuom.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-transpcode.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-version.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-volume.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-weight.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
       <loc>http://schema.liquid-technologies.com/LibraryDocs/def-weightuom.html</loc>
-      <lastmod>2020-01-05-08:00</lastmod>
+      <lastmod>2020-01-10-08:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
    </url>

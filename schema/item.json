@@ -3,7 +3,7 @@
     "$id": "https://standards.namm.org/schema/2020.1/item.json",
     "type": "object",
     "title": "Item",
-    "description": "NAMM Item v2019.1",
+    "description": "Item v2020.1",
     "additionalProperties": false,
     "properties": {
         "Version": {

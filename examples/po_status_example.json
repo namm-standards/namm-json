@@ -1,0 +1,137 @@
+﻿{
+    "Version": 2020.1,
+    "Id": "B78DD4DC-09EB-4D47-AD3C-FF2105399CDE",
+    "POStatusRequestId": "8814043038988",
+    "Timestamp": "2020-01-02T01:21:44-0500",
+    "BuyerOrderId": "8814043038988",
+    "DateOrdered": "2019-12-31",
+    "BuyerName": "",
+    "Supplier": {
+      "PartyId": "0670716000009",
+      "PartyIdType": "GLN",
+      "Name": "Korg USA Inc.",
+      "Address": {
+        "Attn": "",
+        "Address1": "316 S SERVICE RD",
+        "Address2": "",
+        "Address3": "",
+        "City": "MELVILLE",
+        "State": "NY",
+        "PostalCode": "117473228",
+        "Country": "USA",
+        "CountryCode": "US"
+      }
+    },
+    "SoldTo": {
+      "PartyId": "698765768754",
+      "PartyIdType": "GLN",
+      "Name": "Bill's Music",
+      "Address": {
+        "Attn": "Accounts Payable",
+        "Address1": "1 FLUSHING AVE",
+        "Address2": "",
+        "Address3": "",
+        "City": "BROOKLYN",
+        "State": "NY",
+        "PostalCode": "11205",
+        "Country": "USA",
+        "CountryCode": "US"
+      }
+    },
+    "StatusCode": "C1",
+    "PaymentTerms": {
+      "StatusCode": "0",
+      "StatusMessage": "",
+      "TermsCode": "P002"
+    },
+    "ShipmentTerms": {
+      "StatusCode": "0"
+    },
+    "ShipTo": {
+        "PartyId": "698765768754",
+        "PartyIdType": "GLN",
+        "Name": "Bill's Music",
+        "Address": {
+        "Attn": "",
+        "Address1": "1 FLUSHING AVE",
+        "Address2": "",
+        "Address3": "",
+        "City": "BROOKLYN",
+        "State": "NY",
+        "PostalCode": "11205",
+        "Country": "USA",
+        "CountryCode": "US"
+      }
+    },
+    "Items": [
+        {
+          "POLineNbr": 1,
+          "SequenceNbr": 1,
+          "StatusCode": "Changes",
+          "StatusMessage": "",
+          "Qty": 1,
+          "OriginalOrderQty": 1,
+          "QtyUOM": "Each",
+          "UCValue": 47.00,
+          "OriginalOrderUCValue": 30.75,
+          "UCCurrencyCode": "USD",
+          "EstimatedShipDate": "2014-05-07",
+          "SupplierOrderId": "OM99574453",
+          "BuyerItemId": "KXXFKM2",
+          "SupplierItemId": "XFKM2",
+          "BarCodeId": "654321",
+          "BarCodeType": "PartNumber",
+          "ShipTo": {
+            "Name": "Bill's Music",
+            "Address": {
+              "Attn": "",
+              "Address1": "1 FLUSHING AVE",
+              "Address2": "",
+              "Address3": "",
+              "City": "BROOKLYN",
+              "State": "NY",
+              "PostalCode": "11205",
+              "Country": "USA",
+              "CountryCode": "US"
+            }
+          }
+        },
+        {
+          "POLineNbr": 2,
+          "SequenceNbr": 1,
+          "StatusCode": "Changes",
+          "StatusMessage": "",
+          "Qty": 2,
+          "OriginalOrderQty": 6,
+          "QtyUOM": "Each",
+          "UCValue": 16.80,
+          "OriginalOrderUCValue": 16.80,
+          "UCCurrencyCode": "USD",
+          "EstimatedShipDate": "2014-06-12",
+          "SupplierOrderId": "OM99574453",
+          "BuyerItemId": "KXGA1",
+          "SupplierItemId": "GA1",
+          "BarCodeId": "4959112069329",
+          "BarCodeType": "GTIN-13"
+        },
+        {
+          "POLineNbr": 2,
+          "SequenceNbr": 2,
+          "StatusCode": "Changes",
+          "StatusMessage": "",
+          "Qty": 4,
+          "OriginalOrderQty": 6,
+          "QtyUOM": "Each",
+          "UCValue": 16.80,
+          "OriginalOrderUCValue": 16.80,
+          "UCCurrencyCode": "USD",
+          "SupplierOrderId": "OM99574453",
+          "BuyerItemId": "KXGA1",
+          "SupplierItemId": "GA1",
+          "BarCodeId": "4959112069329",
+          "BarCodeType": "GTIN-13"
+        }
+      ]
+    
+ 
+}
