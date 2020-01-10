@@ -1,0 +1,16 @@
+﻿{
+  "Version": 2020.1,
+    "Id": "b8917d4c-22e5-4045-8b3c-39ce6e82234a",
+    "Timestamp": "2020-01-02T10:34:02-0500",
+    "Supplier": {
+        "PartyId": "0670716000009",
+        "PartyIdType": "GLN"
+    },
+  "SoldTo": {
+    "PartyId": "NAMM*000010298975",
+    "PartyIdType" : "NAMM"
+  },
+  "BuyerOrderIds": [
+    "65642X"
+    ]
+}

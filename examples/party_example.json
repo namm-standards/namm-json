@@ -1,0 +1,35 @@
+﻿{
+    "Version": 2020.1,
+    "RevisionDate": "2020-01-01T09:20:39-05:00",
+    "TradingPartner": {
+        "PartyId": "NAMM*000000000002",
+        "PartyIdType": "NAMM",
+        "Name": "NAMM Standards Cmte",
+        "DBA": "NAMM",
+        "URL": "https://www.namm.org/standards",
+        "Locations": [
+            {
+                "PartyId": "NAMM*000000000002",
+                "PartyIdType": "NAMM",
+                "Description": "Headquarters",
+                "Name": "NAMM Headquarters",
+                "DBA": "NAMM",
+                "Address": {
+                    "Attn": "Tech Cmte",
+                    "Address1": "5790 Armada Dr",
+                    "Address2": "Suite NS",
+                    "City": "Carlsbad",
+                    "State": "CA",
+                    "PostalCode": "92008",
+                    "Country": "United States",
+                    "CountryCode": "US"
+                },
+                "Phone": "+17604388001",
+                "Fax": "+17604388002",
+                "Email": "standards@namm.org",
+                "StartDate": "2005-01-01",
+                "EndDate": "2021-07-13"
+            }
+        ]
+    }
+}
