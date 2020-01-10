@@ -35,12 +35,12 @@
                </div>
                <div class="col-md-10">
                   <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
-                        <area shape="rect" coords="708,1991,1001,2021" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="688,1961,1011,2033" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="708,1912,854,1942" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="688,1882,864,1954" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
-                        <area shape="rect" coords="379,1903,672,1933" href="schema-2.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]"></area>
-                        <area shape="rect" coords="379,1786,686,1873" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="708,1934,1001,1964" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="688,1904,1011,1976" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="708,1855,854,1885" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="688,1825,864,1897" href="schema-3.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/additionalProperties"></area>
+                        <area shape="rect" coords="379,1846,672,1876" href="schema-2.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]"></area>
+                        <area shape="rect" coords="379,1786,538,1816" href="property-shipto.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]/properties/ShipTo"></area>
                         <area shape="rect" coords="379,1691,727,1778" href="def-transpcode.html" alt="Drilldown into /definitions/TranspCode"></area>
                         <area shape="rect" coords="379,1319,739,1406" href="def-barcodetype.html" alt="Drilldown into /definitions/BarCodeType"></area>
                         <area shape="rect" coords="379,1044,694,1131" href="def-qtyuom.html" alt="Drilldown into /definitions/QtyUOM"></area>
@@ -48,7 +48,7 @@
                         <area shape="rect" coords="379,697,792,784" href="def-currencycode.html" alt="Drilldown into /definitions/CurrencyCode"></area>
                         <area shape="rect" coords="379,537,770,624" href="def-currencycode.html" alt="Drilldown into /definitions/CurrencyCode"></area>
                         <area shape="rect" coords="379,378,696,465" href="def-qtyuom.html" alt="Drilldown into /definitions/QtyUOM"></area>
-                        <area shape="rect" coords="359,33,1181,2204" href="schema-2.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]"></area></map><img src="images/property-items.png" border="0" alt="JSON Schema Diagram of /properties/PODetail/properties/Items" usemap="#DiagramMap"></img></div>
+                        <area shape="rect" coords="359,33,1181,2147" href="schema-2.html" alt="Drilldown into /properties/PODetail/properties/Items/items[0]"></area></map><img src="images/property-items.png" border="0" alt="JSON Schema Diagram of /properties/PODetail/properties/Items" usemap="#DiagramMap"></img></div>
                </div>
             </div>
          </div>
@@ -187,7 +187,27 @@
                 "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/TranspCode"
             },
             "ShipTo": {
-                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                "oneOf": [
+                    {
+                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "Name": {
+                                "type": "string",
+                                "maxLength": 35
+                            },
+                            "Address": {
+                                "#ref": "https://standards.namm.org/schema/common.json#Address"
+                            }
+                        },
+                        "required": [
+                            "Address",
+                            "Name"
+                        ]
+                    }
+                ]
             }
         },
         "required": [
