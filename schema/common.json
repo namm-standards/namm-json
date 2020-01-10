@@ -83,8 +83,7 @@
             },
             "required": [
                 "PartyId",
-                "PartyIdType",
-                "Address"
+                "PartyIdType"
             ]
         },
         "DimUOM": {

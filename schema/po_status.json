@@ -149,7 +149,27 @@
                         "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/BarCodeType"
                     },
                     "ShipTo": {
-                        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                        "oneOf": [
+                            {
+                                "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "Name": {
+                                        "type": "string",
+                                        "maxLength": 35
+                                    },
+                                    "Address": {
+                                        "#ref": "https://standards.namm.org/schema/common.json#Address"
+                                    }
+                                },
+                                "required": [
+                                    "Address",
+                                    "Name"
+                                ]
+                            }
+                        ]
                     }
                 }
             }
