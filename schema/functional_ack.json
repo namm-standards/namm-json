@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://standards.namm.org/schema/2020.1/functional_ack.json",
+  "type": "object",
+  "title": "NAMM Functional Acknowledgement",
+  "description": "This is a json-schema version of NAMM Functional Ack XSD",
+  "$comment": "Additional properties has been set to true to optionally allow reporting back of additional information such as order number",
+  "additionalProperties": true,
+  "properties": {
+      "Version": {
+          "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
+      },
+      "Id": {
+          "type": "string",
+          "description": "Document ID",
+          "maxLength": 50
+      },
+      "Timestamp": {
+          "type": "string",
+          "description": "Date/time stamp for this document",
+          "format": "date-time"
+      },
+      "Supplier": {
+        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+      },
+      "SoldTo": {
+        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+      },
+      "StatusCode" : {
+        "type": "string",
+        "enum": [
+            "C01",
+            "C02"
+          ]
+      },
+      "StatusMessage" : {
+        "type" : "string",
+        "description": "Additional information about status",
+        "maxLength": 255
+      }
+    
+    }
+  }
