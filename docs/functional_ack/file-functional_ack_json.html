@@ -1,0 +1,285 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:lt="http://www.liquid-technologies.com/json-schema-doc-gen" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>
+         Documentation for JSON Schema File 
+         in Functional Acknowledgement
+      </title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="Content/bootstrap.min.css" rel="stylesheet"></link>
+      <link href="Content/JsonSchemaDocs.css" rel="stylesheet"></link><script src="Scripts/jquery-3.1.1.min.js" type="text/javascript"></script><script src="Scripts/bootstrap.min.js" type="text/javascript"></script><script src="Scripts/JsonSchemaDocs.js" type="text/javascript"></script><script type="text/javascript">
+         <!--
+                            $(function () {
+                                // ensure the page opens within its frameset
+                                ensureInFrame('SchemaFile', 'file-functional_ack_json');
+                            });
+                        --></script></head>
+   <body>
+      <div class="container">
+         <div class="heading-row">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1>
+                     JSON Schema File 
+                  </h1>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="Changes the URI resolution scope">
+                  <h3>ID</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">https://standards.namm.org/schema/2020.1/functional_ack.json</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A short description of the instance described by this schema.">
+                  <h3>
+                     Title
+                     
+                  </h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">NAMM Functional Acknowledgement</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A description explaining the purpose of the instance described by this schema.">
+                  <h3>Description</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">This is a json-schema version of NAMM Functional Ack XSD</div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="A graphical representation of the JSON schema item.">
+                  <h3>Diagram</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><map name="DiagramMap" id="DiagramMap">
+                        <area shape="rect" coords="346,763,615,805" href="property-statuscode.html" alt="Drilldown into /properties/StatusCode"></area>
+                        <area shape="rect" coords="342,722,619,810" href="property-statuscode.html" alt="Drilldown into /properties/StatusCode"></area>
+                        <area shape="rect" coords="342,576,675,715" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="342,429,689,568" href="def-party.html" alt="Drilldown into /definitions/Party"></area>
+                        <area shape="rect" coords="342,44,682,183" href="def-version.html" alt="Drilldown into /definitions/Version"></area></map><img src="images/file-functional_ack_json.png" border="0" alt="JSON Schema Diagram of /" usemap="#DiagramMap"></img></div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-2 property-heading" tooltip="Describes what the JSON instance value can contain.">
+                  <h3>Value</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="row value-type-row is-flex">
+                     <div class="col-md-2">
+                        <h4>Object</h4>
+                     </div>
+                     <div class="col-md-10">
+                        <div class="valign-center">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <h4>Properties</h4>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <table class="table table-bordered">
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="The name of the property, as it appears in the JSON instance document">Property Name</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="Example { Version : ... }">Version</td>
+                                       <td>number</td>
+                                       <td><a href="def-version.html" title="/definitions/Version">Version
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Id : ... }">Id</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                50</i></strong><div>
+                                             Description : Document ID
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Timestamp : ... }">Timestamp</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          <div>
+                                             Description : Date/time stamp for this document
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { Supplier : ... }">Supplier</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { SoldTo : ... }">SoldTo</td>
+                                       <td>object</td>
+                                       <td><a href="def-party.html" title="/definitions/Party">Party
+                                             (common.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { StatusCode : ... }">StatusCode</td>
+                                       <td>string</td>
+                                       <td><a href="property-statuscode.html" title="/properties/StatusCode">StatusCode
+                                             (functional_ack.json)
+                                             </a></td>
+                                    </tr>
+                                    <tr>
+                                       <td tooltip="Example { StatusMessage : ... }">StatusMessage</td>
+                                       <td>string</td>
+                                       <td>
+                                          A String value
+                                          
+                                          where
+                                          
+                                          <strong><i>
+                                                length &lt;=
+                                                255</i></strong><div>
+                                             Description : Additional information about status
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <thead>
+                                       <tr>
+                                          <th class="col-md-3" tooltip="Any property not matched by the properties described above, must comply with the rules below.">Additional Properties</th>
+                                          <th class="col-md-2" tooltip="The data types that this property can contain within the JSON instance document">Type</th>
+                                          <th class="col-md-7" tooltip="A description of the property including validation rules">Description</th>
+                                       </tr>
+                                    </thead>
+                                    <tr>
+                                       <td tooltip="The property can have any name">
+                                          Any Property
+                                          
+                                       </td>
+                                       <td tooltip="The property can have any type">
+                                          Any
+                                          
+                                       </td>
+                                       <td>
+                                          All values are valid, no restrictions.
+                                          
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="The source code for this JSON Schema item.">
+                  <h3>Source</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center"><pre class="json">{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://standards.namm.org/schema/2020.1/functional_ack.json",
+  "type": "object",
+  "title": "NAMM Functional Acknowledgement",
+  "description": "This is a json-schema version of NAMM Functional Ack XSD",
+  "$comment": "Additional properties has been set to true to optionally allow reporting back of additional information such as order number",
+  "additionalProperties": true,
+  "properties": {
+      "Version": {
+          "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Version"
+      },
+      "Id": {
+          "type": "string",
+          "description": "Document ID",
+          "maxLength": 50
+      },
+      "Timestamp": {
+          "type": "string",
+          "description": "Date/time stamp for this document",
+          "format": "date-time"
+      },
+      "Supplier": {
+        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+      },
+      "SoldTo": {
+        "$ref": "https://standards.namm.org/schema/2020.1/common.json#/definitions/Party"
+      },
+      "StatusCode" : {
+        "type": "string",
+        "enum": [
+            "C01",
+            "C02"
+          ]
+      },
+      "StatusMessage" : {
+        "type" : "string",
+        "description": "Additional information about status",
+        "maxLength": 255
+      }
+    
+    }
+  }</pre><div></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row is-flex">
+               <div class="col-md-2 property-heading" tooltip="All the entities that reference this schema">
+                  <h3>References</h3>
+               </div>
+               <div class="col-md-10">
+                  <div class="valign-center">
+                     <ul>
+                        <li><a href="schema.html" title="/additionalProperties">/additionalProperties
+                              (functional_ack.json)
+                              </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="property-row">
+            <div class="row">
+               <div class="col-md-12">
+                  Documentation for Functional Acknowledgement
+                            <br/>
+                        
+                  Generated using
+                  <a href="http://www.liquid-technologies.com/" target="_parent">Liquid Studio 2021 - XML Editor Edition 19.0.10.10866</a></div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

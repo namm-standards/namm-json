@@ -1,0 +1,19 @@
+{
+  "Version": 2020.1,
+  "Id": "0417b55c-d510-4a22-aa9b-5cfe9323de94",
+  "Timestamp": "2021-07-27T22:53:22.86",
+  "SoldTo": {
+    "PartyId": "1100001001675",
+    "PartyIdType": "GLN",
+    "Name": "Joe's Music Store"
+  },
+  "Supplier": {
+    "PartyId": "0670716000009",
+    "PartyIdType": "GLN",
+    "Name": "Korg USA Inc."
+  },
+  "StatusCode": "C01",
+  "StatusMessage": "Received"
+}
+
+  
