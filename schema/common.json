@@ -77,6 +77,10 @@
                     "type": "string",
                     "maxLength": 35
                 },
+                "Phone": {
+                    "type": "string",
+                    "maxLength": 24
+                },
                 "Address": {
                     "$ref": "#/definitions/Address"
                 }
